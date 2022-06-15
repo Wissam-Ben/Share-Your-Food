@@ -15,6 +15,7 @@
 		AA73268E284DDB16003D6616 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA73268C284DDB16003D6616 /* RegisterViewController.swift */; };
 		AA73268F284DDB16003D6616 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA73268D284DDB16003D6616 /* RegisterViewController.xib */; };
 		AA732693284DE8B3003D6616 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AA732695284DE8B3003D6616 /* Localizable.strings */; };
+		AA73269A285A705B003D6616 /* api in Resources */ = {isa = PBXBuildFile; fileRef = AA732699285A705B003D6616 /* api */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		AA73268D284DDB16003D6616 /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
 		AA732694284DE8B3003D6616 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		AA732696284DE8E8003D6616 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		AA732699285A705B003D6616 /* api */ = {isa = PBXFileReference; lastKnownFileType = folder; name = api; path = ../../../Downloads/api/api; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +47,7 @@
 		AA732660284D459B003D6616 = {
 			isa = PBXGroup;
 			children = (
+				AA732699285A705B003D6616 /* api */,
 				AA73266B284D459B003D6616 /* ShareYourFood */,
 				AA73266A284D459B003D6616 /* Products */,
 			);
@@ -136,6 +139,7 @@
 				AA732693284DE8B3003D6616 /* Localizable.strings in Resources */,
 				AA732689284DD733003D6616 /* SubscribeViewController.xib in Resources */,
 				AA732679284D459C003D6616 /* LaunchScreen.storyboard in Resources */,
+				AA73269A285A705B003D6616 /* api in Resources */,
 				AA732676284D459C003D6616 /* Assets.xcassets in Resources */,
 				AA73268F284DDB16003D6616 /* RegisterViewController.xib in Resources */,
 			);
