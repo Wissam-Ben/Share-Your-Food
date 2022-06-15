@@ -15,7 +15,6 @@
 		AA73268E284DDB16003D6616 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA73268C284DDB16003D6616 /* RegisterViewController.swift */; };
 		AA73268F284DDB16003D6616 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA73268D284DDB16003D6616 /* RegisterViewController.xib */; };
 		AA732693284DE8B3003D6616 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AA732695284DE8B3003D6616 /* Localizable.strings */; };
-		AA73269A285A705B003D6616 /* api in Resources */ = {isa = PBXBuildFile; fileRef = AA732699285A705B003D6616 /* api */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,7 +29,6 @@
 		AA73268D284DDB16003D6616 /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
 		AA732694284DE8B3003D6616 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		AA732696284DE8E8003D6616 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
-		AA732699285A705B003D6616 /* api */ = {isa = PBXFileReference; lastKnownFileType = folder; name = api; path = ../../../Downloads/api/api; sourceTree = "<group>"; };
 		AA73269D285A716D003D6616 /* auth.middleware.ts */ = {isa = PBXFileReference; lastKnownFileType = text; path = auth.middleware.ts; sourceTree = "<group>"; };
 		AA73269F285A716D003D6616 /* user.model.ts */ = {isa = PBXFileReference; lastKnownFileType = text; path = user.model.ts; sourceTree = "<group>"; };
 		AA7326A0285A716D003D6616 /* evaluation.model.ts */ = {isa = PBXFileReference; lastKnownFileType = text; path = evaluation.model.ts; sourceTree = "<group>"; };
@@ -78,7 +76,6 @@
 		AA732660284D459B003D6616 = {
 			isa = PBXGroup;
 			children = (
-				AA732699285A705B003D6616 /* api */,
 				AA73266B284D459B003D6616 /* ShareYourFood */,
 				AA73266A284D459B003D6616 /* Products */,
 			);
@@ -95,6 +92,8 @@
 		AA73266B284D459B003D6616 /* ShareYourFood */ = {
 			isa = PBXGroup;
 			children = (
+				AA7326C3285A7443003D6616 /* Controllers */,
+				AA7326C0285A73F7003D6616 /* Platforms */,
 				AA73269B285A716D003D6616 /* api */,
 				AA73266C284D459B003D6616 /* AppDelegate.swift */,
 				AA732675284D459C003D6616 /* Assets.xcassets */,
@@ -187,6 +186,36 @@
 			path = routes;
 			sourceTree = "<group>";
 		};
+		AA7326C0285A73F7003D6616 /* Platforms */ = {
+			isa = PBXGroup;
+			children = (
+				AA7326C1285A7414003D6616 /* WebServices */,
+			);
+			path = Platforms;
+			sourceTree = "<group>";
+		};
+		AA7326C1285A7414003D6616 /* WebServices */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = WebServices;
+			sourceTree = "<group>";
+		};
+		AA7326C2285A7426003D6616 /* Datasets */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Datasets;
+			sourceTree = "<group>";
+		};
+		AA7326C3285A7443003D6616 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AA7326C2285A7426003D6616 /* Datasets */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -249,7 +278,6 @@
 				AA732693284DE8B3003D6616 /* Localizable.strings in Resources */,
 				AA732689284DD733003D6616 /* SubscribeViewController.xib in Resources */,
 				AA732679284D459C003D6616 /* LaunchScreen.storyboard in Resources */,
-				AA73269A285A705B003D6616 /* api in Resources */,
 				AA732676284D459C003D6616 /* Assets.xcassets in Resources */,
 				AA73268F284DDB16003D6616 /* RegisterViewController.xib in Resources */,
 			);
