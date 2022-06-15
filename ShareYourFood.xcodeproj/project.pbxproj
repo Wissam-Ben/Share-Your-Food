@@ -31,6 +31,37 @@
 		AA732694284DE8B3003D6616 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		AA732696284DE8E8003D6616 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		AA732699285A705B003D6616 /* api */ = {isa = PBXFileReference; lastKnownFileType = folder; name = api; path = ../../../Downloads/api/api; sourceTree = "<group>"; };
+		AA73269D285A716D003D6616 /* auth.middleware.ts */ = {isa = PBXFileReference; lastKnownFileType = text; path = auth.middleware.ts; sourceTree = "<group>"; };
+		AA73269F285A716D003D6616 /* user.model.ts */ = {isa = PBXFileReference; lastKnownFileType = text; path = user.model.ts; sourceTree = "<group>"; };
+		AA7326A0285A716D003D6616 /* evaluation.model.ts */ = {isa = PBXFileReference; lastKnownFileType = text; path = evaluation.model.ts; sourceTree = "<group>"; };
+		AA7326A1285A716D003D6616 /* message.model.ts */ = {isa = PBXFileReference; lastKnownFileType = text; path = message.model.ts; sourceTree = "<group>"; };
+		AA7326A2285A716D003D6616 /* session.model.ts */ = {isa = PBXFileReference; lastKnownFileType = text; path = session.model.ts; sourceTree = "<group>"; };
+		AA7326A3285A716D003D6616 /* reservation.model.ts */ = {isa = PBXFileReference; lastKnownFileType = text; path = reservation.model.ts; sourceTree = "<group>"; };
+		AA7326A4285A716D003D6616 /* recipe.model.ts */ = {isa = PBXFileReference; lastKnownFileType = text; path = recipe.model.ts; sourceTree = "<group>"; };
+		AA7326A5285A716D003D6616 /* plate.model.ts */ = {isa = PBXFileReference; lastKnownFileType = text; path = plate.model.ts; sourceTree = "<group>"; };
+		AA7326A6285A716D003D6616 /* index.ts */ = {isa = PBXFileReference; lastKnownFileType = text; path = index.ts; sourceTree = "<group>"; };
+		AA7326A7285A716D003D6616 /* chat.model.ts */ = {isa = PBXFileReference; lastKnownFileType = text; path = chat.model.ts; sourceTree = "<group>"; };
+		AA7326A8285A716D003D6616 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		AA7326A9285A716D003D6616 /* package-lock.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "package-lock.json"; sourceTree = "<group>"; };
+		AA7326AA285A716D003D6616 /* package.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = package.json; sourceTree = "<group>"; };
+		AA7326AB285A716D003D6616 /* .env */ = {isa = PBXFileReference; lastKnownFileType = text; path = .env; sourceTree = "<group>"; };
+		AA7326AD285A716D003D6616 /* mfdb.mwb.bak */ = {isa = PBXFileReference; lastKnownFileType = file; path = mfdb.mwb.bak; sourceTree = "<group>"; };
+		AA7326AE285A716D003D6616 /* mfdb.mwb */ = {isa = PBXFileReference; lastKnownFileType = file; path = mfdb.mwb; sourceTree = "<group>"; };
+		AA7326AF285A716D003D6616 /* tsconfig.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = tsconfig.json; sourceTree = "<group>"; };
+		AA7326B0285A716D003D6616 /* index.ts */ = {isa = PBXFileReference; lastKnownFileType = text; path = index.ts; sourceTree = "<group>"; };
+		AA7326B2285A716D003D6616 /* auth.controller.ts */ = {isa = PBXFileReference; lastKnownFileType = text; path = auth.controller.ts; sourceTree = "<group>"; };
+		AA7326B3285A716D003D6616 /* message.controller.ts */ = {isa = PBXFileReference; lastKnownFileType = text; path = message.controller.ts; sourceTree = "<group>"; };
+		AA7326B4285A716D003D6616 /* reservation.controller.ts */ = {isa = PBXFileReference; lastKnownFileType = text; path = reservation.controller.ts; sourceTree = "<group>"; };
+		AA7326B5285A716D003D6616 /* user.controller.ts */ = {isa = PBXFileReference; lastKnownFileType = text; path = user.controller.ts; sourceTree = "<group>"; };
+		AA7326B6285A716D003D6616 /* recipe.controller.ts */ = {isa = PBXFileReference; lastKnownFileType = text; path = recipe.controller.ts; sourceTree = "<group>"; };
+		AA7326B7285A716D003D6616 /* plate.controller.ts */ = {isa = PBXFileReference; lastKnownFileType = text; path = plate.controller.ts; sourceTree = "<group>"; };
+		AA7326B9285A716D003D6616 /* user.router.ts */ = {isa = PBXFileReference; lastKnownFileType = text; path = user.router.ts; sourceTree = "<group>"; };
+		AA7326BA285A716D003D6616 /* plate.router.ts */ = {isa = PBXFileReference; lastKnownFileType = text; path = plate.router.ts; sourceTree = "<group>"; };
+		AA7326BB285A716D003D6616 /* recipe.router.ts */ = {isa = PBXFileReference; lastKnownFileType = text; path = recipe.router.ts; sourceTree = "<group>"; };
+		AA7326BC285A716D003D6616 /* reservation.router.ts */ = {isa = PBXFileReference; lastKnownFileType = text; path = reservation.router.ts; sourceTree = "<group>"; };
+		AA7326BD285A716D003D6616 /* message.router.ts */ = {isa = PBXFileReference; lastKnownFileType = text; path = message.router.ts; sourceTree = "<group>"; };
+		AA7326BE285A716D003D6616 /* index.ts */ = {isa = PBXFileReference; lastKnownFileType = text; path = index.ts; sourceTree = "<group>"; };
+		AA7326BF285A716D003D6616 /* auth.router.ts */ = {isa = PBXFileReference; lastKnownFileType = text; path = auth.router.ts; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +95,7 @@
 		AA73266B284D459B003D6616 /* ShareYourFood */ = {
 			isa = PBXGroup;
 			children = (
+				AA73269B285A716D003D6616 /* api */,
 				AA73266C284D459B003D6616 /* AppDelegate.swift */,
 				AA732675284D459C003D6616 /* Assets.xcassets */,
 				AA732677284D459C003D6616 /* LaunchScreen.storyboard */,
@@ -75,6 +107,84 @@
 				AA732695284DE8B3003D6616 /* Localizable.strings */,
 			);
 			path = ShareYourFood;
+			sourceTree = "<group>";
+		};
+		AA73269B285A716D003D6616 /* api */ = {
+			isa = PBXGroup;
+			children = (
+				AA73269C285A716D003D6616 /* middlewares */,
+				AA73269E285A716D003D6616 /* models */,
+				AA7326A8285A716D003D6616 /* .gitignore */,
+				AA7326A9285A716D003D6616 /* package-lock.json */,
+				AA7326AA285A716D003D6616 /* package.json */,
+				AA7326AB285A716D003D6616 /* .env */,
+				AA7326AC285A716D003D6616 /* db */,
+				AA7326AF285A716D003D6616 /* tsconfig.json */,
+				AA7326B0285A716D003D6616 /* index.ts */,
+				AA7326B1285A716D003D6616 /* controllers */,
+				AA7326B8285A716D003D6616 /* routes */,
+			);
+			path = api;
+			sourceTree = "<group>";
+		};
+		AA73269C285A716D003D6616 /* middlewares */ = {
+			isa = PBXGroup;
+			children = (
+				AA73269D285A716D003D6616 /* auth.middleware.ts */,
+			);
+			path = middlewares;
+			sourceTree = "<group>";
+		};
+		AA73269E285A716D003D6616 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				AA73269F285A716D003D6616 /* user.model.ts */,
+				AA7326A0285A716D003D6616 /* evaluation.model.ts */,
+				AA7326A1285A716D003D6616 /* message.model.ts */,
+				AA7326A2285A716D003D6616 /* session.model.ts */,
+				AA7326A3285A716D003D6616 /* reservation.model.ts */,
+				AA7326A4285A716D003D6616 /* recipe.model.ts */,
+				AA7326A5285A716D003D6616 /* plate.model.ts */,
+				AA7326A6285A716D003D6616 /* index.ts */,
+				AA7326A7285A716D003D6616 /* chat.model.ts */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		AA7326AC285A716D003D6616 /* db */ = {
+			isa = PBXGroup;
+			children = (
+				AA7326AD285A716D003D6616 /* mfdb.mwb.bak */,
+				AA7326AE285A716D003D6616 /* mfdb.mwb */,
+			);
+			path = db;
+			sourceTree = "<group>";
+		};
+		AA7326B1285A716D003D6616 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AA7326B2285A716D003D6616 /* auth.controller.ts */,
+				AA7326B3285A716D003D6616 /* message.controller.ts */,
+				AA7326B4285A716D003D6616 /* reservation.controller.ts */,
+				AA7326B5285A716D003D6616 /* user.controller.ts */,
+				AA7326B6285A716D003D6616 /* recipe.controller.ts */,
+				AA7326B7285A716D003D6616 /* plate.controller.ts */,
+			);
+			path = controllers;
+			sourceTree = "<group>";
+		};
+		AA7326B8285A716D003D6616 /* routes */ = {
+			isa = PBXGroup;
+			children = (
+				AA7326B9285A716D003D6616 /* user.router.ts */,
+				AA7326BA285A716D003D6616 /* plate.router.ts */,
+				AA7326BB285A716D003D6616 /* recipe.router.ts */,
+				AA7326BC285A716D003D6616 /* reservation.router.ts */,
+				AA7326BD285A716D003D6616 /* message.router.ts */,
+				AA7326BE285A716D003D6616 /* index.ts */,
+				AA7326BF285A716D003D6616 /* auth.router.ts */,
+			);
+			path = routes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
