@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,9 @@
 		AA73268E284DDB16003D6616 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA73268C284DDB16003D6616 /* RegisterViewController.swift */; };
 		AA73268F284DDB16003D6616 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA73268D284DDB16003D6616 /* RegisterViewController.xib */; };
 		AA732693284DE8B3003D6616 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AA732695284DE8B3003D6616 /* Localizable.strings */; };
+		AA7326CC285A8FAF003D6616 /* MealRecipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7326CB285A8FAF003D6616 /* MealRecipe.swift */; };
+		AA7326CE285A900B003D6616 /* MealCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7326CD285A900B003D6616 /* MealCategory.swift */; };
+		AA7326D0285A9029003D6616 /* MealInfos.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7326CF285A9029003D6616 /* MealInfos.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +63,9 @@
 		AA7326BD285A716D003D6616 /* message.router.ts */ = {isa = PBXFileReference; lastKnownFileType = text; path = message.router.ts; sourceTree = "<group>"; };
 		AA7326BE285A716D003D6616 /* index.ts */ = {isa = PBXFileReference; lastKnownFileType = text; path = index.ts; sourceTree = "<group>"; };
 		AA7326BF285A716D003D6616 /* auth.router.ts */ = {isa = PBXFileReference; lastKnownFileType = text; path = auth.router.ts; sourceTree = "<group>"; };
+		AA7326CB285A8FAF003D6616 /* MealRecipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealRecipe.swift; sourceTree = "<group>"; };
+		AA7326CD285A900B003D6616 /* MealCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealCategory.swift; sourceTree = "<group>"; };
+		AA7326CF285A9029003D6616 /* MealInfos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealInfos.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +98,7 @@
 		AA73266B284D459B003D6616 /* ShareYourFood */ = {
 			isa = PBXGroup;
 			children = (
+				AA7326C4285A7F0F003D6616 /* Definitions */,
 				AA7326C3285A7443003D6616 /* Controllers */,
 				AA7326C0285A73F7003D6616 /* Platforms */,
 				AA73269B285A716D003D6616 /* api */,
@@ -216,6 +223,32 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		AA7326C4285A7F0F003D6616 /* Definitions */ = {
+			isa = PBXGroup;
+			children = (
+				AA7326C6285A7F8D003D6616 /* Services */,
+				AA7326C5285A7F18003D6616 /* Models */,
+			);
+			path = Definitions;
+			sourceTree = "<group>";
+		};
+		AA7326C5285A7F18003D6616 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AA7326CB285A8FAF003D6616 /* MealRecipe.swift */,
+				AA7326CD285A900B003D6616 /* MealCategory.swift */,
+				AA7326CF285A9029003D6616 /* MealInfos.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AA7326C6285A7F8D003D6616 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -252,7 +285,7 @@
 				};
 			};
 			buildConfigurationList = AA732664284D459B003D6616 /* Build configuration list for PBXProject "ShareYourFood" */;
-			compatibilityVersion = "Xcode 13.0";
+			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -290,6 +323,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA7326D0285A9029003D6616 /* MealInfos.swift in Sources */,
+				AA7326CE285A900B003D6616 /* MealCategory.swift in Sources */,
+				AA7326CC285A8FAF003D6616 /* MealRecipe.swift in Sources */,
 				AA73268E284DDB16003D6616 /* RegisterViewController.swift in Sources */,
 				AA73266D284D459B003D6616 /* AppDelegate.swift in Sources */,
 				AA732688284DD733003D6616 /* SubscribeViewController.swift in Sources */,
