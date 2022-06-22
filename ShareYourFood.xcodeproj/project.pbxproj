@@ -23,6 +23,8 @@
 		AA7326E4286394F5003D6616 /* SearchRecipeListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA7326E2286394F5003D6616 /* SearchRecipeListViewController.xib */; };
 		AA7326E728639565003D6616 /* SearchRecipeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7326E528639565003D6616 /* SearchRecipeTableViewController.swift */; };
 		AA7326E828639565003D6616 /* SearchRecipeTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA7326E628639565003D6616 /* SearchRecipeTableViewController.xib */; };
+		AA7326EA2863993D003D6616 /* RecioeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7326E92863993D003D6616 /* RecioeService.swift */; };
+		AA7326EE286399A3003D6616 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7326ED286399A3003D6616 /* Food.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +78,8 @@
 		AA7326E2286394F5003D6616 /* SearchRecipeListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchRecipeListViewController.xib; sourceTree = "<group>"; };
 		AA7326E528639565003D6616 /* SearchRecipeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRecipeTableViewController.swift; sourceTree = "<group>"; };
 		AA7326E628639565003D6616 /* SearchRecipeTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchRecipeTableViewController.xib; sourceTree = "<group>"; };
+		AA7326E92863993D003D6616 /* RecioeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecioeService.swift; sourceTree = "<group>"; };
+		AA7326ED286399A3003D6616 /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -236,9 +240,8 @@
 		AA7326C5285A7F18003D6616 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				AA7326CB285A8FAF003D6616 /* MealRecipe.swift */,
-				AA7326CD285A900B003D6616 /* MealCategory.swift */,
-				AA7326CF285A9029003D6616 /* MealInfos.swift */,
+				AA7326EC28639985003D6616 /* FoodModels */,
+				AA7326EB2863995A003D6616 /* MealModels */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -246,6 +249,7 @@
 		AA7326C6285A7F8D003D6616 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				AA7326E92863993D003D6616 /* RecioeService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -270,6 +274,24 @@
 				AA7326E628639565003D6616 /* SearchRecipeTableViewController.xib */,
 			);
 			path = Search;
+			sourceTree = "<group>";
+		};
+		AA7326EB2863995A003D6616 /* MealModels */ = {
+			isa = PBXGroup;
+			children = (
+				AA7326CB285A8FAF003D6616 /* MealRecipe.swift */,
+				AA7326CD285A900B003D6616 /* MealCategory.swift */,
+				AA7326CF285A9029003D6616 /* MealInfos.swift */,
+			);
+			path = MealModels;
+			sourceTree = "<group>";
+		};
+		AA7326EC28639985003D6616 /* FoodModels */ = {
+			isa = PBXGroup;
+			children = (
+				AA7326ED286399A3003D6616 /* Food.swift */,
+			);
+			path = FoodModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -348,6 +370,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA7326EE286399A3003D6616 /* Food.swift in Sources */,
 				AA7326E3286394F5003D6616 /* SearchRecipeListViewController.swift in Sources */,
 				AA7326D0285A9029003D6616 /* MealInfos.swift in Sources */,
 				AA7326E728639565003D6616 /* SearchRecipeTableViewController.swift in Sources */,
@@ -356,6 +379,7 @@
 				AA7326CC285A8FAF003D6616 /* MealRecipe.swift in Sources */,
 				AA73268E284DDB16003D6616 /* RegisterViewController.swift in Sources */,
 				AA73266D284D459B003D6616 /* AppDelegate.swift in Sources */,
+				AA7326EA2863993D003D6616 /* RecioeService.swift in Sources */,
 				AA732688284DD733003D6616 /* SubscribeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
