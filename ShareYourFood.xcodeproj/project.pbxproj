@@ -18,6 +18,11 @@
 		AA7326CC285A8FAF003D6616 /* MealRecipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7326CB285A8FAF003D6616 /* MealRecipe.swift */; };
 		AA7326CE285A900B003D6616 /* MealCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7326CD285A900B003D6616 /* MealCategory.swift */; };
 		AA7326D0285A9029003D6616 /* MealInfos.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7326CF285A9029003D6616 /* MealInfos.swift */; };
+		AA7326D4285E71F7003D6616 /* MealService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7326D3285E71F7003D6616 /* MealService.swift */; };
+		AA7326E3286394F5003D6616 /* SearchRecipeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7326E1286394F5003D6616 /* SearchRecipeListViewController.swift */; };
+		AA7326E4286394F5003D6616 /* SearchRecipeListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA7326E2286394F5003D6616 /* SearchRecipeListViewController.xib */; };
+		AA7326E728639565003D6616 /* SearchRecipeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7326E528639565003D6616 /* SearchRecipeTableViewController.swift */; };
+		AA7326E828639565003D6616 /* SearchRecipeTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA7326E628639565003D6616 /* SearchRecipeTableViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +71,11 @@
 		AA7326CB285A8FAF003D6616 /* MealRecipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealRecipe.swift; sourceTree = "<group>"; };
 		AA7326CD285A900B003D6616 /* MealCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealCategory.swift; sourceTree = "<group>"; };
 		AA7326CF285A9029003D6616 /* MealInfos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealInfos.swift; sourceTree = "<group>"; };
+		AA7326D3285E71F7003D6616 /* MealService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealService.swift; sourceTree = "<group>"; };
+		AA7326E1286394F5003D6616 /* SearchRecipeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRecipeListViewController.swift; sourceTree = "<group>"; };
+		AA7326E2286394F5003D6616 /* SearchRecipeListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchRecipeListViewController.xib; sourceTree = "<group>"; };
+		AA7326E528639565003D6616 /* SearchRecipeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRecipeTableViewController.swift; sourceTree = "<group>"; };
+		AA7326E628639565003D6616 /* SearchRecipeTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchRecipeTableViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,10 +116,6 @@
 				AA732675284D459C003D6616 /* Assets.xcassets */,
 				AA732677284D459C003D6616 /* LaunchScreen.storyboard */,
 				AA73267A284D459C003D6616 /* Info.plist */,
-				AA732686284DD733003D6616 /* SubscribeViewController.swift */,
-				AA732687284DD733003D6616 /* SubscribeViewController.xib */,
-				AA73268C284DDB16003D6616 /* RegisterViewController.swift */,
-				AA73268D284DDB16003D6616 /* RegisterViewController.xib */,
 				AA732695284DE8B3003D6616 /* Localizable.strings */,
 			);
 			path = ShareYourFood;
@@ -204,21 +210,16 @@
 		AA7326C1285A7414003D6616 /* WebServices */ = {
 			isa = PBXGroup;
 			children = (
+				AA7326D3285E71F7003D6616 /* MealService.swift */,
 			);
 			path = WebServices;
-			sourceTree = "<group>";
-		};
-		AA7326C2285A7426003D6616 /* Datasets */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Datasets;
 			sourceTree = "<group>";
 		};
 		AA7326C3285A7443003D6616 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				AA7326C2285A7426003D6616 /* Datasets */,
+				AA7326E028639491003D6616 /* Search */,
+				AA7326DF28639475003D6616 /* Authentification */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -247,6 +248,28 @@
 			children = (
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		AA7326DF28639475003D6616 /* Authentification */ = {
+			isa = PBXGroup;
+			children = (
+				AA732686284DD733003D6616 /* SubscribeViewController.swift */,
+				AA732687284DD733003D6616 /* SubscribeViewController.xib */,
+				AA73268C284DDB16003D6616 /* RegisterViewController.swift */,
+				AA73268D284DDB16003D6616 /* RegisterViewController.xib */,
+			);
+			path = Authentification;
+			sourceTree = "<group>";
+		};
+		AA7326E028639491003D6616 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				AA7326E1286394F5003D6616 /* SearchRecipeListViewController.swift */,
+				AA7326E2286394F5003D6616 /* SearchRecipeListViewController.xib */,
+				AA7326E528639565003D6616 /* SearchRecipeTableViewController.swift */,
+				AA7326E628639565003D6616 /* SearchRecipeTableViewController.xib */,
+			);
+			path = Search;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -308,8 +331,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA7326E4286394F5003D6616 /* SearchRecipeListViewController.xib in Resources */,
 				AA732693284DE8B3003D6616 /* Localizable.strings in Resources */,
 				AA732689284DD733003D6616 /* SubscribeViewController.xib in Resources */,
+				AA7326E828639565003D6616 /* SearchRecipeTableViewController.xib in Resources */,
 				AA732679284D459C003D6616 /* LaunchScreen.storyboard in Resources */,
 				AA732676284D459C003D6616 /* Assets.xcassets in Resources */,
 				AA73268F284DDB16003D6616 /* RegisterViewController.xib in Resources */,
@@ -323,7 +348,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA7326E3286394F5003D6616 /* SearchRecipeListViewController.swift in Sources */,
 				AA7326D0285A9029003D6616 /* MealInfos.swift in Sources */,
+				AA7326E728639565003D6616 /* SearchRecipeTableViewController.swift in Sources */,
+				AA7326D4285E71F7003D6616 /* MealService.swift in Sources */,
 				AA7326CE285A900B003D6616 /* MealCategory.swift in Sources */,
 				AA7326CC285A8FAF003D6616 /* MealRecipe.swift in Sources */,
 				AA73268E284DDB16003D6616 /* RegisterViewController.swift in Sources */,

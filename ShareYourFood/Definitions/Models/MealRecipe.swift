@@ -8,6 +8,7 @@
 import Foundation
 
 class MealRecipe {
+    
     init(id: String, name: String, category: String, area: String, instructions: String, thumb: URL, ingredient1: String, ingredient2: String, ingredient3: String, ingredient4: String, ingredient5: String, ingredient6: String, ingredient7: String, ingredient8: String, ingredient9: String, ingredient10: String, ingredient11: String, ingredient12: String, ingredient13: String, ingredient14: String, ingredient15: String, ingredient16: String, ingredient17: String, ingredient18: String, ingredient19: String, ingredient20: String, measure1: String, measure2: String, measure3: String, measure4: String, measure5: String, measure6: String, measure7: String, measure8: String, measure9: String, measure10: String, measure11: String, measure12: String, measure13: String, measure14: String, measure15: String, measure16: String, measure17: String, measure18: String, measure19: String, measure20: String) {
         self.id = id
         self.name = name
@@ -135,25 +136,25 @@ class MealRecipe {
               let ingredient19 = meal["strIngredient19"] as? String,
               let ingredient20 = meal["strIngredient20"] as? String,
               let measure1 = meal["strMeasure1"] as? String,
-              let measure2 = meal["strMeasure1"] as? String,
-              let measure3 = meal["strMeasure1"] as? String,
-              let measure4 = meal["strMeasure1"] as? String,
-              let measure5 = meal["strMeasure1"] as? String,
-              let measure6 = meal["strMeasure1"] as? String,
-              let measure7 = meal["strMeasure1"] as? String,
-              let measure8 = meal["strMeasure1"] as? String,
-              let measure9 = meal["strMeasure1"] as? String,
-              let measure10 = meal["strMeasure1"] as? String,
-              let measure11 = meal["strMeasure1"] as? String,
-              let measure12 = meal["strMeasure1"] as? String,
-              let measure13 = meal["strMeasure1"] as? String,
-              let measure14 = meal["strMeasure1"] as? String,
-              let measure15 = meal["strMeasure1"] as? String,
-              let measure16 = meal["strMeasure1"] as? String,
-              let measure17 = meal["strMeasure1"] as? String,
-              let measure18 = meal["strMeasure1"] as? String,
-              let measure19 = meal["strMeasure1"] as? String,
-              let measure20 = meal["strMeasure1"] as? String else {
+              let measure2 = meal["strMeasure2"] as? String,
+              let measure3 = meal["strMeasure3"] as? String,
+              let measure4 = meal["strMeasure4"] as? String,
+              let measure5 = meal["strMeasure5"] as? String,
+              let measure6 = meal["strMeasure6"] as? String,
+              let measure7 = meal["strMeasure7"] as? String,
+              let measure8 = meal["strMeasure8"] as? String,
+              let measure9 = meal["strMeasure9"] as? String,
+              let measure10 = meal["strMeasure10"] as? String,
+              let measure11 = meal["strMeasure11"] as? String,
+              let measure12 = meal["strMeasure12"] as? String,
+              let measure13 = meal["strMeasure13"] as? String,
+              let measure14 = meal["strMeasure14"] as? String,
+              let measure15 = meal["strMeasure15"] as? String,
+              let measure16 = meal["strMeasure16"] as? String,
+              let measure17 = meal["strMeasure17"] as? String,
+              let measure18 = meal["strMeasure18"] as? String,
+              let measure19 = meal["strMeasure19"] as? String,
+              let measure20 = meal["strMeasure20"] as? String else {
             return nil
         }
         self.init(id: id, name: name, category: category, area: area, instructions: instructions, thumb: thumb, ingredient1: ingredient1, ingredient2: ingredient2, ingredient3: ingredient3, ingredient4: ingredient4, ingredient5: ingredient5, ingredient6: ingredient6, ingredient7: ingredient7, ingredient8: ingredient8, ingredient9: ingredient9, ingredient10: ingredient10, ingredient11: ingredient11, ingredient12: ingredient12, ingredient13: ingredient13, ingredient14: ingredient14, ingredient15: ingredient15, ingredient16: ingredient16, ingredient17: ingredient17, ingredient18: ingredient18, ingredient19: ingredient19, ingredient20: ingredient20, measure1: measure1, measure2: measure2, measure3: measure3, measure4: measure4, measure5: measure5, measure6: measure6, measure7: measure7, measure8: measure8, measure9: measure9, measure10: measure10, measure11: measure11, measure12: measure12, measure13: measure13, measure14: measure14, measure15: measure15, measure16: measure16, measure17: measure17, measure18: measure18, measure19: measure19, measure20: measure20)
