@@ -25,17 +25,9 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     
     
     @IBAction func handleRegister(_ sender: Any) {
-        guard let email = self.emailTextField.text, let password = self.passwordTextField.text else {
-            self.displayErrorMessage(title: "Formulaire invalide", message: "Les champs sont obligatoires")
-            return
-        }
-        guard email.count >= 4 else { self.displayErrorMessage(title: "Formulaire invalide", message: "L'email n'est pas conforme")
-            return
-        }
         
-        guard password.count >= 6 else { self.displayErrorMessage(title: "Formulaire invalide", message: "Le mot de passe n'est pas conforme")
-            return
-        }
+        self.navigationController?.pushViewController(SearchRecipeCategoriesListViewController(), animated: true)
+
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -58,15 +50,5 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
             }
         }
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

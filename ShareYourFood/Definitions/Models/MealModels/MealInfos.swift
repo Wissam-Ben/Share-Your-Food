@@ -7,7 +7,7 @@
 
 import Foundation
 
-class MealDBMealInfos {
+class MealInfos {
     
     var idMeal: Int
     var strMeal: String

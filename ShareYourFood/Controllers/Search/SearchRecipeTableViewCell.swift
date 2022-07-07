@@ -9,6 +9,7 @@ import UIKit
 
 class SearchRecipeTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var recipeNameLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

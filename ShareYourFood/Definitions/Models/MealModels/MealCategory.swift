@@ -8,28 +8,27 @@
 import Foundation
 
 class MealCategory {
-    init(id: Int, name: String, thumb: URL, description: String) {
+    init(id: Int, name: String, description: String, thumb: String) {
         self.id = id
         self.name = name
-        self.thumb = thumb
         self.description = description
+        self.thumb = thumb
     }
     
     var id: Int
     var name: String
-    var thumb: URL
+    var thumb: String
     var description: String
     
-    
+    // let meal = dict["categories"] as? [String: Any],
     
     convenience init?(dict: [String: Any]) {
-        guard let meal = dict["categories"] as? [String: Any],
-              let id = meal["idCategory"] as? Int,
-              let name = meal["strCategory"] as? String,
-              let thumb = meal["strCategoryThumb"] as? URL,
-              let description = meal["strCategoryDescription"] as? String else {
+        guard let id = dict["idCategory"] as? String,
+              let name = dict["strCategory"] as? String,
+              let description = dict["strCategoryDescription"] as? String,
+              let thumb = dict["strCategoryThumb"] as? String else {
             return nil
         }
-        self.init(id: id, name: name, thumb: thumb, description: description)
+        self.init(id: 0, name: name, description: description, thumb: thumb)
     }
 }

@@ -7,16 +7,65 @@
 
 import UIKit
 
-class SearchRecipeCategoriesListViewController: UIViewController {
+class SearchRecipeCategoriesListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var categoryTableView: UITableView!
     @IBOutlet weak var categoriesIndicatorView: UIActivityIndicatorView!
+    var mealCategoryService : MealCategoryService = MealCategoryWebService()
+    
+    var categories: [MealCategory] = [] {
+        didSet {
+            self.categoryTableView.reloadData()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let nib = UINib(nibName: "SearchRecipeCategoriesTableViewController", bundle: <#T##Bundle?#>)
+        let nib = UINib(nibName: "SearchRecipeCategoriesTableViewCell", bundle: nil)
+        self.categoryTableView.register(nib, forCellReuseIdentifier: "CATEGORY_CELL_ID")
+        self.categoryTableView.delegate = self
+        self.categoryTableView.dataSource = self
+        self.mealCategoryService.fetchCategories { categories in
+            self.categoriesIndicatorView.stopAnimating()
+            self.categories = categories
+        }
+    }
+    
+    @objc func handleEditTableView() {
+        UIView.animate(withDuration: 0.66) {
+            self.categoryTableView.isEditing = !self.categoryTableView.isEditing
+        }
     }
 
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return categories.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let category = self.categories[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CATEGORY_CELL_ID", for: indexPath) as! SearchRecipeCategoriesTableViewCell
+        
+        cell.setCategory(with: category)
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 120
+    }
+    
+    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        let src = self.categories.remove(at: sourceIndexPath.row)
+        self.categories.insert(src, at: destinationIndexPath.row)
+    }
+    
+    // ne pas cliquer sur deselect => cela inverse la logique du clique 1 déclanche le dernier
+    // utiliser did
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let category = self.categories[indexPath.row]
+        print(category.name)
+    }
 
 }
