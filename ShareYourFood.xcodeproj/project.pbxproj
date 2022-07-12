@@ -12,24 +12,33 @@
 		AA732679284D459C003D6616 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA732677284D459C003D6616 /* LaunchScreen.storyboard */; };
 		AA732688284DD733003D6616 /* SubscribeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA732686284DD733003D6616 /* SubscribeViewController.swift */; };
 		AA732689284DD733003D6616 /* SubscribeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA732687284DD733003D6616 /* SubscribeViewController.xib */; };
-		AA73268E284DDB16003D6616 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA73268C284DDB16003D6616 /* RegisterViewController.swift */; };
-		AA73268F284DDB16003D6616 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA73268D284DDB16003D6616 /* RegisterViewController.xib */; };
 		AA732693284DE8B3003D6616 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AA732695284DE8B3003D6616 /* Localizable.strings */; };
 		AA7326CC285A8FAF003D6616 /* MealRecipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7326CB285A8FAF003D6616 /* MealRecipe.swift */; };
 		AA7326CE285A900B003D6616 /* MealCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7326CD285A900B003D6616 /* MealCategory.swift */; };
 		AA7326D0285A9029003D6616 /* MealInfos.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7326CF285A9029003D6616 /* MealInfos.swift */; };
 		AA7326D4285E71F7003D6616 /* MealService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7326D3285E71F7003D6616 /* MealService.swift */; };
-		AA7326E3286394F5003D6616 /* SearchRecipeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7326E1286394F5003D6616 /* SearchRecipeListViewController.swift */; };
 		AA7326EA2863993D003D6616 /* RecipeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7326E92863993D003D6616 /* RecipeService.swift */; };
 		AA7326EE286399A3003D6616 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7326ED286399A3003D6616 /* Food.swift */; };
 		AA7326F528643F2C003D6616 /* SearchRecipeCategoriesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7326F328643F2C003D6616 /* SearchRecipeCategoriesListViewController.swift */; };
 		AA7326F628643F2C003D6616 /* SearchRecipeCategoriesListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA7326F428643F2C003D6616 /* SearchRecipeCategoriesListViewController.xib */; };
 		AA7326FB2864494C003D6616 /* SearchRecipeCategoriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7326F92864494C003D6616 /* SearchRecipeCategoriesTableViewCell.swift */; };
 		AA7326FC2864494C003D6616 /* SearchRecipeCategoriesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA7326FA2864494C003D6616 /* SearchRecipeCategoriesTableViewCell.xib */; };
-		AA7326FF286478D4003D6616 /* SearchRecipeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7326FD286478D4003D6616 /* SearchRecipeTableViewCell.swift */; };
-		AA732700286478D4003D6616 /* SearchRecipeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA7326FE286478D4003D6616 /* SearchRecipeTableViewCell.xib */; };
 		AA73270228647A64003D6616 /* MealCategoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA73270128647A64003D6616 /* MealCategoryService.swift */; };
 		AA73270428647A82003D6616 /* MealCategoryWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA73270328647A82003D6616 /* MealCategoryWebService.swift */; };
+		AA9FD88828798D5500D970DA /* RecipeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9FD88628798D5500D970DA /* RecipeDetailsViewController.swift */; };
+		AA9FD88928798D5500D970DA /* RecipeDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA9FD88728798D5500D970DA /* RecipeDetailsViewController.xib */; };
+		AA9FD88C2879AC8400D970DA /* RecipesInfosListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9FD88A2879AC8400D970DA /* RecipesInfosListViewController.swift */; };
+		AA9FD88D2879AC8400D970DA /* RecipesInfosListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA9FD88B2879AC8400D970DA /* RecipesInfosListViewController.xib */; };
+		AA9FD8902879ACA200D970DA /* RecipeInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9FD88E2879ACA200D970DA /* RecipeInfoTableViewCell.swift */; };
+		AA9FD8912879ACA200D970DA /* RecipeInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA9FD88F2879ACA200D970DA /* RecipeInfoTableViewCell.xib */; };
+		AA9FD8942879C3B300D970DA /* RecipeDetailsMealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9FD8922879C3B300D970DA /* RecipeDetailsMealViewController.swift */; };
+		AA9FD8952879C3B300D970DA /* RecipeDetailsMealViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA9FD8932879C3B300D970DA /* RecipeDetailsMealViewController.xib */; };
+		AA9FD898287D4E2000D970DA /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9FD896287D4E2000D970DA /* LogInViewController.swift */; };
+		AA9FD899287D4E2000D970DA /* LogInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA9FD897287D4E2000D970DA /* LogInViewController.xib */; };
+		AA9FD89C287D93C900D970DA /* RecipeIngredientTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9FD89A287D93C900D970DA /* RecipeIngredientTableViewCell.swift */; };
+		AA9FD89D287D93C900D970DA /* RecipeIngredientTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA9FD89B287D93C900D970DA /* RecipeIngredientTableViewCell.xib */; };
+		AA9FD8A0287D963A00D970DA /* RecipeIngredientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9FD89E287D963A00D970DA /* RecipeIngredientsViewController.swift */; };
+		AA9FD8A1287D963A00D970DA /* RecipeIngredientsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA9FD89F287D963A00D970DA /* RecipeIngredientsViewController.xib */; };
 		AAF285FE2865A5C90060E039 /* MealCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF285FD2865A5C90060E039 /* MealCategories.swift */; };
 		AAF286002868906C0060E039 /* MealRecipeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF285FF2868906C0060E039 /* MealRecipeService.swift */; };
 		AAF28642286F93060060E039 /* MealRecipeWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF28641286F93060060E039 /* MealRecipeWebService.swift */; };
@@ -42,8 +51,6 @@
 		AA732678284D459C003D6616 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AA732686284DD733003D6616 /* SubscribeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribeViewController.swift; sourceTree = "<group>"; };
 		AA732687284DD733003D6616 /* SubscribeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubscribeViewController.xib; sourceTree = "<group>"; };
-		AA73268C284DDB16003D6616 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
-		AA73268D284DDB16003D6616 /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
 		AA732694284DE8B3003D6616 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		AA732696284DE8E8003D6616 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		AA73269D285A716D003D6616 /* auth.middleware.ts */ = {isa = PBXFileReference; lastKnownFileType = text; path = auth.middleware.ts; sourceTree = "<group>"; };
@@ -81,19 +88,29 @@
 		AA7326CD285A900B003D6616 /* MealCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealCategory.swift; sourceTree = "<group>"; };
 		AA7326CF285A9029003D6616 /* MealInfos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealInfos.swift; sourceTree = "<group>"; };
 		AA7326D3285E71F7003D6616 /* MealService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealService.swift; sourceTree = "<group>"; };
-		AA7326E1286394F5003D6616 /* SearchRecipeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRecipeListViewController.swift; sourceTree = "<group>"; };
-		AA7326E2286394F5003D6616 /* SearchRecipeListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchRecipeListViewController.xib; sourceTree = "<group>"; };
 		AA7326E92863993D003D6616 /* RecipeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeService.swift; sourceTree = "<group>"; };
 		AA7326ED286399A3003D6616 /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 		AA7326F328643F2C003D6616 /* SearchRecipeCategoriesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRecipeCategoriesListViewController.swift; sourceTree = "<group>"; };
 		AA7326F428643F2C003D6616 /* SearchRecipeCategoriesListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchRecipeCategoriesListViewController.xib; sourceTree = "<group>"; };
 		AA7326F92864494C003D6616 /* SearchRecipeCategoriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRecipeCategoriesTableViewCell.swift; sourceTree = "<group>"; };
 		AA7326FA2864494C003D6616 /* SearchRecipeCategoriesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchRecipeCategoriesTableViewCell.xib; sourceTree = "<group>"; };
-		AA7326FD286478D4003D6616 /* SearchRecipeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRecipeTableViewCell.swift; sourceTree = "<group>"; };
-		AA7326FE286478D4003D6616 /* SearchRecipeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchRecipeTableViewCell.xib; sourceTree = "<group>"; };
 		AA73270128647A64003D6616 /* MealCategoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealCategoryService.swift; sourceTree = "<group>"; };
 		AA73270328647A82003D6616 /* MealCategoryWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealCategoryWebService.swift; sourceTree = "<group>"; };
 		AA7327072864E14E003D6616 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA9FD88628798D5500D970DA /* RecipeDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailsViewController.swift; sourceTree = "<group>"; };
+		AA9FD88728798D5500D970DA /* RecipeDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipeDetailsViewController.xib; sourceTree = "<group>"; };
+		AA9FD88A2879AC8400D970DA /* RecipesInfosListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesInfosListViewController.swift; sourceTree = "<group>"; };
+		AA9FD88B2879AC8400D970DA /* RecipesInfosListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipesInfosListViewController.xib; sourceTree = "<group>"; };
+		AA9FD88E2879ACA200D970DA /* RecipeInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeInfoTableViewCell.swift; sourceTree = "<group>"; };
+		AA9FD88F2879ACA200D970DA /* RecipeInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipeInfoTableViewCell.xib; sourceTree = "<group>"; };
+		AA9FD8922879C3B300D970DA /* RecipeDetailsMealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailsMealViewController.swift; sourceTree = "<group>"; };
+		AA9FD8932879C3B300D970DA /* RecipeDetailsMealViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipeDetailsMealViewController.xib; sourceTree = "<group>"; };
+		AA9FD896287D4E2000D970DA /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		AA9FD897287D4E2000D970DA /* LogInViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LogInViewController.xib; sourceTree = "<group>"; };
+		AA9FD89A287D93C900D970DA /* RecipeIngredientTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeIngredientTableViewCell.swift; sourceTree = "<group>"; };
+		AA9FD89B287D93C900D970DA /* RecipeIngredientTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipeIngredientTableViewCell.xib; sourceTree = "<group>"; };
+		AA9FD89E287D963A00D970DA /* RecipeIngredientsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeIngredientsViewController.swift; sourceTree = "<group>"; };
+		AA9FD89F287D963A00D970DA /* RecipeIngredientsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipeIngredientsViewController.xib; sourceTree = "<group>"; };
 		AAF285FD2865A5C90060E039 /* MealCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealCategories.swift; sourceTree = "<group>"; };
 		AAF285FF2868906C0060E039 /* MealRecipeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealRecipeService.swift; sourceTree = "<group>"; };
 		AAF28641286F93060060E039 /* MealRecipeWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealRecipeWebService.swift; sourceTree = "<group>"; };
@@ -280,8 +297,8 @@
 			children = (
 				AA732686284DD733003D6616 /* SubscribeViewController.swift */,
 				AA732687284DD733003D6616 /* SubscribeViewController.xib */,
-				AA73268C284DDB16003D6616 /* RegisterViewController.swift */,
-				AA73268D284DDB16003D6616 /* RegisterViewController.xib */,
+				AA9FD896287D4E2000D970DA /* LogInViewController.swift */,
+				AA9FD897287D4E2000D970DA /* LogInViewController.xib */,
 			);
 			path = Authentification;
 			sourceTree = "<group>";
@@ -289,14 +306,22 @@
 		AA7326E028639491003D6616 /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				AA7326E1286394F5003D6616 /* SearchRecipeListViewController.swift */,
-				AA7326E2286394F5003D6616 /* SearchRecipeListViewController.xib */,
-				AA7326FD286478D4003D6616 /* SearchRecipeTableViewCell.swift */,
-				AA7326FE286478D4003D6616 /* SearchRecipeTableViewCell.xib */,
 				AA7326F328643F2C003D6616 /* SearchRecipeCategoriesListViewController.swift */,
 				AA7326F428643F2C003D6616 /* SearchRecipeCategoriesListViewController.xib */,
 				AA7326F92864494C003D6616 /* SearchRecipeCategoriesTableViewCell.swift */,
 				AA7326FA2864494C003D6616 /* SearchRecipeCategoriesTableViewCell.xib */,
+				AA9FD88628798D5500D970DA /* RecipeDetailsViewController.swift */,
+				AA9FD88728798D5500D970DA /* RecipeDetailsViewController.xib */,
+				AA9FD88A2879AC8400D970DA /* RecipesInfosListViewController.swift */,
+				AA9FD88B2879AC8400D970DA /* RecipesInfosListViewController.xib */,
+				AA9FD88E2879ACA200D970DA /* RecipeInfoTableViewCell.swift */,
+				AA9FD88F2879ACA200D970DA /* RecipeInfoTableViewCell.xib */,
+				AA9FD8922879C3B300D970DA /* RecipeDetailsMealViewController.swift */,
+				AA9FD8932879C3B300D970DA /* RecipeDetailsMealViewController.xib */,
+				AA9FD89A287D93C900D970DA /* RecipeIngredientTableViewCell.swift */,
+				AA9FD89B287D93C900D970DA /* RecipeIngredientTableViewCell.xib */,
+				AA9FD89E287D963A00D970DA /* RecipeIngredientsViewController.swift */,
+				AA9FD89F287D963A00D970DA /* RecipeIngredientsViewController.xib */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -379,13 +404,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA9FD8A1287D963A00D970DA /* RecipeIngredientsViewController.xib in Resources */,
+				AA9FD88D2879AC8400D970DA /* RecipesInfosListViewController.xib in Resources */,
 				AA7326F628643F2C003D6616 /* SearchRecipeCategoriesListViewController.xib in Resources */,
+				AA9FD89D287D93C900D970DA /* RecipeIngredientTableViewCell.xib in Resources */,
 				AA732693284DE8B3003D6616 /* Localizable.strings in Resources */,
 				AA732689284DD733003D6616 /* SubscribeViewController.xib in Resources */,
-				AA732700286478D4003D6616 /* SearchRecipeTableViewCell.xib in Resources */,
+				AA9FD88928798D5500D970DA /* RecipeDetailsViewController.xib in Resources */,
+				AA9FD8912879ACA200D970DA /* RecipeInfoTableViewCell.xib in Resources */,
+				AA9FD8952879C3B300D970DA /* RecipeDetailsMealViewController.xib in Resources */,
 				AA732679284D459C003D6616 /* LaunchScreen.storyboard in Resources */,
+				AA9FD899287D4E2000D970DA /* LogInViewController.xib in Resources */,
 				AA732676284D459C003D6616 /* Assets.xcassets in Resources */,
-				AA73268F284DDB16003D6616 /* RegisterViewController.xib in Resources */,
 				AA7326FC2864494C003D6616 /* SearchRecipeCategoriesTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -397,23 +427,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA9FD88C2879AC8400D970DA /* RecipesInfosListViewController.swift in Sources */,
 				AA7326EE286399A3003D6616 /* Food.swift in Sources */,
-				AA7326E3286394F5003D6616 /* SearchRecipeListViewController.swift in Sources */,
+				AA9FD89C287D93C900D970DA /* RecipeIngredientTableViewCell.swift in Sources */,
 				AA7326D0285A9029003D6616 /* MealInfos.swift in Sources */,
 				AA7326FB2864494C003D6616 /* SearchRecipeCategoriesTableViewCell.swift in Sources */,
 				AAF285FE2865A5C90060E039 /* MealCategories.swift in Sources */,
-				AA7326FF286478D4003D6616 /* SearchRecipeTableViewCell.swift in Sources */,
 				AAF286002868906C0060E039 /* MealRecipeService.swift in Sources */,
 				AAF28642286F93060060E039 /* MealRecipeWebService.swift in Sources */,
 				AA7326D4285E71F7003D6616 /* MealService.swift in Sources */,
+				AA9FD8A0287D963A00D970DA /* RecipeIngredientsViewController.swift in Sources */,
+				AA9FD8942879C3B300D970DA /* RecipeDetailsMealViewController.swift in Sources */,
 				AA7326F528643F2C003D6616 /* SearchRecipeCategoriesListViewController.swift in Sources */,
 				AA7326CE285A900B003D6616 /* MealCategory.swift in Sources */,
 				AA73270428647A82003D6616 /* MealCategoryWebService.swift in Sources */,
 				AA73270228647A64003D6616 /* MealCategoryService.swift in Sources */,
+				AA9FD88828798D5500D970DA /* RecipeDetailsViewController.swift in Sources */,
 				AA7326CC285A8FAF003D6616 /* MealRecipe.swift in Sources */,
-				AA73268E284DDB16003D6616 /* RegisterViewController.swift in Sources */,
 				AA73266D284D459B003D6616 /* AppDelegate.swift in Sources */,
+				AA9FD898287D4E2000D970DA /* LogInViewController.swift in Sources */,
 				AA7326EA2863993D003D6616 /* RecipeService.swift in Sources */,
+				AA9FD8902879ACA200D970DA /* RecipeInfoTableViewCell.swift in Sources */,
 				AA732688284DD733003D6616 /* SubscribeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

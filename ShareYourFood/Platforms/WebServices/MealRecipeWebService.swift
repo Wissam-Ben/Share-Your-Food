@@ -8,12 +8,13 @@
 import Foundation
 
 class MealRecipeWebService : MealRecipeService {
-    func fetchRecipes(completion: @escaping ([MealInfos]) -> Void) {
+    
+    func fetchRecipesByCategory(completion: @escaping ([MealInfos]) -> Void) {
         
         print("créer URL")
-        guard let url = URL(string: "https://www.themealdb.com/api/json/v1/1/categories.php") else {
+        guard let url = URL(string: "https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood") else {
             completion([])
-            print("Helllllooooo impossibke de créer URL")// impossible de créer l'url
+            print("Helllllooooo impossible de créer URL")// impossible de créer l'url
             return
         }
                 
@@ -34,6 +35,37 @@ class MealRecipeWebService : MealRecipeService {
             print(recipeInfosObjects)
             DispatchQueue.main.async {
                 completion(recipeInfosObjects) // écoute le résultat
+            }
+        }
+        dataTask.resume()
+    }
+    
+    func fetchRecipeDetailsById(completion: @escaping ([MealRecipe]) -> Void, id: String) {
+        print("Helllllooooo créer URL")
+        guard let url = URL(string: "www.themealdb.com/api/json/v1/1/lookup.php?i=" + id) else {
+            completion([])
+            print("Helllllooooo impossible de créer URL")// impossible de créer l'url
+            return
+        }
+                
+        let dataTask = URLSession.shared.dataTask(with: url) { data, res, err in
+            guard let fetchData = data,
+                  let json = try? JSONSerialization.jsonObject(with: fetchData) as? [String: Any],
+                  let details = json["meals"] as? [ [String: Any] ] else {
+                DispatchQueue.main.async {
+                    print("completion");
+                    completion([]) // écoute le résultat
+                }
+                return
+            }
+            //print(json)
+            let recipe: [MealRecipe] = details.compactMap{ obj in
+                //print(obj)
+                return MealRecipe(dict: obj)
+            }
+            //print(categoryObjects)
+            DispatchQueue.main.async {
+                completion(recipe) // écoute le résultat
             }
         }
         dataTask.resume()

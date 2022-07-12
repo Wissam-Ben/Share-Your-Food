@@ -9,21 +9,20 @@ import Foundation
 
 class MealInfos {
     
-    var idMeal: Int
+    var idMeal: String
     var strMeal: String
     var strMealThumb: String
     
-    init(idMeal: Int, strMeal: String, strMealThumb: String) {
+    init(idMeal: String, strMeal: String, strMealThumb: String) {
         self.idMeal = idMeal
         self.strMeal = strMeal
         self.strMealThumb = strMealThumb
     }
     
     convenience init?(dict: [String: Any]) {
-        guard let meal = dict["meals"] as? [String: Any],
-              let idMeal = meal["idMeal"] as? Int,
-              let strMeal = meal["strMeal"] as? String,
-              let strMealThumb = meal["strMealThumb"] as? String else {
+        guard let idMeal = dict["idMeal"] as? String,
+              let strMeal = dict["strMeal"] as? String,
+              let strMealThumb = dict["strMealThumb"] as? String else {
             return nil
         }
         self.init(idMeal: idMeal, strMeal: strMeal, strMealThumb: strMealThumb)

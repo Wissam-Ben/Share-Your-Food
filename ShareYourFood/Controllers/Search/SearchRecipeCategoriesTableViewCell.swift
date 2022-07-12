@@ -19,35 +19,35 @@ class SearchRecipeCategoriesTableViewCell: UITableViewCell {
     }
     
     func setCategory(with category: MealCategory) {
-        var imageCategory = setImageAnime(animeImageString: category.thumb)
+        var imageCategory = setImageCategory(categoryImageString: category.thumb)
         self.categoryImage.image = imageCategory
         self.categoryName.text = category.name
         //self.categoryDescription.text = category.description
-        //self.categoryDescription.numberOfLines = 0
-        //print(category.description)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
     
-    private func setImageAnime(animeImageString: String) -> UIImage{
-            let url = URL(string: animeImageString)
-            let data = try? Data(contentsOf: url!)
+    private func setImageCategory(categoryImageString: String) -> UIImage{
+        let url = URL(string: categoryImageString)
+        let data = try? Data(contentsOf: url!)
 
-            let animeImage: UIImage
+        let categoryImage: UIImage
 
-            if let imageData = data {
-                animeImage = UIImage(data: imageData)!
-            } else {
-                let imageName = "not_found"
-                let image = UIImage(named: imageName)
-                animeImage = image!
-            }
-
-            return animeImage
+        if let imageData = data {
+            categoryImage = UIImage(data: imageData)!
+        } else {
+            let imageName = "not_found"
+            let image = UIImage(named: imageName)
+            categoryImage = image!
         }
+        
+        return categoryImage
+    }
+    
+    
     
 }

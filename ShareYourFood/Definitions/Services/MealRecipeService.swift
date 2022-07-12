@@ -8,5 +8,6 @@
 import Foundation
 
 protocol MealRecipeService {
-    func fetchRecipes(completion: @escaping ([MealInfos]) -> Void) -> Void;
+    func fetchRecipesByCategory(completion: @escaping ([MealInfos]) -> Void) -> Void;
+    func fetchRecipeDetailsById(completion: @escaping ([MealRecipe]) -> Void, id: String) -> Void;
 }

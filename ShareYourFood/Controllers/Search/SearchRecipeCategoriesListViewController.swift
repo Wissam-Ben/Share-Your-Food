@@ -45,9 +45,7 @@ class SearchRecipeCategoriesListViewController: UIViewController, UITableViewDel
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let category = self.categories[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "CATEGORY_CELL_ID", for: indexPath) as! SearchRecipeCategoriesTableViewCell
-        
         cell.setCategory(with: category)
-        
         return cell
     }
     
@@ -60,12 +58,10 @@ class SearchRecipeCategoriesListViewController: UIViewController, UITableViewDel
         self.categories.insert(src, at: destinationIndexPath.row)
     }
     
-    // ne pas cliquer sur deselect => cela inverse la logique du clique 1 déclanche le dernier
-    // utiliser did
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let category = self.categories[indexPath.row]
+        self.navigationController?.pushViewController(RecipesInfosListViewController(), animated: true)
         print(category.name)
     }
-
+    
 }

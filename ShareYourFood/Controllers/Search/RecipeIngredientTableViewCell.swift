@@ -1,15 +1,14 @@
 //
-//  SearchRecipeTableViewCell.swift
+//  RecipeIngredientTableViewCell.swift
 //  ShareYourFood
 //
-//  Created by Benadjaoud Wissam on 23/06/2022.
+//  Created by Benadjaoud Wissam on 12/07/2022.
 //
 
 import UIKit
 
-class SearchRecipeTableViewCell: UITableViewCell {
+class RecipeIngredientTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var recipeNameLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

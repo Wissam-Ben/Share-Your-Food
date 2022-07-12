@@ -8,14 +8,14 @@
 import Foundation
 
 class MealCategory {
-    init(id: Int, name: String, description: String, thumb: String) {
+    init(id: String, name: String, description: String, thumb: String) {
         self.id = id
         self.name = name
         self.description = description
         self.thumb = thumb
     }
     
-    var id: Int
+    var id: String
     var name: String
     var thumb: String
     var description: String
@@ -29,6 +29,6 @@ class MealCategory {
               let thumb = dict["strCategoryThumb"] as? String else {
             return nil
         }
-        self.init(id: 0, name: name, description: description, thumb: thumb)
+        self.init(id: id, name: name, description: description, thumb: thumb)
     }
 }

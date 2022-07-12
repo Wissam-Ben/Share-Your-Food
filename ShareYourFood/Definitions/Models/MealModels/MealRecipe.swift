@@ -9,7 +9,7 @@ import Foundation
 
 class MealRecipe {
     
-    init(id: String, name: String, category: String, area: String, instructions: String, thumb: URL, ingredient1: String, ingredient2: String, ingredient3: String, ingredient4: String, ingredient5: String, ingredient6: String, ingredient7: String, ingredient8: String, ingredient9: String, ingredient10: String, ingredient11: String, ingredient12: String, ingredient13: String, ingredient14: String, ingredient15: String, ingredient16: String, ingredient17: String, ingredient18: String, ingredient19: String, ingredient20: String, measure1: String, measure2: String, measure3: String, measure4: String, measure5: String, measure6: String, measure7: String, measure8: String, measure9: String, measure10: String, measure11: String, measure12: String, measure13: String, measure14: String, measure15: String, measure16: String, measure17: String, measure18: String, measure19: String, measure20: String) {
+    init(id: String, name: String, category: String, area: String, instructions: String, thumb: String, ingredient1: String, ingredient2: String, ingredient3: String, ingredient4: String, ingredient5: String, ingredient6: String, ingredient7: String, ingredient8: String, ingredient9: String, ingredient10: String, ingredient11: String, ingredient12: String, ingredient13: String, ingredient14: String, ingredient15: String, ingredient16: String, ingredient17: String, ingredient18: String, ingredient19: String, ingredient20: String, measure1: String, measure2: String, measure3: String, measure4: String, measure5: String, measure6: String, measure7: String, measure8: String, measure9: String, measure10: String, measure11: String, measure12: String, measure13: String, measure14: String, measure15: String, measure16: String, measure17: String, measure18: String, measure19: String, measure20: String) {
         self.id = id
         self.name = name
         self.category = category
@@ -64,7 +64,7 @@ class MealRecipe {
     var category: String
     var area: String
     var instructions: String
-    var thumb: URL
+    var thumb: String
     //var youtube: URL
     var ingredient1: String
     var ingredient2: String
@@ -114,7 +114,7 @@ class MealRecipe {
               let category = meal["strCategory"] as? String,
               let area = meal["strArea"] as? String,
               let instructions = meal["strInstructions"] as? String,
-              let thumb = meal["strMealThumb"] as? URL,
+              let thumb = meal["strMealThumb"] as? String,
               let ingredient1 = meal["strIngredient1"] as? String,
               let ingredient2 = meal["strIngredient2"] as? String,
               let ingredient3 = meal["strIngredient3"] as? String,

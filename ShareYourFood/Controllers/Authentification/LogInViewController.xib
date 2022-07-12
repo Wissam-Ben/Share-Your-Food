@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LogInViewController" customModule="ShareYourFood" customModuleProvider="target">
+            <connections>
+                <outlet property="loginButton" destination="2Tf-aO-IZP" id="t1v-JP-pM3"/>
+                <outlet property="passwordTextField" destination="Adg-Tr-Qfe" id="aXu-CC-l0M"/>
+                <outlet property="usernameTextField" destination="cpI-WZ-AmX" id="qdd-ax-3By"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cpI-WZ-AmX">
+                    <rect key="frame" x="20" y="344" width="374" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Adg-Tr-Qfe">
+                    <rect key="frame" x="20" y="408" width="374" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Tf-aO-IZP">
+                    <rect key="frame" x="175" y="472" width="64" height="31"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="Log in"/>
+                    <connections>
+                        <action selector="handleLogin:" destination="-1" eventType="touchUpInside" id="dba-Ts-IpU"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="2Tf-aO-IZP" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="32I-s9-DYw"/>
+                <constraint firstItem="Adg-Tr-Qfe" firstAttribute="top" secondItem="cpI-WZ-AmX" secondAttribute="bottom" constant="30" id="Gtd-It-x3x"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Adg-Tr-Qfe" secondAttribute="trailing" constant="20" id="JuT-YL-xFD"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="cpI-WZ-AmX" secondAttribute="trailing" constant="20" id="NPn-Sv-hQQ"/>
+                <constraint firstItem="cpI-WZ-AmX" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="PsB-sB-VR4"/>
+                <constraint firstItem="2Tf-aO-IZP" firstAttribute="top" secondItem="Adg-Tr-Qfe" secondAttribute="bottom" constant="30" id="U26-DY-hWk"/>
+                <constraint firstItem="cpI-WZ-AmX" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="300" id="bui-ff-C7l"/>
+                <constraint firstItem="Adg-Tr-Qfe" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="dcl-rf-3nY"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="96"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
