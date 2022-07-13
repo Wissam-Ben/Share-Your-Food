@@ -59,9 +59,18 @@ class SearchRecipeCategoriesListViewController: UIViewController, UITableViewDel
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let recipes = RecipesInfosListViewController()
+        
         let category = self.categories[indexPath.row]
-        self.navigationController?.pushViewController(RecipesInfosListViewController(), animated: true)
+    
+        recipes.configure(with: category)
+        
+        self.navigationController?.pushViewController(recipes, animated: true)
+        
         print(category.name)
     }
+    
+    
     
 }

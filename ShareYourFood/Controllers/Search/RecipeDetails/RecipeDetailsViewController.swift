@@ -9,9 +9,26 @@ import UIKit
 
 class RecipeDetailsViewController: UIViewController {
 
+    var recipeId: String!
+    
+    var recipe: MealRecipe!
+    
+    var mealRecipeService: MealRecipeService = MealRecipeWebService()
+    
+    
+    @IBOutlet weak var recipeImageView: UIImageView!
+    @IBOutlet weak var recipeNameTextView: UILabel!
+    @IBOutlet weak var areaTextViewController: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.mealRecipeService.fetchRecipeDetailsById(completion: { recipes in
+            print(recipes)
+            self.recipe = recipes.first
+        }, id: self.recipeId)
     }
+
     
     private func setImageRecipe(recipeImageString: String) -> UIImage{
         let url = URL(string: recipeImageString)
@@ -26,5 +43,10 @@ class RecipeDetailsViewController: UIViewController {
         }
         return recipeImage
     }
-
+    
+    func configure(with recipe: MealInfos) {
+        self.recipeId = recipe.idMeal
+    }
+    
+    
 }

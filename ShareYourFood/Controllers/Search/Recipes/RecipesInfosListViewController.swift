@@ -10,12 +10,22 @@ import UIKit
 class RecipesInfosListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var recipesListView: UITableView!
+    
+    var searchCategory: SearchRecipeCategoriesTableViewCell = SearchRecipeCategoriesTableViewCell()
+    
+    var category: String = ""
+    
     var mealRecipeService : MealRecipeService = MealRecipeWebService()
+
     
     var recipes: [MealInfos] = [] {
         didSet {
             self.recipesListView.reloadData()
         }
+    }
+    
+    func configure(with category: MealCategory) {
+        self.category = category.name
     }
     
     override func viewDidLoad() {
@@ -25,9 +35,10 @@ class RecipesInfosListViewController: UIViewController, UITableViewDelegate, UIT
         self.recipesListView.register(nib, forCellReuseIdentifier: "RECIPE_INFO_CELL_ID")
         self.recipesListView.delegate = self
         self.recipesListView.dataSource = self
-        self.mealRecipeService.fetchRecipesByCategory { categories in
+        print(category)
+        self.mealRecipeService.fetchRecipesByCategory( completion: { categories in
             self.recipes = categories
-        }
+        }, category: self.category)
 
     }
 
@@ -58,8 +69,16 @@ class RecipesInfosListViewController: UIViewController, UITableViewDelegate, UIT
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let recipeDetails = RecipeDetailsViewController()
+        
         let recipe = self.recipes[indexPath.row]
-        self.navigationController?.pushViewController(Lo(), animated: true)
+        
+        recipeDetails.configure(with: recipe)
+        
+        print(recipe.idMeal)
+        
+        self.navigationController?.pushViewController(recipeDetails, animated: true)
         print(recipe.strMeal)
     }
     
