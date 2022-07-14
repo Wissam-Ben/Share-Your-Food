@@ -42,7 +42,7 @@ class MealRecipeWebService : MealRecipeService {
     
     func fetchRecipeDetailsById(completion: @escaping ([MealRecipe]) -> Void, id: String) {
         print("Helllllooooo créer URL")
-        guard let url = URL(string: "www.themealdb.com/api/json/v1/1/lookup.php?i=" + id) else {
+        guard let url = URL(string: "https://www.themealdb.com/api/json/v1/1/lookup.php?i=" + id) else {
             completion([])
             print("Helllllooooo impossible de créer URL")// impossible de créer l'url
             return
@@ -51,11 +51,12 @@ class MealRecipeWebService : MealRecipeService {
         print(url)
                 
         let dataTask = URLSession.shared.dataTask(with: url) { data, res, err in
-            guard let fetchData = data,
+            guard err == nil,
+                  let fetchData = data,
                   let json = try? JSONSerialization.jsonObject(with: fetchData) as? [String: Any],
                   let details = json["meals"] as? [ [String: Any] ] else {
                 DispatchQueue.main.async {
-                    print("completion");
+                    print("completion!!!!!");
                     completion([]) // écoute le résultat
                 }
                 return
