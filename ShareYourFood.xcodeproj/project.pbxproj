@@ -33,6 +33,15 @@
 		AA9FD8912879ACA200D970DA /* RecipeInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA9FD88F2879ACA200D970DA /* RecipeInfoTableViewCell.xib */; };
 		AA9FD898287D4E2000D970DA /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9FD896287D4E2000D970DA /* LogInViewController.swift */; };
 		AA9FD899287D4E2000D970DA /* LogInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA9FD897287D4E2000D970DA /* LogInViewController.xib */; };
+		AA9FD8AA2881C0B100D970DA /* FoodService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9FD8A92881C0B100D970DA /* FoodService.swift */; };
+		AA9FD8B12881C0E300D970DA /* UserSubscribe.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9FD8AB2881C0E300D970DA /* UserSubscribe.swift */; };
+		AA9FD8B22881C0E300D970DA /* Evaluation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9FD8AC2881C0E300D970DA /* Evaluation.swift */; };
+		AA9FD8B32881C0E300D970DA /* PlateRecipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9FD8AD2881C0E300D970DA /* PlateRecipe.swift */; };
+		AA9FD8B42881C0E300D970DA /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9FD8AE2881C0E300D970DA /* Session.swift */; };
+		AA9FD8B52881C0E300D970DA /* Plate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9FD8AF2881C0E300D970DA /* Plate.swift */; };
+		AA9FD8B62881C0E300D970DA /* Reservation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9FD8B02881C0E300D970DA /* Reservation.swift */; };
+		AA9FD8B82881C11300D970DA /* FoodWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9FD8B72881C11300D970DA /* FoodWebService.swift */; };
+		AA9FD8BA2881C27400D970DA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9FD8B92881C27400D970DA /* User.swift */; };
 		AAF285FE2865A5C90060E039 /* MealCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF285FD2865A5C90060E039 /* MealCategories.swift */; };
 		AAF286002868906C0060E039 /* MealRecipeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF285FF2868906C0060E039 /* MealRecipeService.swift */; };
 		AAF28642286F93060060E039 /* MealRecipeWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF28641286F93060060E039 /* MealRecipeWebService.swift */; };
@@ -99,6 +108,15 @@
 		AA9FD88F2879ACA200D970DA /* RecipeInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipeInfoTableViewCell.xib; sourceTree = "<group>"; };
 		AA9FD896287D4E2000D970DA /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		AA9FD897287D4E2000D970DA /* LogInViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LogInViewController.xib; sourceTree = "<group>"; };
+		AA9FD8A92881C0B100D970DA /* FoodService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodService.swift; sourceTree = "<group>"; };
+		AA9FD8AB2881C0E300D970DA /* UserSubscribe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSubscribe.swift; sourceTree = "<group>"; };
+		AA9FD8AC2881C0E300D970DA /* Evaluation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Evaluation.swift; sourceTree = "<group>"; };
+		AA9FD8AD2881C0E300D970DA /* PlateRecipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlateRecipe.swift; sourceTree = "<group>"; };
+		AA9FD8AE2881C0E300D970DA /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		AA9FD8AF2881C0E300D970DA /* Plate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Plate.swift; sourceTree = "<group>"; };
+		AA9FD8B02881C0E300D970DA /* Reservation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reservation.swift; sourceTree = "<group>"; };
+		AA9FD8B72881C11300D970DA /* FoodWebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodWebService.swift; sourceTree = "<group>"; };
+		AA9FD8B92881C27400D970DA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		AAF285FD2865A5C90060E039 /* MealCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealCategories.swift; sourceTree = "<group>"; };
 		AAF285FF2868906C0060E039 /* MealRecipeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealRecipeService.swift; sourceTree = "<group>"; };
 		AAF28641286F93060060E039 /* MealRecipeWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealRecipeWebService.swift; sourceTree = "<group>"; };
@@ -236,6 +254,7 @@
 		AA7326C1285A7414003D6616 /* WebServices */ = {
 			isa = PBXGroup;
 			children = (
+				AA9FD8B72881C11300D970DA /* FoodWebService.swift */,
 				AA7326D3285E71F7003D6616 /* MealService.swift */,
 				AA73270328647A82003D6616 /* MealCategoryWebService.swift */,
 				AAF28641286F93060060E039 /* MealRecipeWebService.swift */,
@@ -273,6 +292,7 @@
 		AA7326C6285A7F8D003D6616 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				AA9FD8A92881C0B100D970DA /* FoodService.swift */,
 				AA7326E92863993D003D6616 /* RecipeService.swift */,
 				AA73270128647A64003D6616 /* MealCategoryService.swift */,
 				AAF285FF2868906C0060E039 /* MealRecipeService.swift */,
@@ -316,6 +336,13 @@
 			isa = PBXGroup;
 			children = (
 				AA7326ED286399A3003D6616 /* Food.swift */,
+				AA9FD8AC2881C0E300D970DA /* Evaluation.swift */,
+				AA9FD8AF2881C0E300D970DA /* Plate.swift */,
+				AA9FD8AD2881C0E300D970DA /* PlateRecipe.swift */,
+				AA9FD8B02881C0E300D970DA /* Reservation.swift */,
+				AA9FD8AE2881C0E300D970DA /* Session.swift */,
+				AA9FD8AB2881C0E300D970DA /* UserSubscribe.swift */,
+				AA9FD8B92881C27400D970DA /* User.swift */,
 			);
 			path = FoodModels;
 			sourceTree = "<group>";
@@ -434,21 +461,30 @@
 				AA7326EE286399A3003D6616 /* Food.swift in Sources */,
 				AA7326D0285A9029003D6616 /* MealInfos.swift in Sources */,
 				AA7326FB2864494C003D6616 /* SearchRecipeCategoriesTableViewCell.swift in Sources */,
+				AA9FD8B32881C0E300D970DA /* PlateRecipe.swift in Sources */,
+				AA9FD8B82881C11300D970DA /* FoodWebService.swift in Sources */,
 				AAF285FE2865A5C90060E039 /* MealCategories.swift in Sources */,
 				AAF286002868906C0060E039 /* MealRecipeService.swift in Sources */,
+				AA9FD8B52881C0E300D970DA /* Plate.swift in Sources */,
 				AAF28642286F93060060E039 /* MealRecipeWebService.swift in Sources */,
 				AA7326D4285E71F7003D6616 /* MealService.swift in Sources */,
 				AA7326F528643F2C003D6616 /* SearchRecipeCategoriesListViewController.swift in Sources */,
+				AA9FD8B22881C0E300D970DA /* Evaluation.swift in Sources */,
+				AA9FD8AA2881C0B100D970DA /* FoodService.swift in Sources */,
 				AA7326CE285A900B003D6616 /* MealCategory.swift in Sources */,
 				AA73270428647A82003D6616 /* MealCategoryWebService.swift in Sources */,
 				AA73270228647A64003D6616 /* MealCategoryService.swift in Sources */,
 				AA9FD88828798D5500D970DA /* RecipeDetailsViewController.swift in Sources */,
 				AA7326CC285A8FAF003D6616 /* MealRecipe.swift in Sources */,
 				AA73266D284D459B003D6616 /* AppDelegate.swift in Sources */,
+				AA9FD8BA2881C27400D970DA /* User.swift in Sources */,
 				AA9FD898287D4E2000D970DA /* LogInViewController.swift in Sources */,
 				AA7326EA2863993D003D6616 /* RecipeService.swift in Sources */,
+				AA9FD8B42881C0E300D970DA /* Session.swift in Sources */,
+				AA9FD8B62881C0E300D970DA /* Reservation.swift in Sources */,
 				AA9FD8902879ACA200D970DA /* RecipeInfoTableViewCell.swift in Sources */,
 				AA732688284DD733003D6616 /* SubscribeViewController.swift in Sources */,
+				AA9FD8B12881C0E300D970DA /* UserSubscribe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

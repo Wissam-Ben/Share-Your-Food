@@ -16,8 +16,15 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var loginButton: UIButton!
     
+    var foodService: FoodService {
+            return FoodWebService()
+    }
+    
+    var plates: [Plate] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         super.title = NSLocalizedString("login.title", comment: "")
         self.usernameTextField.delegate = self
         self.passwordTextField.delegate = self
@@ -37,6 +44,12 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         
         guard pwd.count >= 6 else { self.displayErrorMessage(title: "Formulaire invalide", message: "Le mot de passe doit contenir au moins 4 caractères")
             return
+        }
+        
+        self.foodService.fetchPlates { plate in
+           
+            self.plates = plate
+        
         }
         
         self.navigationController?.pushViewController(SearchRecipeCategoriesListViewController(), animated: true)
