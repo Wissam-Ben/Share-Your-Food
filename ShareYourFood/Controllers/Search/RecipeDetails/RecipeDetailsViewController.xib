@@ -371,6 +371,8 @@
                         <constraint firstAttribute="trailing" secondItem="yU3-Tx-5jY" secondAttribute="trailing" id="jaZ-Y6-VhT"/>
                         <constraint firstItem="yU3-Tx-5jY" firstAttribute="height" secondItem="8ay-nj-PMw" secondAttribute="height" id="jl8-dq-pvM"/>
                     </constraints>
+                    <viewLayoutGuide key="contentLayoutGuide" id="EZn-39-7hF"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="4Xx-XK-1KJ"/>
                 </scrollView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
