@@ -16,14 +16,35 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var loginButton: UIButton!
     
-    var foodService: FoodService {
-            return FoodWebService()
+    var plateService: PlateService {
+            return PlateWebService()
+    }
+    
+    var authService: AuthService {
+            return AuthWebService()
+    }
+    
+    var reservationService: ReservationService {
+            return ReservationWebService()
     }
     
     var plates: [Plate] = []
+    var users: [UserSubscribe] = []
+    var reservations: [Reservation] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        /*self.reservationService.fetchReservationsOfPlate(plateID: 1) { plate in
+           
+            self.reservations = plate
+        
+        }*/
+        
+        self.plateService.addPlate { _ in 
+        
+        }
+        
         
         super.title = NSLocalizedString("login.title", comment: "")
         self.usernameTextField.delegate = self
@@ -46,11 +67,6 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
             return
         }
         
-        self.foodService.fetchPlates { plate in
-           
-            self.plates = plate
-        
-        }
         
         self.navigationController?.pushViewController(SearchRecipeCategoriesListViewController(), animated: true)
         

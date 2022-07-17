@@ -7,6 +7,7 @@
 
 import Foundation
 
-protocol FoodService {
+protocol PlateService {
     func fetchPlates(completion: @escaping ([Plate]) -> Void) -> Void
+    func addPlate(completion: @escaping ([Plate]) -> Void) -> Void
 }

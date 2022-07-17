@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Plate {
+class PlateRequest {
     var id: Int
     var name: String
     var photo: String
@@ -15,11 +15,10 @@ class Plate {
     var number: Int
     var comment: String
     var reserved: Bool
-    var user: User
-    var createdAt: String
+    var userId: Int
     
     
-    init(id: Int, name: String, photo: String, quantity: Int, number: Int, comment: String, reserved: Bool, user: User, createdAt: String) {
+    init(id: Int, name: String, photo: String, quantity: Int, number: Int, comment: String, reserved: Bool, userId: Int) {
         self.id = id
         self.name = name
         self.photo = photo
@@ -27,8 +26,7 @@ class Plate {
         self.number = number
         self.comment = comment
         self.reserved = reserved
-        self.user = user
-        self.createdAt = createdAt
+        self.userId = userId
     }
     
     
@@ -40,11 +38,10 @@ class Plate {
               let number = dict["number"] as? Int,
               let comment = dict["comment"] as? String,
               let reserved = dict["reserved"] as? Bool,
-              let user = dict["UserId"] as? User,
-              let createdAt = dict["createdAt"] as? String else {
+              let userId = dict["UserId"] as? Int else {
             return nil
         }
-        self.init(id: id, name: name, photo: photo, quantity: quantity, number: number, comment: comment, reserved: reserved, user: user, createdAt: createdAt)
+        self.init(id: id, name: name, photo: photo, quantity: quantity, number: number, comment: comment, reserved: reserved, userId: userId)
     }
     
 }

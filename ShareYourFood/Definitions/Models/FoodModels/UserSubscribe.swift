@@ -6,21 +6,8 @@
 //
 
 import Foundation
-//id?      : number;
-//   firstname: string;
-//   lastname : string;
-//   username : string;
-//   password : string;
-//   email    : string;
-//   photo?   : string;
-//   number?  : string;
-//   address? : string;
-//   zipcode? : number;
-//   city?    : string;
-//   cantEat? : string;
-//   bio?     : string;
-//   role     : number;
-//   isAvailable: boolean;
+
+
 class UserSubscribe {
     
     var id: Int
