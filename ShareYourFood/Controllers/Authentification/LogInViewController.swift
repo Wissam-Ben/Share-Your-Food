@@ -28,6 +28,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
             return ReservationWebService()
     }
     
+    //var plate: PlateByIdResponse = 
     var plates: [Plate] = []
     var users: [UserSubscribe] = []
     var reservations: [Reservation] = []
@@ -35,16 +36,25 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        /*self.reservationService.fetchReservationsOfPlate(plateID: 1) { plate in
+        /*self.reservationService.fetchReservationsOfPlate(plateId: 1) { plate in
            
             self.reservations = plate
         
         }*/
         
-        self.plateService.addPlate { _ in 
+        self.plateService.fetchPlateById(plateId: 8) { _ in
+          
         
         }
         
+        /*self.plateService.editPlate(plateId: 8, newplate: PlateRequest(name: "Couscous", photo: "", quantity: 400, number: 5, comment: "Couscous fait par halisia halifa", reserved: false, userId: 5)) { _ in
+        }*/
+        
+        /*self.plateService.deletePlate(plateId: 1) { _ in
+        }*/
+        
+        /*self.reservationService.addReservation(reservation: ReservationRequest(plateId: 8)) { _ in
+        }*/
         
         super.title = NSLocalizedString("login.title", comment: "")
         self.usernameTextField.delegate = self

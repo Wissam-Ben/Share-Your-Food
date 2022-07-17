@@ -8,5 +8,6 @@
 import Foundation
 
 protocol ReservationService {
-    func fetchReservationsOfPlate(plateID: Int, completion: @escaping ([Reservation]) -> Void) -> Void
+    func fetchReservationsOfPlate(plateId: Int, completion: @escaping ([Reservation]) -> Void) -> Void
+    func addReservation(reservation: ReservationRequest, completion: @escaping ([PlateRequest]) -> Void) -> Void
 }

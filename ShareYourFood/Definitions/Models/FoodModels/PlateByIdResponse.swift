@@ -1,25 +1,25 @@
 //
-//  Plate.swift
+//  PlateByIdResponse.swift
 //  ShareYourFood
 //
-//  Created by Halifa Halisia on 23/06/2022.
+//  Created by Halifa Halisia on 17/07/2022.
 //
 
 import Foundation
 
-class Plate {
+class PlateByIdResponse {
     var id: Int
     var name: String
-    var photo: String
+    var photo: PhotoResponse
     var quantity: Int
     var number: Int
     var comment: String
-    var reserved: Bool
-    var user: User
+    var reserved: Int
+    var userId: Int
     var createdAt: String
     
     
-     init(id: Int, name: String, photo: String, quantity: Int, number: Int, comment: String, reserved: Bool, user: User, createdAt: String) {
+    init(id: Int, name: String, photo: PhotoResponse, quantity: Int, number: Int, comment: String, reserved: Int, userId: Int, createdAt: String) {
         self.id = id
         self.name = name
         self.photo = photo
@@ -27,7 +27,7 @@ class Plate {
         self.number = number
         self.comment = comment
         self.reserved = reserved
-        self.user = user
+        self.userId = userId
         self.createdAt = createdAt
     }
     
@@ -35,16 +35,16 @@ class Plate {
     convenience init?(dict: [String: Any]) {
         guard let id = dict["id"] as? Int,
               let name = dict["name"] as? String,
-              let photo = dict["photo"] as? String,
+              let photo = dict["photo"] as? PhotoResponse,
               let quantity = dict["quantity"] as? Int,
               let number = dict["number"] as? Int,
               let comment = dict["comment"] as? String,
-              let reserved = dict["reserved"] as? Bool,
-              let user = dict["UserId"] as? User,
+              let reserved = dict["reserved"] as? Int,
+              let userId = dict["UserId"] as? Int,
               let createdAt = dict["createdAt"] as? String else {
             return nil
         }
-        self.init(id: id, name: name, photo: photo, quantity: quantity, number: number, comment: comment, reserved: reserved, user: user, createdAt: createdAt)
+        self.init(id:id, name: name, photo: photo, quantity: quantity, number: number, comment: comment, reserved: reserved, userId: userId, createdAt: createdAt)
     }
     
 }
