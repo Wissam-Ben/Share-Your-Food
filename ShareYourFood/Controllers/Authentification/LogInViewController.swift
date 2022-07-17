@@ -19,8 +19,15 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
     var foodService: FoodService {
             return FoodWebService()
     }
-    
     var plates: [Plate] = []
+    
+    var authenticationService: AuthenticationService {
+        return AuthenticationWebService()
+    }
+    var user: UserLogin!
+    var userResponse: UserLoginResponse!
+    
+    var token: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,11 +53,17 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
             return
         }
         
-        self.foodService.fetchPlates { plate in
-           
-            self.plates = plate
+//        self.foodService.fetchPlates { plate in
+//           
+//            self.plates = plate
+//        
+//        }
         
-        }
+        user = UserLogin(username: log, password: pwd)
+        self.authenticationService.login(completion: { response in
+            self.userResponse = response
+            print(response)
+        }, user: self.user)
         
         self.navigationController?.pushViewController(SearchRecipeCategoriesListViewController(), animated: true)
         

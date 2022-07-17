@@ -27,7 +27,7 @@ class UserLogin: Codable {
     
     func toJSON() -> [String: Any] {
         return [
-            "username": self.username
+            "username": self.username,
             "Password": self.password
         ]
     }

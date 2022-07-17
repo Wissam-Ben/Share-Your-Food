@@ -8,6 +8,6 @@
 import Foundation
 
 protocol AuthenticationService {
-    func login(completion: @escaping ([UserLoginResponse]) -> Void, user: UserLogin)
-    func subscribe(completion: @escaping ([UserSubscribeResponse]) -> Void, user: UserSubscribe)
+    func login(completion: @escaping (UserLoginResponse) -> Void, user: UserLogin)
+    func subscribe(completion: @escaping (UserSubscribeResponse) -> Void, user: UserSubscribe)
 }

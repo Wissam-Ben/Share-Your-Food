@@ -7,7 +7,7 @@
 
 import Foundation
 
-class UserLoginResponse {
+class UserLoginResponse: Codable {
         var token: String
         var user: User
         

@@ -7,7 +7,7 @@
 
 import Foundation
 
-class UserSubscribeResponse {
+class UserSubscribeResponse: Codable {
     
     var id: Int
     var firstname: String
@@ -45,13 +45,13 @@ class UserSubscribeResponse {
     
     func toJSON() -> [String: Any] {
         return [
-            "id": self.id
-            "firstname": self.firstname
-            "lastname": self.lastname
-            "username": self.username
-            "password": self.password
-            "email": self.email
-            "role": self.role
+            "id": self.id,
+            "firstname": self.firstname,
+            "lastname": self.lastname,
+            "username": self.username,
+            "password": self.password,
+            "email": self.email,
+            "role": self.role,
             "createdAt": self.createdAt
         ]
     }
