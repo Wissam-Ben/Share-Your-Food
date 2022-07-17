@@ -9,5 +9,5 @@ import Foundation
 
 protocol PlateService {
     func fetchPlates(completion: @escaping ([Plate]) -> Void) -> Void
-    func addPlate(completion: @escaping ([Plate]) -> Void) -> Void
+    func addPlate(completion: @escaping ([PlateRequest]) -> Void) -> Void
 }

@@ -7,8 +7,7 @@
 
 import Foundation
 
-class PlateRequest {
-    var id: Int
+class PlateRequest : Codable {
     var name: String
     var photo: String
     var quantity: Int
@@ -18,8 +17,7 @@ class PlateRequest {
     var userId: Int
     
     
-    init(id: Int, name: String, photo: String, quantity: Int, number: Int, comment: String, reserved: Bool, userId: Int) {
-        self.id = id
+    init( name: String, photo: String, quantity: Int, number: Int, comment: String, reserved: Bool, userId: Int) {
         self.name = name
         self.photo = photo
         self.quantity = quantity
@@ -31,8 +29,7 @@ class PlateRequest {
     
     
     convenience init?(dict: [String: Any]) {
-        guard let id = dict["id"] as? Int,
-              let name = dict["name"] as? String,
+        guard let name = dict["name"] as? String,
               let photo = dict["photo"] as? String,
               let quantity = dict["quantity"] as? Int,
               let number = dict["number"] as? Int,
@@ -41,7 +38,7 @@ class PlateRequest {
               let userId = dict["UserId"] as? Int else {
             return nil
         }
-        self.init(id: id, name: name, photo: photo, quantity: quantity, number: number, comment: comment, reserved: reserved, userId: userId)
+        self.init(name: name, photo: photo, quantity: quantity, number: number, comment: comment, reserved: reserved, userId: userId)
     }
     
 }
