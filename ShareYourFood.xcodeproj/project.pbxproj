@@ -12,6 +12,7 @@
 		AA0DF58C28835FDE00B3C025 /* UserLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0DF58B28835FDE00B3C025 /* UserLogin.swift */; };
 		AA0DF58E2883651200B3C025 /* UserSubscribeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0DF58D2883651200B3C025 /* UserSubscribeResponse.swift */; };
 		AA0DF590288369D600B3C025 /* UserLoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0DF58F288369D600B3C025 /* UserLoginResponse.swift */; };
+		AA0DF5922884343400B3C025 /* MyVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0DF5912884343400B3C025 /* MyVariables.swift */; };
 		AA73266D284D459B003D6616 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA73266C284D459B003D6616 /* AppDelegate.swift */; };
 		AA732676284D459C003D6616 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA732675284D459C003D6616 /* Assets.xcassets */; };
 		AA732679284D459C003D6616 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA732677284D459C003D6616 /* LaunchScreen.storyboard */; };
@@ -58,6 +59,7 @@
 		AA0DF58B28835FDE00B3C025 /* UserLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLogin.swift; sourceTree = "<group>"; };
 		AA0DF58D2883651200B3C025 /* UserSubscribeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSubscribeResponse.swift; sourceTree = "<group>"; };
 		AA0DF58F288369D600B3C025 /* UserLoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoginResponse.swift; sourceTree = "<group>"; };
+		AA0DF5912884343400B3C025 /* MyVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyVariables.swift; sourceTree = "<group>"; };
 		AA732669284D459B003D6616 /* ShareYourFood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShareYourFood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA73266C284D459B003D6616 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA732675284D459C003D6616 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -358,6 +360,7 @@
 				AA0DF58B28835FDE00B3C025 /* UserLogin.swift */,
 				AA0DF58D2883651200B3C025 /* UserSubscribeResponse.swift */,
 				AA0DF58F288369D600B3C025 /* UserLoginResponse.swift */,
+				AA0DF5912884343400B3C025 /* MyVariables.swift */,
 			);
 			path = FoodModels;
 			sourceTree = "<group>";
@@ -485,6 +488,7 @@
 				AA0DF590288369D600B3C025 /* UserLoginResponse.swift in Sources */,
 				AA9FD8B52881C0E300D970DA /* Plate.swift in Sources */,
 				AAF28642286F93060060E039 /* MealRecipeWebService.swift in Sources */,
+				AA0DF5922884343400B3C025 /* MyVariables.swift in Sources */,
 				AA7326D4285E71F7003D6616 /* MealService.swift in Sources */,
 				AA7326F528643F2C003D6616 /* SearchRecipeCategoriesListViewController.swift in Sources */,
 				AA9FD8B22881C0E300D970DA /* Evaluation.swift in Sources */,

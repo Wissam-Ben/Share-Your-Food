@@ -53,12 +53,6 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
             return
         }
         
-//        self.foodService.fetchPlates { plate in
-//           
-//            self.plates = plate
-//        
-//        }
-        
         user = UserLogin(username: log, password: pwd)
         self.authenticationService.login(completion: { response in
             self.userResponse = response
@@ -67,7 +61,6 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         
         self.navigationController?.pushViewController(SearchRecipeCategoriesListViewController(), animated: true)
         
-
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

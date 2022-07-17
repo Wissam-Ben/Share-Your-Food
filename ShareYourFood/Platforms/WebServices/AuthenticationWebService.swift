@@ -18,32 +18,47 @@ class AuthenticationWebService: AuthenticationService {
             return
         }
         
-        let body = user.toJSON()
-        
-        let finalBody = try? JSONSerialization.data(withJSONObject: body)
+        print(user.username + user.password)
         
         request.httpMethod = "POST"
-        request.httpBody = finalBody
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type") // the request is JSON
+        request.setValue("application/json", forHTTPHeaderField: "Accept") // the response expected to be in JSON format
+        request.httpBody = jsonData
 
-        let task = URLSession.shared.dataTask(with: request) { data, response, error in
-            if let error = error {
-                    print(error)
-                    // Handle HTTP request error
-                } else if let data = data {
-                    print(data)
-                    // Handle HTTP request response
-                } else {
-                    print("errrooooooor")
-                    // Handle unexpected error
-                }
-            if let response = response as? HTTPURLResponse {
-                print(response.statusCode)
-                print(response)
-            }
-        }
-
-        task.resume()
-        
+        URLSession.shared.dataTask(with: request) { data, response, error in
+                    guard error == nil else {
+                        print("Error: error calling POST")
+                        print(error!)
+                        return
+                    }
+                    guard let data = data else {
+                        print("Error: Did not receive data")
+                        return
+                    }
+                    guard let response = response as? HTTPURLResponse, (200 ..< 299) ~= response.statusCode else {
+                        print("Error: HTTP request failed")
+                        return
+                    }
+                    do {
+                        guard let jsonObject = try JSONSerialization.jsonObject(with: data) as? [String: Any] else {
+                            print("Error: Cannot convert data to JSON object")
+                            return
+                        }
+                        guard let prettyJsonData = try? JSONSerialization.data(withJSONObject: jsonObject, options: .prettyPrinted) else {
+                            print("Error: Cannot convert JSON object to Pretty JSON data")
+                            return
+                        }
+                        guard let prettyPrintedJson = String(data: prettyJsonData, encoding: .utf8) else {
+                            print("Error: Couldn't print JSON in String")
+                            return
+                        }
+                        
+                        print(prettyPrintedJson)
+                    } catch {
+                        print("Error: Trying to convert JSON data to string")
+                        return
+                    }
+                }.resume()
     }
     
     func subscribe(completion: @escaping (UserSubscribeResponse) -> Void, user: UserSubscribe) {
@@ -56,6 +71,8 @@ class AuthenticationWebService: AuthenticationService {
         }
         
         request.httpMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type") // the request is JSON
+        request.setValue("application/json", forHTTPHeaderField: "Accept")
         request.httpBody = jsonData
 
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
