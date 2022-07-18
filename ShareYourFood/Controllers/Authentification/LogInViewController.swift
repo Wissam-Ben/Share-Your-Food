@@ -16,16 +16,27 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var loginButton: UIButton!
     
-    var foodService: FoodService {
-            return FoodWebService()
-    }
+    @IBOutlet weak var subscribeButton: UIButton!
     
-    var plates: [Plate] = []
+    @IBOutlet weak var subscribeTextView: UILabel!
+    
+    var authenticationService: AuthenticationService {
+        return AuthenticationWebService()
+    }
+    var user: UserLogin!
+    var userResponse: UserLoginResponse!
+    
+    var token: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         super.title = NSLocalizedString("login.title", comment: "")
+        self.loginButton.setTitle(NSLocalizedString("login.button", comment: ""), for: UIControl.State.normal)
+        self.subscribeButton.setTitle(NSLocalizedString("subscribe.button", comment: ""), for: UIControl.State.normal)
+        self.subscribeTextView.text = NSLocalizedString("subscribe.message", comment: "")
+        self.usernameTextField.placeholder = NSLocalizedString("username", comment: "")
+        self.passwordTextField.placeholder = NSLocalizedString("password", comment: "")
         self.usernameTextField.delegate = self
         self.passwordTextField.delegate = self
         self.handleLogin(self.loginButton!)
@@ -46,15 +57,19 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
             return
         }
         
-        self.foodService.fetchPlates { plate in
-           
-            self.plates = plate
+        self.user = UserLogin(username: log, password: pwd)
+        self.authenticationService.login(completion: { response in
+            self.userResponse = response
+            print("ttoooootttoooo")
+            print(response.token)
+            print("toooto")
+            MyVariables.token = response.token
+            
+        }, user: self.user)
         
-        }
-        
-        self.navigationController?.pushViewController(SearchRecipeCategoriesListViewController(), animated: true)
-        
+        print(MyVariables.token)
 
+        self.navigationController?.pushViewController(SearchRecipeCategoriesListViewController(), animated: true)
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -76,6 +91,11 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
                 alert.dismiss(animated: true)
             }
         }
+    }
+    
+    
+    @IBAction func subscribe(_ sender: Any) {
+        self.navigationController?.pushViewController(SubscribeViewController(), animated: true)
     }
     
 
