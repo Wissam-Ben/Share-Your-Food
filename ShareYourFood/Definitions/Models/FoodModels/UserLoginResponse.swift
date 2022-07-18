@@ -7,7 +7,7 @@
 
 import Foundation
 
-class UserLoginResponse: Codable {
+class UserLoginResponse: Decodable {
         var token: String
         var user: User
         
@@ -24,4 +24,12 @@ class UserLoginResponse: Codable {
             }
             self.init(token: token, user: user)
         }
+    
+    func toJSON() -> [String: Any] {
+        return [
+            "token": self.token,
+            "user": self.user,
+        ]
+    }
+    
 }

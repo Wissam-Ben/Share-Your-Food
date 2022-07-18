@@ -13,6 +13,8 @@
 		AA0DF58E2883651200B3C025 /* UserSubscribeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0DF58D2883651200B3C025 /* UserSubscribeResponse.swift */; };
 		AA0DF590288369D600B3C025 /* UserLoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0DF58F288369D600B3C025 /* UserLoginResponse.swift */; };
 		AA0DF5922884343400B3C025 /* MyVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0DF5912884343400B3C025 /* MyVariables.swift */; };
+		AA0DF59528855F6E00B3C025 /* RecipeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0DF59328855F6E00B3C025 /* RecipeDetailViewController.swift */; };
+		AA0DF59628855F6E00B3C025 /* RecipeDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA0DF59428855F6E00B3C025 /* RecipeDetailViewController.xib */; };
 		AA73266D284D459B003D6616 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA73266C284D459B003D6616 /* AppDelegate.swift */; };
 		AA732676284D459C003D6616 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA732675284D459C003D6616 /* Assets.xcassets */; };
 		AA732679284D459C003D6616 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA732677284D459C003D6616 /* LaunchScreen.storyboard */; };
@@ -60,6 +62,8 @@
 		AA0DF58D2883651200B3C025 /* UserSubscribeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSubscribeResponse.swift; sourceTree = "<group>"; };
 		AA0DF58F288369D600B3C025 /* UserLoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoginResponse.swift; sourceTree = "<group>"; };
 		AA0DF5912884343400B3C025 /* MyVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyVariables.swift; sourceTree = "<group>"; };
+		AA0DF59328855F6E00B3C025 /* RecipeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailViewController.swift; sourceTree = "<group>"; };
+		AA0DF59428855F6E00B3C025 /* RecipeDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipeDetailViewController.xib; sourceTree = "<group>"; };
 		AA732669284D459B003D6616 /* ShareYourFood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShareYourFood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA73266C284D459B003D6616 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA732675284D459C003D6616 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -392,6 +396,8 @@
 			children = (
 				AA9FD88628798D5500D970DA /* RecipeDetailsViewController.swift */,
 				AA9FD88728798D5500D970DA /* RecipeDetailsViewController.xib */,
+				AA0DF59328855F6E00B3C025 /* RecipeDetailViewController.swift */,
+				AA0DF59428855F6E00B3C025 /* RecipeDetailViewController.xib */,
 			);
 			path = RecipeDetails;
 			sourceTree = "<group>";
@@ -456,6 +462,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA9FD88D2879AC8400D970DA /* RecipesInfosListViewController.xib in Resources */,
+				AA0DF59628855F6E00B3C025 /* RecipeDetailViewController.xib in Resources */,
 				AA7326F628643F2C003D6616 /* SearchRecipeCategoriesListViewController.xib in Resources */,
 				AA732693284DE8B3003D6616 /* Localizable.strings in Resources */,
 				AA732689284DD733003D6616 /* SubscribeViewController.xib in Resources */,
@@ -498,6 +505,7 @@
 				AA0DF58828835E6600B3C025 /* AuthenticationService.swift in Sources */,
 				AA73270228647A64003D6616 /* MealCategoryService.swift in Sources */,
 				AA0DF58C28835FDE00B3C025 /* UserLogin.swift in Sources */,
+				AA0DF59528855F6E00B3C025 /* RecipeDetailViewController.swift in Sources */,
 				AA9FD88828798D5500D970DA /* RecipeDetailsViewController.swift in Sources */,
 				AA7326CC285A8FAF003D6616 /* MealRecipe.swift in Sources */,
 				AA73266D284D459B003D6616 /* AppDelegate.swift in Sources */,

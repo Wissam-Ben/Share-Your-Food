@@ -19,7 +19,7 @@ class User: Codable {
     var photo: String
     var number: String
     var address: String
-    var zipcode: Int
+    var zipcode: String
     var city: String
     var canteat: String
     var bio: String
@@ -27,7 +27,7 @@ class User: Codable {
     var isAvailable: Bool
     var createdAt: String
         
-    init(id: Int, firstname: String, lastname: String, username: String, password: String, email: String, photo: String, number: String, address: String, zipcode: Int, city: String, canteat: String, bio: String, role: Int, isAvailable: Bool, createdAt: String) {
+    init(id: Int, firstname: String, lastname: String, username: String, password: String, email: String, photo: String, number: String, address: String, zipcode: String, city: String, canteat: String, bio: String, role: Int, isAvailable: Bool, createdAt: String) {
         self.id = id
         self.firstname = firstname
         self.lastname = lastname
@@ -55,8 +55,8 @@ class User: Codable {
               let email = dict["email"] as? String,
               let photo = dict["photo"] as? String,
               let number = dict["number"] as? String,
-              let address = dict["ingredient"] as? String,
-              let zipcode = dict["zipcode"] as? Int,
+              let address = dict["address"] as? String,
+              let zipcode = dict["zipcode"] as? String,
               let city = dict["city"] as? String,
               let canteat = dict["canteat"] as? String,
               let bio = dict["bio"] as? String,
