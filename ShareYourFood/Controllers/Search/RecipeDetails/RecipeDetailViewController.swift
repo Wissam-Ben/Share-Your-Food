@@ -53,11 +53,6 @@ class RecipeDetailViewController: UIViewController {
     @IBOutlet weak var ingredient14TextView: UILabel!
     @IBOutlet weak var ingredient15TextView: UILabel!
     
-    
-    
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         

@@ -68,7 +68,7 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Capture d’écran 2022-07-17 à 12.25.04" translatesAutoresizingMaskIntoConstraints="NO" id="5Vb-Aa-TpO">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Capture d’écran 2022-07-17 à 12.25.04" translatesAutoresizingMaskIntoConstraints="NO" id="5Vb-Aa-TpO">
                     <rect key="frame" x="10" y="54" width="394" height="280"/>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yu7-hw-JZ8">
@@ -114,7 +114,7 @@
         </view>
     </objects>
     <resources>
-        <image name="Capture d’écran 2022-07-17 à 12.25.04" width="654" height="338"/>
+        <image name="Capture d’écran 2022-07-17 à 12.25.04" width="654" height="338"/>
         <systemColor name="systemMintColor">
             <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

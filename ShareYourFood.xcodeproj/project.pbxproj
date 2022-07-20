@@ -18,6 +18,7 @@
 		AA2D11B7288837F1007547F7 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2D11B6288837F1007547F7 /* UserService.swift */; };
 		AA2D11B9288838B9007547F7 /* UserWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2D11B8288838B9007547F7 /* UserWebService.swift */; };
 		AA2D11BB28884300007547F7 /* UserSave.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2D11BA28884300007547F7 /* UserSave.swift */; };
+		AA2D11C4288867D6007547F7 /* PlateDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA2D11C3288867D6007547F7 /* PlateDetailsViewController.xib */; };
 		AA73266D284D459B003D6616 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA73266C284D459B003D6616 /* AppDelegate.swift */; };
 		AA732676284D459C003D6616 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA732675284D459C003D6616 /* Assets.xcassets */; };
 		AA732679284D459C003D6616 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA732677284D459C003D6616 /* LaunchScreen.storyboard */; };
@@ -64,7 +65,7 @@
 		AAF285FE2865A5C90060E039 /* MealCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF285FD2865A5C90060E039 /* MealCategories.swift */; };
 		AAF286002868906C0060E039 /* MealRecipeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF285FF2868906C0060E039 /* MealRecipeService.swift */; };
 		AAF28642286F93060060E039 /* MealRecipeWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF28641286F93060060E039 /* MealRecipeWebService.swift */; };
-		F8BEA3802881F0F700A14C74 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BEA37F2881F0F700A14C74 /* AuthService.swift */; };
+		F8BEA3802881F0F700A14C74 /* UsersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BEA37F2881F0F700A14C74 /* UsersService.swift */; };
 		F8BEA3822881F12B00A14C74 /* AuthWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BEA3812881F12B00A14C74 /* AuthWebService.swift */; };
 		F8BEA384288218B900A14C74 /* ReservationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BEA383288218B900A14C74 /* ReservationService.swift */; };
 		F8BEA38628821D7700A14C74 /* ReservationWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BEA38528821D7700A14C74 /* ReservationWebService.swift */; };
@@ -87,6 +88,7 @@
 		AA2D11B6288837F1007547F7 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		AA2D11B8288838B9007547F7 /* UserWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserWebService.swift; sourceTree = "<group>"; };
 		AA2D11BA28884300007547F7 /* UserSave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSave.swift; sourceTree = "<group>"; };
+		AA2D11C3288867D6007547F7 /* PlateDetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlateDetailsViewController.xib; sourceTree = "<group>"; };
 		AA732669284D459B003D6616 /* ShareYourFood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShareYourFood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA73266C284D459B003D6616 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA732675284D459C003D6616 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -167,7 +169,7 @@
 		AAF285FD2865A5C90060E039 /* MealCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealCategories.swift; sourceTree = "<group>"; };
 		AAF285FF2868906C0060E039 /* MealRecipeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealRecipeService.swift; sourceTree = "<group>"; };
 		AAF28641286F93060060E039 /* MealRecipeWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealRecipeWebService.swift; sourceTree = "<group>"; };
-		F8BEA37F2881F0F700A14C74 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		F8BEA37F2881F0F700A14C74 /* UsersService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersService.swift; sourceTree = "<group>"; };
 		F8BEA3812881F12B00A14C74 /* AuthWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthWebService.swift; sourceTree = "<group>"; };
 		F8BEA383288218B900A14C74 /* ReservationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationService.swift; sourceTree = "<group>"; };
 		F8BEA38528821D7700A14C74 /* ReservationWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationWebService.swift; sourceTree = "<group>"; };
@@ -362,7 +364,7 @@
 				AA7326E92863993D003D6616 /* RecipeService.swift */,
 				AA73270128647A64003D6616 /* MealCategoryService.swift */,
 				AAF285FF2868906C0060E039 /* MealRecipeService.swift */,
-				F8BEA37F2881F0F700A14C74 /* AuthService.swift */,
+				F8BEA37F2881F0F700A14C74 /* UsersService.swift */,
 				F8BEA383288218B900A14C74 /* ReservationService.swift */,
 				AA0DF58728835E6600B3C025 /* AuthenticationService.swift */,
 				AA2D11B6288837F1007547F7 /* UserService.swift */,
@@ -441,6 +443,7 @@
 				AA9A4FD42887FEE30071C567 /* plateTableViewCell.swift */,
 				AA9A4FD52887FEE30071C567 /* plateTableViewCell.xib */,
 				AA9A4FD8288800E20071C567 /* PlateDetailsViewController.swift */,
+				AA2D11C3288867D6007547F7 /* PlateDetailsViewController.xib */,
 				AA9A4FDC288803150071C567 /* MyPlatesViewController.swift */,
 			);
 			path = Plates;
@@ -557,6 +560,7 @@
 				AA9FD899287D4E2000D970DA /* LogInViewController.xib in Resources */,
 				AA732676284D459C003D6616 /* Assets.xcassets in Resources */,
 				AA7326FC2864494C003D6616 /* SearchRecipeCategoriesTableViewCell.xib in Resources */,
+				AA2D11C4288867D6007547F7 /* PlateDetailsViewController.xib in Resources */,
 				AA9A4FE3288803900071C567 /* AddPlateViewController.xib in Resources */,
 				F8BEA39028883BD900A14C74 /* Navigation.storyboard in Resources */,
 			);
@@ -589,7 +593,7 @@
 				AA9A4FD22887FE770071C567 /* HomePlatesViewController.swift in Sources */,
 				AA0DF5922884343400B3C025 /* MyVariables.swift in Sources */,
 				AA7326D4285E71F7003D6616 /* MealService.swift in Sources */,
-				F8BEA3802881F0F700A14C74 /* AuthService.swift in Sources */,
+				F8BEA3802881F0F700A14C74 /* UsersService.swift in Sources */,
 				AA2D11B9288838B9007547F7 /* UserWebService.swift in Sources */,
 				AA7326F528643F2C003D6616 /* SearchRecipeCategoriesListViewController.swift in Sources */,
 				AA2D11BB28884300007547F7 /* UserSave.swift in Sources */,

@@ -7,6 +7,10 @@
 
 import Foundation
 
+
+// to delete
+
+
 class UserSave: Codable {
     
     var id: Int

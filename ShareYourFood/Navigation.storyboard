@@ -51,7 +51,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jE4-zO-Vur">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Capture d’écran 2022-07-20 à 18.21.26" translatesAutoresizingMaskIntoConstraints="NO" id="jE4-zO-Vur">
                                 <rect key="frame" x="30" y="118" width="354" height="271"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fzz-w7-bBG">
@@ -164,7 +164,7 @@
         <!--My shared plates-->
         <scene sceneID="Y4S-Hf-Sbo">
             <objects>
-                <viewController id="eha-yf-RjW" customClass="SearchRecipeCategoriesListViewController" customModule="ShareYourFood" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="eha-yf-RjW" customClass="MyPlatesViewController" customModule="ShareYourFood" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="y02-4e-2pu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -173,25 +173,19 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="pnw-Kf-Fzg">
-                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
-                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bRX-bO-Jlp"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="pnw-Kf-Fzg" firstAttribute="centerX" secondItem="y02-4e-2pu" secondAttribute="centerX" id="4ne-Ky-PQb"/>
                             <constraint firstItem="bRX-bO-Jlp" firstAttribute="bottom" secondItem="vzB-dO-crb" secondAttribute="bottom" id="JgQ-VE-ft8"/>
                             <constraint firstItem="vzB-dO-crb" firstAttribute="top" secondItem="bRX-bO-Jlp" secondAttribute="top" id="KYa-hm-gJH"/>
                             <constraint firstItem="vzB-dO-crb" firstAttribute="leading" secondItem="bRX-bO-Jlp" secondAttribute="leading" id="MsH-Gm-4WW"/>
                             <constraint firstItem="bRX-bO-Jlp" firstAttribute="trailing" secondItem="vzB-dO-crb" secondAttribute="trailing" id="cAA-tj-eEc"/>
-                            <constraint firstItem="pnw-Kf-Fzg" firstAttribute="centerY" secondItem="y02-4e-2pu" secondAttribute="centerY" id="zRw-NX-c7H"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="My shared plates" id="kW6-kj-Zll"/>
                     <connections>
-                        <outlet property="categoriesIndicatorView" destination="pnw-Kf-Fzg" id="T6N-2D-91R"/>
-                        <outlet property="categoryTableView" destination="vzB-dO-crb" id="8fe-wP-x5T"/>
+                        <outlet property="platesList" destination="vzB-dO-crb" id="yGr-Md-sOl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4iS-Cl-QNk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -206,7 +200,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Wl8-XI-gEJ">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Capture d’écran 2022-07-17 à 15.25.06" translatesAutoresizingMaskIntoConstraints="NO" id="Wl8-XI-gEJ">
                                 <rect key="frame" x="10" y="89" width="394" height="269"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xD2-83-Klh">
@@ -396,6 +390,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Capture d’écran 2022-07-17 à 15.25.06" width="674" height="434"/>
+        <image name="Capture d’écran 2022-07-20 à 18.21.26" width="770" height="760"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
