@@ -13,7 +13,7 @@ class UserWebService: UserService {
         
         var request = URLRequest(url: url!)
         
-        let token = "$2b$05$bNc4UjzXTtMebLXBNKl0aOmjgLxr7aOAxWr4FWYGDbFS.QXOB9jfm"
+        let token = MyVariables.token
         
         let authorization = "Bearer ".appending(token)
         request.httpMethod = "GET"

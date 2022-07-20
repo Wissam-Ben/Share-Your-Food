@@ -63,34 +63,38 @@ class SubscribeViewController: UIViewController, UITextFieldDelegate {
                 return
         }
         
-        guard firstname.count >= 2 else { self.displayErrorMessage(title: "Formulaire invalide", message: "Le login doit contenir au moins 4 caractères")
+        guard firstname.count >= 2 else { self.displayErrorMessage(title: "Formulaire invalide", message: "Le prénom doit contenir au moins 2 caractères")
             return
         }
         
-        guard lastname.count >= 4 else { self.displayErrorMessage(title: "Formulaire invalide", message: "Le login doit contenir au moins 4 caractères")
+        guard lastname.count >= 2 else { self.displayErrorMessage(title: "Formulaire invalide", message: "Le nom doit contenir au moins 2 caractères")
             return
         }
         
-        guard email.count >= 4 else { self.displayErrorMessage(title: "Formulaire invalide", message: "Le login doit contenir au moins 4 caractères")
+        guard email.count >= 4 else { self.displayErrorMessage(title: "Formulaire invalide", message: "L'email' doit contenir au moins 2 caractères")
             return
         }
         
-        guard username.count >= 4 else { self.displayErrorMessage(title: "Formulaire invalide", message: "Le login doit contenir au moins 4 caractères")
+        guard username.count >= 2 else { self.displayErrorMessage(title: "Formulaire invalide", message: "L'identifiant' doit contenir au moins 2 caractères")
             return
         }
         
-        guard password.count >= 6 else { self.displayErrorMessage(title: "Formulaire invalide", message: "Le mot de passe doit contenir au moins 4 caractères")
+        guard password.count >= 6 else { self.displayErrorMessage(title: "Formulaire invalide", message: "Le mot de passe doit contenir au moins 6 caractères")
             return
         }
         
         self.user = UserSubscribe(firstname: firstname, lastname: lastname, username: username, password: password, email: email)
         self.authenticationService.subscribe(completion: { UserSubscribeResponse in
             self.userResponse = UserSubscribeResponse
-            print(UserSubscribeResponse)
+            print(self.userResponse.password)
         }, user: self.user)
         
-        self.navigationController?.pushViewController(SearchRecipeCategoriesListViewController(), animated: true)
-        
+        if(MyVariables.subscriptionStatusCode == 200) {
+            self.navigationController?.pushViewController(LogInViewController(), animated: true)
+        } else {
+            self.displayErrorMessage(title: "Formulaire invalide", message: "Les champs saisis ne sont pas conformes")
+                return
+        }
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
