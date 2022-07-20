@@ -10,11 +10,11 @@ import Foundation
 
 class PlateWebService: PlateService {
     
-    func fetchPlates(completion: @escaping ([Plate]) -> Void) {
+    func fetchPlates(completion: @escaping ([PlateResponse]) -> Void) {
         let url = URL(string: "http://localhost:3000/plates")
         var request = URLRequest(url: url!)
         
-        let token = "$2b$05$9CXm5G5aPe8WxwUry5HNQeMo2cAsGNNjiQ6oUqc6//jopUvpEXVZa"
+        let token = "$2b$05$GMrcIjCdXfRaj8b4EkVNCuXmgWjcbUG7Kkjq/8y7Ojxudngc1ho8C"
         
         let authorization = "Bearer ".appending(token)
         request.httpMethod = "GET"
@@ -24,20 +24,21 @@ class PlateWebService: PlateService {
             data, res, err in
            
             guard let fetchData = data,
-                 let json = try? JSONSerialization.jsonObject(with: fetchData) as? [[String: Any]]
-
+                let json = try? JSONSerialization.jsonObject(with: fetchData) as? [[String: Any]]
+            
             else {
                 Dispatch.DispatchQueue.main.async {
                     completion([])
                 }
                     return
             }
-        
-           let plates: [Plate] = json.compactMap {obj in
-               print(obj)
-            return Plate(dict: obj)
-            }
             
+           let plates: [PlateResponse] = json.compactMap {obj in
+            return PlateResponse(dict: obj)
+            }
+            for plate in plates {
+                print(plate.name)
+            }
             DispatchQueue.main.async {
                 completion(plates)
             }
@@ -71,7 +72,7 @@ class PlateWebService: PlateService {
             }
            
             print(plate)
-            print(json)
+            //print(json)
             DispatchQueue.main.async {
                 completion(plate)
             }

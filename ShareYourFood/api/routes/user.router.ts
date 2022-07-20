@@ -11,8 +11,8 @@ userRouter.get("/", isAuth, async function(req, res) {
     const plateController = await UserController.getInstance();
     const plate = await plateController.getAll();
     if(plate !== null) {
-        res.status(200);
         res.json(plate);
+        res.status(200);
     }else {
         res.status(404).end();
     }
@@ -21,8 +21,8 @@ userRouter.get("/availables", isAuth, async function(req, res) {
     const plateController = await UserController.getInstance();
     const plate = await plateController.getAll(true);
     if(plate !== null) {
-        res.status(200);
         res.json(plate);
+        res.status(200);
     }else {
         res.status(404).end();
     }
@@ -31,7 +31,7 @@ userRouter.get("/:by", isAuth, async function(req,res) {
     const userController = await UserController.getInstance();
     const user = await userController.getBy(req.params.by);
     if(user !== null) {
-        res.status(200).json(user).end();
+        res.status(200).end();
     } else {
         res.status(404).send({error: 'field not found'}).end();
     }
@@ -56,7 +56,7 @@ userRouter.put("/:by", isAuth, async function (req, res) {
             bio        : req.body.bio || user.bio,
             isAvailable: req.body.isAvailable
         })
-        res.status(201).json(user).end();
+        res.json(user).status(201).end();
     } else {
         res.status(404).send({error: "No such user"}).end();
     }

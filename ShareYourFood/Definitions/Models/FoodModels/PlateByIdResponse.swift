@@ -35,16 +35,17 @@ class PlateByIdResponse {
     convenience init?(dict: [String: Any]) {
         guard let id = dict["id"] as? Int,
               let name = dict["name"] as? String,
-              let photo = dict["photo"] as? PhotoResponse,
+              let photo = dict["photo"] as? [String: Any],
               let quantity = dict["quantity"] as? Int,
               let number = dict["number"] as? Int,
               let comment = dict["comment"] as? String,
               let reserved = dict["reserved"] as? Int,
               let userId = dict["UserId"] as? Int,
-              let createdAt = dict["createdAt"] as? String else {
+              let createdAt = dict["createdAt"] as? String,
+              let photoResponseObject = PhotoResponse(dict: photo) else {
             return nil
         }
-        self.init(id:id, name: name, photo: photo, quantity: quantity, number: number, comment: comment, reserved: reserved, userId: userId, createdAt: createdAt)
+        self.init(id:id, name: name, photo: photoResponseObject, quantity: quantity, number: number, comment: comment, reserved: reserved, userId: userId, createdAt: createdAt)
     }
     
 }
