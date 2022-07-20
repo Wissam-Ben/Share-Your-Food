@@ -20,10 +20,10 @@ class HomePlatesViewController: UIViewController, UITableViewDelegate, UITableVi
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let nib = UINib(nibName: "plateTableViewCell", bundle: nil)
-        self.platesList.register(nib, forCellReuseIdentifier: "PLATE_CELL_ID")
-        self.platesList.delegate = self
-        self.platesList.dataSource = self
+//        let nib = UINib(nibName: "plateTableViewCell", bundle: nil)
+//        self.platesList.register(nib, forCellReuseIdentifier: "PLATE_CELL_ID")
+//        self.platesList.delegate = self
+//        self.platesList.dataSource = self
         
     }
     

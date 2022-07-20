@@ -39,19 +39,13 @@
 		AA9A4FC52887F5F80071C567 /* NavigationBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9A4FC32887F5F80071C567 /* NavigationBarViewController.swift */; };
 		AA9A4FC62887F5F80071C567 /* NavigationBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA9A4FC42887F5F80071C567 /* NavigationBarViewController.xib */; };
 		AA9A4FCE2887F92C0071C567 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9A4FCC2887F92C0071C567 /* AccountViewController.swift */; };
-		AA9A4FCF2887F92C0071C567 /* AccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA9A4FCD2887F92C0071C567 /* AccountViewController.xib */; };
 		AA9A4FD22887FE770071C567 /* HomePlatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9A4FD02887FE770071C567 /* HomePlatesViewController.swift */; };
-		AA9A4FD32887FE770071C567 /* HomePlatesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA9A4FD12887FE770071C567 /* HomePlatesViewController.xib */; };
 		AA9A4FD62887FEE30071C567 /* plateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9A4FD42887FEE30071C567 /* plateTableViewCell.swift */; };
 		AA9A4FD72887FEE30071C567 /* plateTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA9A4FD52887FEE30071C567 /* plateTableViewCell.xib */; };
 		AA9A4FDA288800E20071C567 /* PlateDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9A4FD8288800E20071C567 /* PlateDetailsViewController.swift */; };
-		AA9A4FDB288800E20071C567 /* PlateDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA9A4FD9288800E20071C567 /* PlateDetailsViewController.xib */; };
 		AA9A4FDE288803150071C567 /* MyPlatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9A4FDC288803150071C567 /* MyPlatesViewController.swift */; };
-		AA9A4FDF288803150071C567 /* MyPlatesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA9A4FDD288803150071C567 /* MyPlatesViewController.xib */; };
 		AA9A4FE2288803900071C567 /* AddPlateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9A4FE0288803900071C567 /* AddPlateViewController.swift */; };
 		AA9A4FE3288803900071C567 /* AddPlateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA9A4FE1288803900071C567 /* AddPlateViewController.xib */; };
-		AA9FD88828798D5500D970DA /* RecipeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9FD88628798D5500D970DA /* RecipeDetailsViewController.swift */; };
-		AA9FD88928798D5500D970DA /* RecipeDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA9FD88728798D5500D970DA /* RecipeDetailsViewController.xib */; };
 		AA9FD88C2879AC8400D970DA /* RecipesInfosListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9FD88A2879AC8400D970DA /* RecipesInfosListViewController.swift */; };
 		AA9FD88D2879AC8400D970DA /* RecipesInfosListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA9FD88B2879AC8400D970DA /* RecipesInfosListViewController.xib */; };
 		AA9FD8902879ACA200D970DA /* RecipeInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9FD88E2879ACA200D970DA /* RecipeInfoTableViewCell.swift */; };
@@ -148,19 +142,13 @@
 		AA9A4FC32887F5F80071C567 /* NavigationBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarViewController.swift; sourceTree = "<group>"; };
 		AA9A4FC42887F5F80071C567 /* NavigationBarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NavigationBarViewController.xib; sourceTree = "<group>"; };
 		AA9A4FCC2887F92C0071C567 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
-		AA9A4FCD2887F92C0071C567 /* AccountViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountViewController.xib; sourceTree = "<group>"; };
 		AA9A4FD02887FE770071C567 /* HomePlatesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePlatesViewController.swift; sourceTree = "<group>"; };
-		AA9A4FD12887FE770071C567 /* HomePlatesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomePlatesViewController.xib; sourceTree = "<group>"; };
 		AA9A4FD42887FEE30071C567 /* plateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = plateTableViewCell.swift; sourceTree = "<group>"; };
 		AA9A4FD52887FEE30071C567 /* plateTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = plateTableViewCell.xib; sourceTree = "<group>"; };
 		AA9A4FD8288800E20071C567 /* PlateDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlateDetailsViewController.swift; sourceTree = "<group>"; };
-		AA9A4FD9288800E20071C567 /* PlateDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlateDetailsViewController.xib; sourceTree = "<group>"; };
 		AA9A4FDC288803150071C567 /* MyPlatesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPlatesViewController.swift; sourceTree = "<group>"; };
-		AA9A4FDD288803150071C567 /* MyPlatesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyPlatesViewController.xib; sourceTree = "<group>"; };
 		AA9A4FE0288803900071C567 /* AddPlateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlateViewController.swift; sourceTree = "<group>"; };
 		AA9A4FE1288803900071C567 /* AddPlateViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddPlateViewController.xib; sourceTree = "<group>"; };
-		AA9FD88628798D5500D970DA /* RecipeDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailsViewController.swift; sourceTree = "<group>"; };
-		AA9FD88728798D5500D970DA /* RecipeDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipeDetailsViewController.xib; sourceTree = "<group>"; };
 		AA9FD88A2879AC8400D970DA /* RecipesInfosListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesInfosListViewController.swift; sourceTree = "<group>"; };
 		AA9FD88B2879AC8400D970DA /* RecipesInfosListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipesInfosListViewController.xib; sourceTree = "<group>"; };
 		AA9FD88E2879ACA200D970DA /* RecipeInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeInfoTableViewCell.swift; sourceTree = "<group>"; };
@@ -442,7 +430,6 @@
 			isa = PBXGroup;
 			children = (
 				AA9A4FCC2887F92C0071C567 /* AccountViewController.swift */,
-				AA9A4FCD2887F92C0071C567 /* AccountViewController.xib */,
 			);
 			path = Account;
 			sourceTree = "<group>";
@@ -451,13 +438,10 @@
 			isa = PBXGroup;
 			children = (
 				AA9A4FD02887FE770071C567 /* HomePlatesViewController.swift */,
-				AA9A4FD12887FE770071C567 /* HomePlatesViewController.xib */,
 				AA9A4FD42887FEE30071C567 /* plateTableViewCell.swift */,
 				AA9A4FD52887FEE30071C567 /* plateTableViewCell.xib */,
 				AA9A4FD8288800E20071C567 /* PlateDetailsViewController.swift */,
-				AA9A4FD9288800E20071C567 /* PlateDetailsViewController.xib */,
 				AA9A4FDC288803150071C567 /* MyPlatesViewController.swift */,
-				AA9A4FDD288803150071C567 /* MyPlatesViewController.xib */,
 			);
 			path = Plates;
 			sourceTree = "<group>";
@@ -496,8 +480,6 @@
 		AA9FD8A4287F580600D970DA /* RecipeDetails */ = {
 			isa = PBXGroup;
 			children = (
-				AA9FD88628798D5500D970DA /* RecipeDetailsViewController.swift */,
-				AA9FD88728798D5500D970DA /* RecipeDetailsViewController.xib */,
 				AA0DF59328855F6E00B3C025 /* RecipeDetailViewController.swift */,
 				AA0DF59428855F6E00B3C025 /* RecipeDetailViewController.xib */,
 			);
@@ -565,18 +547,13 @@
 			files = (
 				AA9A4FC62887F5F80071C567 /* NavigationBarViewController.xib in Resources */,
 				AA9FD88D2879AC8400D970DA /* RecipesInfosListViewController.xib in Resources */,
-				AA9A4FD32887FE770071C567 /* HomePlatesViewController.xib in Resources */,
 				AA0DF59628855F6E00B3C025 /* RecipeDetailViewController.xib in Resources */,
-				AA9A4FDF288803150071C567 /* MyPlatesViewController.xib in Resources */,
 				AA7326F628643F2C003D6616 /* SearchRecipeCategoriesListViewController.xib in Resources */,
 				AA9A4FD72887FEE30071C567 /* plateTableViewCell.xib in Resources */,
 				AA732693284DE8B3003D6616 /* Localizable.strings in Resources */,
 				AA732689284DD733003D6616 /* SubscribeViewController.xib in Resources */,
-				AA9FD88928798D5500D970DA /* RecipeDetailsViewController.xib in Resources */,
 				AA9FD8912879ACA200D970DA /* RecipeInfoTableViewCell.xib in Resources */,
-				AA9A4FDB288800E20071C567 /* PlateDetailsViewController.xib in Resources */,
 				AA732679284D459C003D6616 /* LaunchScreen.storyboard in Resources */,
-				AA9A4FCF2887F92C0071C567 /* AccountViewController.xib in Resources */,
 				AA9FD899287D4E2000D970DA /* LogInViewController.xib in Resources */,
 				AA732676284D459C003D6616 /* Assets.xcassets in Resources */,
 				AA7326FC2864494C003D6616 /* SearchRecipeCategoriesTableViewCell.xib in Resources */,
@@ -629,7 +606,6 @@
 				AA2D11B7288837F1007547F7 /* UserService.swift in Sources */,
 				AA0DF58C28835FDE00B3C025 /* UserLogin.swift in Sources */,
 				AA0DF59528855F6E00B3C025 /* RecipeDetailViewController.swift in Sources */,
-				AA9FD88828798D5500D970DA /* RecipeDetailsViewController.swift in Sources */,
 				AA7326CC285A8FAF003D6616 /* MealRecipe.swift in Sources */,
 				F8BEA3882884141700A14C74 /* PlateRequest.swift in Sources */,
 				AA73266D284D459B003D6616 /* AppDelegate.swift in Sources */,

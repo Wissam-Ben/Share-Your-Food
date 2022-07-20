@@ -118,4 +118,9 @@ class SubscribeViewController: UIViewController, UITextFieldDelegate {
         self.navigationController?.pushViewController(LogInViewController(), animated: true)
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+    
 }

@@ -386,14 +386,6 @@
             </constraints>
             <point key="canvasLocation" x="131.8840579710145" y="65.625"/>
         </view>
-        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="W4c-dh-5fN">
-            <rect key="frame" x="0.0" y="0.0" width="42" height="21"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-            <nil key="textColor"/>
-            <nil key="highlightedColor"/>
-            <point key="canvasLocation" x="762" y="155"/>
-        </label>
     </objects>
     <resources>
         <image name="Capture d’écran 2022-07-18 à 12.09.07.png" width="167" height="131"/>

@@ -111,10 +111,14 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
 
         /*self.navigationController?.pushViewController(SearchRecipeCategoriesListViewController(), animated: true)*/
         var mainView: UIStoryboard!
-        mainView = UIStoryboard(name: "navMenu", bundle: nil)
-        let viewcontroller : UIViewController = mainView.instantiateViewController(withIdentifier: "Navigation") as UIViewController
-        self.navigationController?.pushViewController(viewcontroller, animated: true)
-    }
+        
+        //mainView = UIStoryboard(name: "LaunchScreen", bundle: nil)
+        //let viewcontroller : UIViewController = mainView.instantiateViewController(withIdentifier: "navMenu") as UIViewController
+        
+        let vc = UIStoryboard(name: "Navigation", bundle: nil).instantiateInitialViewController() as? UIViewController
+        
+        self.navigationController?.pushViewController(vc!, animated: true)
+        }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == self.usernameTextField {
@@ -142,5 +146,9 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         self.navigationController?.pushViewController(SubscribeViewController(), animated: true)
     }
     
-
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+    
 }
