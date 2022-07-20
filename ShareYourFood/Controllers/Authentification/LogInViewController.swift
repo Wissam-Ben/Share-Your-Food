@@ -22,14 +22,49 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
     
     var authenticationService: AuthenticationService {
         return AuthenticationWebService()
+
     }
     var user: UserLogin!
     var userResponse: UserLoginResponse!
     
-    var token: String!
+    var authService: AuthService {
+            return AuthWebService()
+    }
+    
+    var reservationService: ReservationService {
+            return ReservationWebService()
+    }
+    
+    //var plate: PlateByIdResponse = 
+    var plates: [Plate] = []
+    var users: [UserSubscribe] = []
+    var reservations: [Reservation] = []
+
+    //var token: String!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        /*self.reservationService.fetchReservationsOfPlate(plateId: 1) { plate in
+           
+            self.reservations = plate
+        
+        }*/
+        
+        self.plateService.fetchPlateById(plateId: 8) { _ in
+          
+        
+        }
+        
+        /*self.plateService.editPlate(plateId: 8, newplate: PlateRequest(name: "Couscous", photo: "", quantity: 400, number: 5, comment: "Couscous fait par halisia halifa", reserved: false, userId: 5)) { _ in
+        }*/
+        
+        /*self.plateService.deletePlate(plateId: 1) { _ in
+        }*/
+        
+        /*self.reservationService.addReservation(reservation: ReservationRequest(plateId: 8)) { _ in
+        }*/
         
         super.title = NSLocalizedString("login.title", comment: "")
         self.loginButton.setTitle(NSLocalizedString("login.button", comment: ""), for: UIControl.State.normal)
