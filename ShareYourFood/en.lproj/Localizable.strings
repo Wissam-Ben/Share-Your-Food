@@ -5,6 +5,10 @@
   Created by Benadjaoud Wissam on 06/06/2022.
   
 */
+
+/*
+ Authentication
+ */
 "subscribe.title" = "Subscribe";
 "login.title" = "Log In";
 "firstname" = "firstname";
@@ -16,4 +20,22 @@
 "subscribe.button" = "Subscribe";
 "login.message" = "Already have an account ?";
 "subscribe.message" = "Don't have an account ?";
+"login.length.message" = "Login filed must have at least 4 characters";
+"login.incorrect.fields" = "Wrong username and password";
+
+/*
+ Add plate
+ */
+"addplate.title" = "Add a plate";
+"addplate.name" = "Plate name";
+"addplate.quantity" = "Quantity";
+"addplate.portion" = "Plate portion (g/plate)";
+"addplate.comment" = "Comment";
+
+/*
+ All
+ */
+"invalid.form.message" = "Invalid form";
+"missing.field.message" = "All fields are required";
+"close" = "Close";
 
