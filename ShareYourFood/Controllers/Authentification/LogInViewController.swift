@@ -36,10 +36,6 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
             return ReservationWebService()
     }
     
-    var userService: UserService {
-        return UserWebService()
-    }
-    
     //var plate: PlateByIdResponse = 
     var plates: [Plate] = []
     var users: [UserSubscribe] = []
@@ -50,26 +46,6 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        /*self.reservationService.fetchReservationsOfPlate(plateId: 1) { plate in
-           
-            self.reservations = plate
-        
-        }*/
-        
-        /*self.plateService.editPlate(plateId: 8, newplate: PlateRequest(name: "Couscous", photo: "", quantity: 400, number: 5, comment: "Couscous fait par halisia halifa", reserved: false, userId: 5)) { _ in
-        }*/
-        
-        /*self.plateService.deletePlate(plateId: 1) { _ in
-        }*/
-        
-        /*self.reservationService.addReservation(reservation: ReservationRequest(plateId: 8)) { _ in
-        }*/
-        
-        userService.fetchUserById(userId: "5") { user in
-            self.userAccount = user
-        }
-        
         
         super.title = NSLocalizedString("login.title", comment: "")
         self.loginButton.setTitle(NSLocalizedString("login.button", comment: ""), for: UIControl.State.normal)
@@ -99,26 +75,22 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         
         self.user = UserLogin(username: log, password: pwd)
         self.authenticationService.login(completion: { response in
+            //print(response)
             self.userResponse = response
-            print("ttoooootttoooo")
-            print(response.token)
-            print("toooto")
             MyVariables.token = response.token
+            print(MyVariables.token)
             
         }, user: self.user)
         
-        print(MyVariables.token)
-
-        /*self.navigationController?.pushViewController(SearchRecipeCategoriesListViewController(), animated: true)*/
-        var mainView: UIStoryboard!
-        
-        //mainView = UIStoryboard(name: "LaunchScreen", bundle: nil)
-        //let viewcontroller : UIViewController = mainView.instantiateViewController(withIdentifier: "navMenu") as UIViewController
-        
         let vc = UIStoryboard(name: "Navigation", bundle: nil).instantiateInitialViewController() as? UIViewController
         
-        self.navigationController?.pushViewController(vc!, animated: true)
+        if(MyVariables.token != "") {
+            self.navigationController?.pushViewController(vc!, animated: true)
+        } else {
+            self.displayErrorMessage(title: "Formulaire invalide", message: "L'identifiant et le mot de passe sont incorrectes")
+                return
         }
+    }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == self.usernameTextField {

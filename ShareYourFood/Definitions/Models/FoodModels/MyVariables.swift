@@ -9,4 +9,6 @@ import Foundation
 
 struct MyVariables {
     static var token = ""
+    static var id = ""
+    static var subscriptionStatusCode = 0
 }

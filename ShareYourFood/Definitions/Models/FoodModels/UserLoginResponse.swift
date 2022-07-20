@@ -7,10 +7,9 @@
 
 import Foundation
 
-class UserLoginResponse: Decodable {
+class UserLoginResponse: Codable {
         var token: String
         var user: User
-        
         
         init(token: String, user: User) {
             self.token = token

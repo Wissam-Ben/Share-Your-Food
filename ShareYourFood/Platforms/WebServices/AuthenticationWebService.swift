@@ -52,13 +52,19 @@ class AuthenticationWebService: AuthenticationService {
                             print("Error: Couldn't print JSON in String")
                             return
                         }
-                    
-                        //print(jsonObject)
-                        //print(prettyPrintedJson)
-                    } catch {
+                        guard let token: String = jsonObject["token"] as? String,
+                              let user: [String: Any] = jsonObject["user"] as? [String: Any],
+                              let id: Int = user["id"] as? Int else {
+                                print("errooooor")
+                                return
+                        }
+                        MyVariables.token = token
+                        MyVariables.id = id.description
+                      } catch {
                         print("Error: Trying to convert JSON data to string")
                         return
                     }
+                    
                 }.resume()
     }
     
@@ -70,8 +76,6 @@ class AuthenticationWebService: AuthenticationService {
             print("Error: Trying to convert model to JSON data")
             return
         }
-        
-        print(user.toJSON())
         
         request.httpMethod = "POST"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type") // the request is JSON
@@ -105,9 +109,9 @@ class AuthenticationWebService: AuthenticationService {
                             print("Error: Couldn't print JSON in String")
                             return
                         }
-                    
-                        print(jsonObject)
-                        //print(prettyPrintedJson)
+                        
+                        MyVariables.subscriptionStatusCode = response.statusCode
+                
                     } catch {
                         print("Error: Trying to convert JSON data to string")
                         return

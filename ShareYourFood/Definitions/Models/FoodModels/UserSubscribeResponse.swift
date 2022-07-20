@@ -9,38 +9,32 @@ import Foundation
 
 class UserSubscribeResponse: Codable {
     
-    var id: Int
+    var id: String
     var firstname: String
     var lastname: String
     var username: String
     var password: String
     var email: String
-    var role: Int
-    var createdAt: String
     
-    init(id: Int, firstname: String, lastname: String, username: String, password: String, email: String, role: Int, createdAt: String) {
+    init(id: String, firstname: String, lastname: String, username: String, password: String, email: String) {
         self.id = id
         self.firstname = firstname
         self.lastname = lastname
         self.username = username
         self.password = password
         self.email = email
-        self.role = role
-        self.createdAt = createdAt
     }
     
     convenience init?(dict: [String: Any]) {
-        guard let id = dict["id"] as? Int,
+        guard let id = dict["id"] as? String,
               let firstname = dict["firstname"] as? String,
               let lastname = dict["lastname"] as? String,
               let username = dict["username"] as? String,
               let password = dict["password"] as? String,
-              let email = dict["email"] as? String,
-              let role = dict["role"] as? Int,
-              let createdAt = dict["createdAt"] as? String else {
+              let email = dict["email"] as? String else {
             return nil
         }
-        self.init(id: id, firstname: firstname, lastname: lastname, username: username, password: password, email:email, role:role, createdAt: createdAt)
+        self.init(id: id, firstname: firstname, lastname: lastname, username: username, password: password, email:email)
     }
     
     func toJSON() -> [String: Any] {
@@ -50,9 +44,7 @@ class UserSubscribeResponse: Codable {
             "lastname": self.lastname,
             "username": self.username,
             "password": self.password,
-            "email": self.email,
-            "role": self.role,
-            "createdAt": self.createdAt
+            "email": self.email
         ]
     }
 }

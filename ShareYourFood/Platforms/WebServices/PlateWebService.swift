@@ -14,7 +14,7 @@ class PlateWebService: PlateService {
         let url = URL(string: "http://localhost:3000/plates")
         var request = URLRequest(url: url!)
         
-        let token = "$2b$05$9CXm5G5aPe8WxwUry5HNQeMo2cAsGNNjiQ6oUqc6//jopUvpEXVZa"
+        let token = MyVariables.token
         
         let authorization = "Bearer ".appending(token)
         request.httpMethod = "GET"
@@ -42,7 +42,7 @@ class PlateWebService: PlateService {
                 completion(plates)
             }
         }
-        dataTask.resume()//OBLIGATOIRE pour lancer la requete
+        dataTask.resume()
     }
     
     func fetchPlateById(plateId: Int, completion: @escaping (PlateByIdResponse) -> Void) {
@@ -50,7 +50,7 @@ class PlateWebService: PlateService {
         
         var request = URLRequest(url: url!)
         
-        let token = "$2b$05$9CXm5G5aPe8WxwUry5HNQeMo2cAsGNNjiQ6oUqc6//jopUvpEXVZa"
+        let token = MyVariables.token
         
         let authorization = "Bearer ".appending(token)
         request.httpMethod = "GET"
@@ -77,50 +77,6 @@ class PlateWebService: PlateService {
             }
         }
         dataTask.resume()
-      /* var request = URLRequest(url: url!)
-        let token = "$2b$05$9CXm5G5aPe8WxwUry5HNQeMo2cAsGNNjiQ6oUqc6//jopUvpEXVZa"
-        
-        let authorization = "Bearer ".appending(token)
-                request.httpMethod = "GET"
-        request.addValue(authorization, forHTTPHeaderField: "Authorization")
-        
-                URLSession.shared.dataTask(with: request) { data, response, error in
-                    guard error == nil else {
-                        print("Error: error calling GET")
-                        print(error!)
-                        return
-                    }
-                    guard let data = data else {
-                        print("Error: Did not receive data")
-                        return
-                    }
-                    guard let response = response as? HTTPURLResponse, (200 ..< 299) ~= response.statusCode else {
-                        print("Error: HTTP request failed")
-                        return
-                    }
-                    do {
-                        guard let jsonObject = try JSONSerialization.jsonObject(with: data) as? [String: Any] else {
-                            print("Error: Cannot convert data to JSON object")
-                            return
-                        }
-                        guard let prettyJsonData = try? JSONSerialization.data(withJSONObject: jsonObject, options: .prettyPrinted) else {
-                            print("Error: Cannot convert JSON object to Pretty JSON data")
-                            return
-                        }
-                        guard let prettyPrintedJson = String(data: prettyJsonData, encoding: .utf8) else {
-                            print("Error: Could print JSON in String")
-                            return
-                        }
-                        
-                    
-                        
-                    } catch {
-                        print("Error: Trying to convert JSON data to string")
-                        return
-                    }
-                }.resume()*/
-        
-        
     }
 
     
@@ -128,7 +84,7 @@ class PlateWebService: PlateService {
     
     func addPlate(plate: PlateRequest, completion: @escaping ([PlateRequest]) -> Void) {
         let url = URL(string: "http://localhost:3000/plates")
-        let token = "$2b$05$WrR/dKo3Pa6i8cm4h9EEe.Xits/GiHxiNvVGq8s72Ect7D2gACM2e"
+        let token = MyVariables.token
         let authorization = "Bearer ".appending(token)
         
         let uploadDataModel = PlateRequest(name: plate.name, photo: plate.photo, quantity: plate.quantity, number: plate.number, comment: plate.comment, reserved: plate.reserved, userId: plate.userId)
@@ -240,7 +196,7 @@ class PlateWebService: PlateService {
     
     func deletePlate(plateId: Int, completion: @escaping ([PlateRequest]) -> Void) {
         let url = URL(string: "http://localhost:3000/plates/"+plateId.description)
-        let token = "$2b$05$WrR/dKo3Pa6i8cm4h9EEe.Xits/GiHxiNvVGq8s72Ect7D2gACM2e"
+        let token = MyVariables.token
         let authorization = "Bearer ".appending(token)
         
                 
