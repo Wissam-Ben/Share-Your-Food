@@ -106,8 +106,8 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
 
         /*self.navigationController?.pushViewController(SearchRecipeCategoriesListViewController(), animated: true)*/
         var mainView: UIStoryboard!
-        mainView = UIStoryboard(name: "vcLogin", bundle: nil)
-        let viewcontroller : UIViewController = mainView.instantiateViewController(withIdentifier: "iPhone5") as UIViewController
+        mainView = UIStoryboard(name: "navMenu", bundle: nil)
+        let viewcontroller : UIViewController = mainView.instantiateViewController(withIdentifier: "Navigation") as UIViewController
         self.navigationController?.pushViewController(viewcontroller, animated: true)
     }
     
