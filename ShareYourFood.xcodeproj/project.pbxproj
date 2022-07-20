@@ -15,6 +15,9 @@
 		AA0DF5922884343400B3C025 /* MyVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0DF5912884343400B3C025 /* MyVariables.swift */; };
 		AA0DF59528855F6E00B3C025 /* RecipeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0DF59328855F6E00B3C025 /* RecipeDetailViewController.swift */; };
 		AA0DF59628855F6E00B3C025 /* RecipeDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA0DF59428855F6E00B3C025 /* RecipeDetailViewController.xib */; };
+		AA2D11B7288837F1007547F7 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2D11B6288837F1007547F7 /* UserService.swift */; };
+		AA2D11B9288838B9007547F7 /* UserWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2D11B8288838B9007547F7 /* UserWebService.swift */; };
+		AA2D11BB28884300007547F7 /* UserSave.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2D11BA28884300007547F7 /* UserSave.swift */; };
 		AA73266D284D459B003D6616 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA73266C284D459B003D6616 /* AppDelegate.swift */; };
 		AA732676284D459C003D6616 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA732675284D459C003D6616 /* Assets.xcassets */; };
 		AA732679284D459C003D6616 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA732677284D459C003D6616 /* LaunchScreen.storyboard */; };
@@ -87,6 +90,9 @@
 		AA0DF5912884343400B3C025 /* MyVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyVariables.swift; sourceTree = "<group>"; };
 		AA0DF59328855F6E00B3C025 /* RecipeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailViewController.swift; sourceTree = "<group>"; };
 		AA0DF59428855F6E00B3C025 /* RecipeDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipeDetailViewController.xib; sourceTree = "<group>"; };
+		AA2D11B6288837F1007547F7 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		AA2D11B8288838B9007547F7 /* UserWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserWebService.swift; sourceTree = "<group>"; };
+		AA2D11BA28884300007547F7 /* UserSave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSave.swift; sourceTree = "<group>"; };
 		AA732669284D459B003D6616 /* ShareYourFood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShareYourFood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA73266C284D459B003D6616 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA732675284D459C003D6616 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -324,6 +330,7 @@
 				F8BEA3812881F12B00A14C74 /* AuthWebService.swift */,
 				F8BEA38528821D7700A14C74 /* ReservationWebService.swift */,
 				AA0DF58928835E9B00B3C025 /* AuthenticationWebService.swift */,
+				AA2D11B8288838B9007547F7 /* UserWebService.swift */,
 			);
 			path = WebServices;
 			sourceTree = "<group>";
@@ -370,6 +377,7 @@
 				F8BEA37F2881F0F700A14C74 /* AuthService.swift */,
 				F8BEA383288218B900A14C74 /* ReservationService.swift */,
 				AA0DF58728835E6600B3C025 /* AuthenticationService.swift */,
+				AA2D11B6288837F1007547F7 /* UserService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -425,6 +433,7 @@
 				AA0DF58D2883651200B3C025 /* UserSubscribeResponse.swift */,
 				AA0DF58F288369D600B3C025 /* UserLoginResponse.swift */,
 				AA0DF5912884343400B3C025 /* MyVariables.swift */,
+				AA2D11BA28884300007547F7 /* UserSave.swift */,
 			);
 			path = FoodModels;
 			sourceTree = "<group>";
@@ -604,7 +613,9 @@
 				AA0DF5922884343400B3C025 /* MyVariables.swift in Sources */,
 				AA7326D4285E71F7003D6616 /* MealService.swift in Sources */,
 				F8BEA3802881F0F700A14C74 /* AuthService.swift in Sources */,
+				AA2D11B9288838B9007547F7 /* UserWebService.swift in Sources */,
 				AA7326F528643F2C003D6616 /* SearchRecipeCategoriesListViewController.swift in Sources */,
+				AA2D11BB28884300007547F7 /* UserSave.swift in Sources */,
 				F8BEA384288218B900A14C74 /* ReservationService.swift in Sources */,
 				AA9FD8B22881C0E300D970DA /* Evaluation.swift in Sources */,
 				AA9FD8AA2881C0B100D970DA /* PlateService.swift in Sources */,
@@ -615,6 +626,7 @@
 				AA73270228647A64003D6616 /* MealCategoryService.swift in Sources */,
 				F8BEA3822881F12B00A14C74 /* AuthWebService.swift in Sources */,
 				AA9A4FE2288803900071C567 /* AddPlateViewController.swift in Sources */,
+				AA2D11B7288837F1007547F7 /* UserService.swift in Sources */,
 				AA0DF58C28835FDE00B3C025 /* UserLogin.swift in Sources */,
 				AA0DF59528855F6E00B3C025 /* RecipeDetailViewController.swift in Sources */,
 				AA9FD88828798D5500D970DA /* RecipeDetailsViewController.swift in Sources */,
