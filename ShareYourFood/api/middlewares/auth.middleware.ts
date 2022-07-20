@@ -14,13 +14,13 @@ export async function isAuth(req: Request, res: Response, next: NextFunction): P
         	where: {token: bearerToken}
         }).then((sess) => {
         	if (!sess) {
-        		res.status(401).json();
+        		res.status(401);
         		return;
         	}
         	
         }).catch((err) => {
 			console.log(err);
-			res.status(401).json();
+			res.status(401);
 			return;
 		});
 		next();

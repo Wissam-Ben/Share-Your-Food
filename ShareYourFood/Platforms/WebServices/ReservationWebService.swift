@@ -34,9 +34,10 @@ class ReservationWebService: ReservationService {
             
 
             let reservations: [Reservation] = json.compactMap {obj in
-                print(obj)
+                //print(obj)
                 return Reservation(dict: obj)
             }
+            print(reservations)
             
             DispatchQueue.main.async {
                 completion(reservations)

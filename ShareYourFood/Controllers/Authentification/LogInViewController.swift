@@ -28,6 +28,10 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
     var userResponse: UserLoginResponse!
     var userAccount: User!
     
+    var plateService: PlateService {
+            return PlateWebService()
+    }
+    
     var authService: AuthService {
             return AuthWebService()
     }
@@ -51,11 +55,11 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        /*self.reservationService.fetchReservationsOfPlate(plateId: 1) { plate in
+        self.reservationService.fetchReservationsOfPlate(plateId: 1) { plate in
            
             self.reservations = plate
         
-        }*/
+        }
         
         /*self.plateService.editPlate(plateId: 8, newplate: PlateRequest(name: "Couscous", photo: "", quantity: 400, number: 5, comment: "Couscous fait par halisia halifa", reserved: false, userId: 5)) { _ in
         }*/
