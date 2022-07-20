@@ -20,6 +20,7 @@ class PhotoResponse  {
     convenience init?(dict: [String: Any]) {
         guard let type = dict["type"] as? String,
               let data = dict["data"] as? [Int] else {
+            
             return nil
         }
         self.init(type: type, data: data)

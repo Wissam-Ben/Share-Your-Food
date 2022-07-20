@@ -74,6 +74,8 @@
 		F8BEA38C28844DFF00A14C74 /* PlateByIdResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BEA38B28844DFF00A14C74 /* PlateByIdResponse.swift */; };
 		F8BEA38E28844E3800A14C74 /* PhotoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BEA38D28844E3800A14C74 /* PhotoResponse.swift */; };
 		F8BEA39028883BD900A14C74 /* Navigation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8BEA38F28883BD900A14C74 /* Navigation.storyboard */; };
+		F8BEA39228886F7200A14C74 /* PlateResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BEA39128886F7200A14C74 /* PlateResponse.swift */; };
+		F8BEA3942888763200A14C74 /* UserPlate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BEA3932888763200A14C74 /* UserPlate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -178,6 +180,8 @@
 		F8BEA38B28844DFF00A14C74 /* PlateByIdResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlateByIdResponse.swift; sourceTree = "<group>"; };
 		F8BEA38D28844E3800A14C74 /* PhotoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoResponse.swift; sourceTree = "<group>"; };
 		F8BEA38F28883BD900A14C74 /* Navigation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Navigation.storyboard; sourceTree = "<group>"; };
+		F8BEA39128886F7200A14C74 /* PlateResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlateResponse.swift; sourceTree = "<group>"; };
+		F8BEA3932888763200A14C74 /* UserPlate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPlate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -415,6 +419,7 @@
 				AA9FD8AE2881C0E300D970DA /* Session.swift */,
 				AA9FD8AB2881C0E300D970DA /* UserSubscribe.swift */,
 				AA9FD8B92881C27400D970DA /* User.swift */,
+				F8BEA39128886F7200A14C74 /* PlateResponse.swift */,
 				F8BEA3872884141700A14C74 /* PlateRequest.swift */,
 				F8BEA389288432C400A14C74 /* ReservationRequest.swift */,
 				F8BEA38B28844DFF00A14C74 /* PlateByIdResponse.swift */,
@@ -424,6 +429,7 @@
 				AA0DF58F288369D600B3C025 /* UserLoginResponse.swift */,
 				AA0DF5912884343400B3C025 /* MyVariables.swift */,
 				AA2D11BA28884300007547F7 /* UserSave.swift */,
+				F8BEA3932888763200A14C74 /* UserPlate.swift */,
 			);
 			path = FoodModels;
 			sourceTree = "<group>";
@@ -603,6 +609,7 @@
 				AA9A4FDA288800E20071C567 /* PlateDetailsViewController.swift in Sources */,
 				AA7326CE285A900B003D6616 /* MealCategory.swift in Sources */,
 				AA73270428647A82003D6616 /* MealCategoryWebService.swift in Sources */,
+				F8BEA3942888763200A14C74 /* UserPlate.swift in Sources */,
 				AA0DF58828835E6600B3C025 /* AuthenticationService.swift in Sources */,
 				AA73270228647A64003D6616 /* MealCategoryService.swift in Sources */,
 				F8BEA3822881F12B00A14C74 /* AuthWebService.swift in Sources */,
@@ -610,6 +617,7 @@
 				AA2D11B7288837F1007547F7 /* UserService.swift in Sources */,
 				AA0DF58C28835FDE00B3C025 /* UserLogin.swift in Sources */,
 				AA0DF59528855F6E00B3C025 /* RecipeDetailViewController.swift in Sources */,
+				F8BEA39228886F7200A14C74 /* PlateResponse.swift in Sources */,
 				AA7326CC285A8FAF003D6616 /* MealRecipe.swift in Sources */,
 				F8BEA3882884141700A14C74 /* PlateRequest.swift in Sources */,
 				AA73266D284D459B003D6616 /* AppDelegate.swift in Sources */,
