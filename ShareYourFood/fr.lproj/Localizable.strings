@@ -7,3 +7,12 @@
 */ 
 "subscribe.title" = "Inscription";
 "login.title" = "Connexion";
+"firstname" = "prénom";
+"lastname" = "nom";
+"username" = "identifiant";
+"email" = "email";
+"password" = "mot de passe";
+"login.button" = "Se connecter";
+"subscribe.button" = "S'inscrire";
+"login.message" = "Vous avez déjà un compte ?";
+"subscribe.message" = "Vous n'avez pas encore de compte ?";

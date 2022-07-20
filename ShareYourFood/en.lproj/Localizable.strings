@@ -7,3 +7,13 @@
 */
 "subscribe.title" = "Subscribe";
 "login.title" = "Log In";
+"firstname" = "firstname";
+"lastname" = "lastname";
+"username" = "username";
+"email" = "email";
+"password" = "password";
+"login.button" = "Login";
+"subscribe.button" = "Subscribe";
+"login.message" = "Already have an account ?";
+"subscribe.message" = "Don't have an account ?";
+
