@@ -70,7 +70,7 @@ class RecipesInfosListViewController: UIViewController, UITableViewDelegate, UIT
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let recipeDetails = RecipeDetailsViewController()
+        let recipeDetails = RecipeDetailViewController()
         
         let recipe = self.recipes[indexPath.row]
         

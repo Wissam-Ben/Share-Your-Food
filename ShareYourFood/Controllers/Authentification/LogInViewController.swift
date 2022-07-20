@@ -16,16 +16,68 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var loginButton: UIButton!
     
-    var foodService: FoodService {
-            return FoodWebService()
+    @IBOutlet weak var subscribeButton: UIButton!
+    
+    @IBOutlet weak var subscribeTextView: UILabel!
+    
+    var authenticationService: AuthenticationService {
+        return AuthenticationWebService()
+
+    }
+    var user: UserLogin!
+    var userResponse: UserLoginResponse!
+    var userAccount: User!
+    
+    var authService: AuthService {
+            return AuthWebService()
     }
     
+    var reservationService: ReservationService {
+            return ReservationWebService()
+    }
+    
+    var userService: UserService {
+        return UserWebService()
+    }
+    
+    //var plate: PlateByIdResponse = 
     var plates: [Plate] = []
+    var users: [UserSubscribe] = []
+    var reservations: [Reservation] = []
+
+    //var token: String!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        /*self.reservationService.fetchReservationsOfPlate(plateId: 1) { plate in
+           
+            self.reservations = plate
+        
+        }*/
+        
+        
+        /*self.plateService.editPlate(plateId: 8, newplate: PlateRequest(name: "Couscous", photo: "", quantity: 400, number: 5, comment: "Couscous fait par halisia halifa", reserved: false, userId: 5)) { _ in
+        }*/
+        
+        /*self.plateService.deletePlate(plateId: 1) { _ in
+        }*/
+        
+        /*self.reservationService.addReservation(reservation: ReservationRequest(plateId: 8)) { _ in
+        }*/
+        
+        userService.fetchUserById(userId: "5") { user in
+            self.userAccount = user
+        }
+        
+        
         super.title = NSLocalizedString("login.title", comment: "")
+        self.loginButton.setTitle(NSLocalizedString("login.button", comment: ""), for: UIControl.State.normal)
+        self.subscribeButton.setTitle(NSLocalizedString("subscribe.button", comment: ""), for: UIControl.State.normal)
+        self.subscribeTextView.text = NSLocalizedString("subscribe.message", comment: "")
+        self.usernameTextField.placeholder = NSLocalizedString("username", comment: "")
+        self.passwordTextField.placeholder = NSLocalizedString("password", comment: "")
         self.usernameTextField.delegate = self
         self.passwordTextField.delegate = self
         self.handleLogin(self.loginButton!)
@@ -46,15 +98,19 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
             return
         }
         
-        self.foodService.fetchPlates { plate in
-           
-            self.plates = plate
+        self.user = UserLogin(username: log, password: pwd)
+        self.authenticationService.login(completion: { response in
+            self.userResponse = response
+            print("ttoooootttoooo")
+            print(response.token)
+            print("toooto")
+            MyVariables.token = response.token
+            
+        }, user: self.user)
         
-        }
-        
-        self.navigationController?.pushViewController(SearchRecipeCategoriesListViewController(), animated: true)
-        
+        print(MyVariables.token)
 
+        self.navigationController?.pushViewController(SearchRecipeCategoriesListViewController(), animated: true)
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -76,6 +132,11 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
                 alert.dismiss(animated: true)
             }
         }
+    }
+    
+    
+    @IBAction func subscribe(_ sender: Any) {
+        self.navigationController?.pushViewController(SubscribeViewController(), animated: true)
     }
     
 

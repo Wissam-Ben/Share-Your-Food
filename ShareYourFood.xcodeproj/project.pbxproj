@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA0DF58828835E6600B3C025 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0DF58728835E6600B3C025 /* AuthenticationService.swift */; };
+		AA0DF58A28835E9B00B3C025 /* AuthenticationWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0DF58928835E9B00B3C025 /* AuthenticationWebService.swift */; };
+		AA0DF58C28835FDE00B3C025 /* UserLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0DF58B28835FDE00B3C025 /* UserLogin.swift */; };
+		AA0DF58E2883651200B3C025 /* UserSubscribeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0DF58D2883651200B3C025 /* UserSubscribeResponse.swift */; };
+		AA0DF590288369D600B3C025 /* UserLoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0DF58F288369D600B3C025 /* UserLoginResponse.swift */; };
+		AA0DF5922884343400B3C025 /* MyVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0DF5912884343400B3C025 /* MyVariables.swift */; };
+		AA0DF59528855F6E00B3C025 /* RecipeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0DF59328855F6E00B3C025 /* RecipeDetailViewController.swift */; };
+		AA0DF59628855F6E00B3C025 /* RecipeDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA0DF59428855F6E00B3C025 /* RecipeDetailViewController.xib */; };
+		AA2D11B7288837F1007547F7 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2D11B6288837F1007547F7 /* UserService.swift */; };
+		AA2D11B9288838B9007547F7 /* UserWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2D11B8288838B9007547F7 /* UserWebService.swift */; };
+		AA2D11BB28884300007547F7 /* UserSave.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2D11BA28884300007547F7 /* UserSave.swift */; };
 		AA73266D284D459B003D6616 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA73266C284D459B003D6616 /* AppDelegate.swift */; };
 		AA732676284D459C003D6616 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA732675284D459C003D6616 /* Assets.xcassets */; };
 		AA732679284D459C003D6616 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA732677284D459C003D6616 /* LaunchScreen.storyboard */; };
@@ -25,6 +36,20 @@
 		AA7326FC2864494C003D6616 /* SearchRecipeCategoriesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA7326FA2864494C003D6616 /* SearchRecipeCategoriesTableViewCell.xib */; };
 		AA73270228647A64003D6616 /* MealCategoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA73270128647A64003D6616 /* MealCategoryService.swift */; };
 		AA73270428647A82003D6616 /* MealCategoryWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA73270328647A82003D6616 /* MealCategoryWebService.swift */; };
+		AA9A4FC52887F5F80071C567 /* NavigationBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9A4FC32887F5F80071C567 /* NavigationBarViewController.swift */; };
+		AA9A4FC62887F5F80071C567 /* NavigationBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA9A4FC42887F5F80071C567 /* NavigationBarViewController.xib */; };
+		AA9A4FCE2887F92C0071C567 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9A4FCC2887F92C0071C567 /* AccountViewController.swift */; };
+		AA9A4FCF2887F92C0071C567 /* AccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA9A4FCD2887F92C0071C567 /* AccountViewController.xib */; };
+		AA9A4FD22887FE770071C567 /* HomePlatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9A4FD02887FE770071C567 /* HomePlatesViewController.swift */; };
+		AA9A4FD32887FE770071C567 /* HomePlatesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA9A4FD12887FE770071C567 /* HomePlatesViewController.xib */; };
+		AA9A4FD62887FEE30071C567 /* plateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9A4FD42887FEE30071C567 /* plateTableViewCell.swift */; };
+		AA9A4FD72887FEE30071C567 /* plateTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA9A4FD52887FEE30071C567 /* plateTableViewCell.xib */; };
+		AA9A4FDA288800E20071C567 /* PlateDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9A4FD8288800E20071C567 /* PlateDetailsViewController.swift */; };
+		AA9A4FDB288800E20071C567 /* PlateDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA9A4FD9288800E20071C567 /* PlateDetailsViewController.xib */; };
+		AA9A4FDE288803150071C567 /* MyPlatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9A4FDC288803150071C567 /* MyPlatesViewController.swift */; };
+		AA9A4FDF288803150071C567 /* MyPlatesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA9A4FDD288803150071C567 /* MyPlatesViewController.xib */; };
+		AA9A4FE2288803900071C567 /* AddPlateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9A4FE0288803900071C567 /* AddPlateViewController.swift */; };
+		AA9A4FE3288803900071C567 /* AddPlateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA9A4FE1288803900071C567 /* AddPlateViewController.xib */; };
 		AA9FD88828798D5500D970DA /* RecipeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9FD88628798D5500D970DA /* RecipeDetailsViewController.swift */; };
 		AA9FD88928798D5500D970DA /* RecipeDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA9FD88728798D5500D970DA /* RecipeDetailsViewController.xib */; };
 		AA9FD88C2879AC8400D970DA /* RecipesInfosListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9FD88A2879AC8400D970DA /* RecipesInfosListViewController.swift */; };
@@ -33,21 +58,40 @@
 		AA9FD8912879ACA200D970DA /* RecipeInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA9FD88F2879ACA200D970DA /* RecipeInfoTableViewCell.xib */; };
 		AA9FD898287D4E2000D970DA /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9FD896287D4E2000D970DA /* LogInViewController.swift */; };
 		AA9FD899287D4E2000D970DA /* LogInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA9FD897287D4E2000D970DA /* LogInViewController.xib */; };
-		AA9FD8AA2881C0B100D970DA /* FoodService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9FD8A92881C0B100D970DA /* FoodService.swift */; };
+		AA9FD8AA2881C0B100D970DA /* PlateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9FD8A92881C0B100D970DA /* PlateService.swift */; };
 		AA9FD8B12881C0E300D970DA /* UserSubscribe.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9FD8AB2881C0E300D970DA /* UserSubscribe.swift */; };
 		AA9FD8B22881C0E300D970DA /* Evaluation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9FD8AC2881C0E300D970DA /* Evaluation.swift */; };
 		AA9FD8B32881C0E300D970DA /* PlateRecipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9FD8AD2881C0E300D970DA /* PlateRecipe.swift */; };
 		AA9FD8B42881C0E300D970DA /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9FD8AE2881C0E300D970DA /* Session.swift */; };
 		AA9FD8B52881C0E300D970DA /* Plate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9FD8AF2881C0E300D970DA /* Plate.swift */; };
 		AA9FD8B62881C0E300D970DA /* Reservation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9FD8B02881C0E300D970DA /* Reservation.swift */; };
-		AA9FD8B82881C11300D970DA /* FoodWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9FD8B72881C11300D970DA /* FoodWebService.swift */; };
+		AA9FD8B82881C11300D970DA /* PlateWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9FD8B72881C11300D970DA /* PlateWebService.swift */; };
 		AA9FD8BA2881C27400D970DA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9FD8B92881C27400D970DA /* User.swift */; };
 		AAF285FE2865A5C90060E039 /* MealCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF285FD2865A5C90060E039 /* MealCategories.swift */; };
 		AAF286002868906C0060E039 /* MealRecipeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF285FF2868906C0060E039 /* MealRecipeService.swift */; };
 		AAF28642286F93060060E039 /* MealRecipeWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF28641286F93060060E039 /* MealRecipeWebService.swift */; };
+		F8BEA3802881F0F700A14C74 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BEA37F2881F0F700A14C74 /* AuthService.swift */; };
+		F8BEA3822881F12B00A14C74 /* AuthWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BEA3812881F12B00A14C74 /* AuthWebService.swift */; };
+		F8BEA384288218B900A14C74 /* ReservationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BEA383288218B900A14C74 /* ReservationService.swift */; };
+		F8BEA38628821D7700A14C74 /* ReservationWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BEA38528821D7700A14C74 /* ReservationWebService.swift */; };
+		F8BEA3882884141700A14C74 /* PlateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BEA3872884141700A14C74 /* PlateRequest.swift */; };
+		F8BEA38A288432C400A14C74 /* ReservationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BEA389288432C400A14C74 /* ReservationRequest.swift */; };
+		F8BEA38C28844DFF00A14C74 /* PlateByIdResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BEA38B28844DFF00A14C74 /* PlateByIdResponse.swift */; };
+		F8BEA38E28844E3800A14C74 /* PhotoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BEA38D28844E3800A14C74 /* PhotoResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AA0DF58728835E6600B3C025 /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
+		AA0DF58928835E9B00B3C025 /* AuthenticationWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationWebService.swift; sourceTree = "<group>"; };
+		AA0DF58B28835FDE00B3C025 /* UserLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLogin.swift; sourceTree = "<group>"; };
+		AA0DF58D2883651200B3C025 /* UserSubscribeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSubscribeResponse.swift; sourceTree = "<group>"; };
+		AA0DF58F288369D600B3C025 /* UserLoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoginResponse.swift; sourceTree = "<group>"; };
+		AA0DF5912884343400B3C025 /* MyVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyVariables.swift; sourceTree = "<group>"; };
+		AA0DF59328855F6E00B3C025 /* RecipeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailViewController.swift; sourceTree = "<group>"; };
+		AA0DF59428855F6E00B3C025 /* RecipeDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipeDetailViewController.xib; sourceTree = "<group>"; };
+		AA2D11B6288837F1007547F7 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		AA2D11B8288838B9007547F7 /* UserWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserWebService.swift; sourceTree = "<group>"; };
+		AA2D11BA28884300007547F7 /* UserSave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSave.swift; sourceTree = "<group>"; };
 		AA732669284D459B003D6616 /* ShareYourFood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShareYourFood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA73266C284D459B003D6616 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA732675284D459C003D6616 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -100,6 +144,20 @@
 		AA73270128647A64003D6616 /* MealCategoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealCategoryService.swift; sourceTree = "<group>"; };
 		AA73270328647A82003D6616 /* MealCategoryWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealCategoryWebService.swift; sourceTree = "<group>"; };
 		AA7327072864E14E003D6616 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA9A4FC32887F5F80071C567 /* NavigationBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarViewController.swift; sourceTree = "<group>"; };
+		AA9A4FC42887F5F80071C567 /* NavigationBarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NavigationBarViewController.xib; sourceTree = "<group>"; };
+		AA9A4FCC2887F92C0071C567 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		AA9A4FCD2887F92C0071C567 /* AccountViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountViewController.xib; sourceTree = "<group>"; };
+		AA9A4FD02887FE770071C567 /* HomePlatesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePlatesViewController.swift; sourceTree = "<group>"; };
+		AA9A4FD12887FE770071C567 /* HomePlatesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomePlatesViewController.xib; sourceTree = "<group>"; };
+		AA9A4FD42887FEE30071C567 /* plateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = plateTableViewCell.swift; sourceTree = "<group>"; };
+		AA9A4FD52887FEE30071C567 /* plateTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = plateTableViewCell.xib; sourceTree = "<group>"; };
+		AA9A4FD8288800E20071C567 /* PlateDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlateDetailsViewController.swift; sourceTree = "<group>"; };
+		AA9A4FD9288800E20071C567 /* PlateDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlateDetailsViewController.xib; sourceTree = "<group>"; };
+		AA9A4FDC288803150071C567 /* MyPlatesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPlatesViewController.swift; sourceTree = "<group>"; };
+		AA9A4FDD288803150071C567 /* MyPlatesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyPlatesViewController.xib; sourceTree = "<group>"; };
+		AA9A4FE0288803900071C567 /* AddPlateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlateViewController.swift; sourceTree = "<group>"; };
+		AA9A4FE1288803900071C567 /* AddPlateViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddPlateViewController.xib; sourceTree = "<group>"; };
 		AA9FD88628798D5500D970DA /* RecipeDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailsViewController.swift; sourceTree = "<group>"; };
 		AA9FD88728798D5500D970DA /* RecipeDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipeDetailsViewController.xib; sourceTree = "<group>"; };
 		AA9FD88A2879AC8400D970DA /* RecipesInfosListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesInfosListViewController.swift; sourceTree = "<group>"; };
@@ -108,18 +166,26 @@
 		AA9FD88F2879ACA200D970DA /* RecipeInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipeInfoTableViewCell.xib; sourceTree = "<group>"; };
 		AA9FD896287D4E2000D970DA /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		AA9FD897287D4E2000D970DA /* LogInViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LogInViewController.xib; sourceTree = "<group>"; };
-		AA9FD8A92881C0B100D970DA /* FoodService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodService.swift; sourceTree = "<group>"; };
+		AA9FD8A92881C0B100D970DA /* PlateService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlateService.swift; sourceTree = "<group>"; };
 		AA9FD8AB2881C0E300D970DA /* UserSubscribe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSubscribe.swift; sourceTree = "<group>"; };
 		AA9FD8AC2881C0E300D970DA /* Evaluation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Evaluation.swift; sourceTree = "<group>"; };
 		AA9FD8AD2881C0E300D970DA /* PlateRecipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlateRecipe.swift; sourceTree = "<group>"; };
 		AA9FD8AE2881C0E300D970DA /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		AA9FD8AF2881C0E300D970DA /* Plate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Plate.swift; sourceTree = "<group>"; };
 		AA9FD8B02881C0E300D970DA /* Reservation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reservation.swift; sourceTree = "<group>"; };
-		AA9FD8B72881C11300D970DA /* FoodWebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodWebService.swift; sourceTree = "<group>"; };
+		AA9FD8B72881C11300D970DA /* PlateWebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlateWebService.swift; sourceTree = "<group>"; };
 		AA9FD8B92881C27400D970DA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		AAF285FD2865A5C90060E039 /* MealCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealCategories.swift; sourceTree = "<group>"; };
 		AAF285FF2868906C0060E039 /* MealRecipeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealRecipeService.swift; sourceTree = "<group>"; };
 		AAF28641286F93060060E039 /* MealRecipeWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealRecipeWebService.swift; sourceTree = "<group>"; };
+		F8BEA37F2881F0F700A14C74 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		F8BEA3812881F12B00A14C74 /* AuthWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthWebService.swift; sourceTree = "<group>"; };
+		F8BEA383288218B900A14C74 /* ReservationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationService.swift; sourceTree = "<group>"; };
+		F8BEA38528821D7700A14C74 /* ReservationWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationWebService.swift; sourceTree = "<group>"; };
+		F8BEA3872884141700A14C74 /* PlateRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlateRequest.swift; sourceTree = "<group>"; };
+		F8BEA389288432C400A14C74 /* ReservationRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationRequest.swift; sourceTree = "<group>"; };
+		F8BEA38B28844DFF00A14C74 /* PlateByIdResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlateByIdResponse.swift; sourceTree = "<group>"; };
+		F8BEA38D28844E3800A14C74 /* PhotoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -254,10 +320,14 @@
 		AA7326C1285A7414003D6616 /* WebServices */ = {
 			isa = PBXGroup;
 			children = (
-				AA9FD8B72881C11300D970DA /* FoodWebService.swift */,
+				AA9FD8B72881C11300D970DA /* PlateWebService.swift */,
 				AA7326D3285E71F7003D6616 /* MealService.swift */,
 				AA73270328647A82003D6616 /* MealCategoryWebService.swift */,
 				AAF28641286F93060060E039 /* MealRecipeWebService.swift */,
+				F8BEA3812881F12B00A14C74 /* AuthWebService.swift */,
+				F8BEA38528821D7700A14C74 /* ReservationWebService.swift */,
+				AA0DF58928835E9B00B3C025 /* AuthenticationWebService.swift */,
+				AA2D11B8288838B9007547F7 /* UserWebService.swift */,
 			);
 			path = WebServices;
 			sourceTree = "<group>";
@@ -265,8 +335,13 @@
 		AA7326C3285A7443003D6616 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				AA9A4FCA2887F8CE0071C567 /* AddPlate */,
+				AA9A4FC82887F8910071C567 /* Plates */,
+				AA9A4FC72887F8770071C567 /* Account */,
 				AA7326E028639491003D6616 /* Search */,
 				AA7326DF28639475003D6616 /* Authentification */,
+				AA9A4FC32887F5F80071C567 /* NavigationBarViewController.swift */,
+				AA9A4FC42887F5F80071C567 /* NavigationBarViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -292,10 +367,14 @@
 		AA7326C6285A7F8D003D6616 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				AA9FD8A92881C0B100D970DA /* FoodService.swift */,
+				AA9FD8A92881C0B100D970DA /* PlateService.swift */,
 				AA7326E92863993D003D6616 /* RecipeService.swift */,
 				AA73270128647A64003D6616 /* MealCategoryService.swift */,
 				AAF285FF2868906C0060E039 /* MealRecipeService.swift */,
+				F8BEA37F2881F0F700A14C74 /* AuthService.swift */,
+				F8BEA383288218B900A14C74 /* ReservationService.swift */,
+				AA0DF58728835E6600B3C025 /* AuthenticationService.swift */,
+				AA2D11B6288837F1007547F7 /* UserService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -343,8 +422,50 @@
 				AA9FD8AE2881C0E300D970DA /* Session.swift */,
 				AA9FD8AB2881C0E300D970DA /* UserSubscribe.swift */,
 				AA9FD8B92881C27400D970DA /* User.swift */,
+				F8BEA3872884141700A14C74 /* PlateRequest.swift */,
+				F8BEA389288432C400A14C74 /* ReservationRequest.swift */,
+				F8BEA38B28844DFF00A14C74 /* PlateByIdResponse.swift */,
+				F8BEA38D28844E3800A14C74 /* PhotoResponse.swift */,
+				AA0DF58B28835FDE00B3C025 /* UserLogin.swift */,
+				AA0DF58D2883651200B3C025 /* UserSubscribeResponse.swift */,
+				AA0DF58F288369D600B3C025 /* UserLoginResponse.swift */,
+				AA0DF5912884343400B3C025 /* MyVariables.swift */,
+				AA2D11BA28884300007547F7 /* UserSave.swift */,
 			);
 			path = FoodModels;
+			sourceTree = "<group>";
+		};
+		AA9A4FC72887F8770071C567 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				AA9A4FCC2887F92C0071C567 /* AccountViewController.swift */,
+				AA9A4FCD2887F92C0071C567 /* AccountViewController.xib */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		AA9A4FC82887F8910071C567 /* Plates */ = {
+			isa = PBXGroup;
+			children = (
+				AA9A4FD02887FE770071C567 /* HomePlatesViewController.swift */,
+				AA9A4FD12887FE770071C567 /* HomePlatesViewController.xib */,
+				AA9A4FD42887FEE30071C567 /* plateTableViewCell.swift */,
+				AA9A4FD52887FEE30071C567 /* plateTableViewCell.xib */,
+				AA9A4FD8288800E20071C567 /* PlateDetailsViewController.swift */,
+				AA9A4FD9288800E20071C567 /* PlateDetailsViewController.xib */,
+				AA9A4FDC288803150071C567 /* MyPlatesViewController.swift */,
+				AA9A4FDD288803150071C567 /* MyPlatesViewController.xib */,
+			);
+			path = Plates;
+			sourceTree = "<group>";
+		};
+		AA9A4FCA2887F8CE0071C567 /* AddPlate */ = {
+			isa = PBXGroup;
+			children = (
+				AA9A4FE0288803900071C567 /* AddPlateViewController.swift */,
+				AA9A4FE1288803900071C567 /* AddPlateViewController.xib */,
+			);
+			path = AddPlate;
 			sourceTree = "<group>";
 		};
 		AA9FD8A2287F57EA00D970DA /* Categories */ = {
@@ -374,6 +495,8 @@
 			children = (
 				AA9FD88628798D5500D970DA /* RecipeDetailsViewController.swift */,
 				AA9FD88728798D5500D970DA /* RecipeDetailsViewController.xib */,
+				AA0DF59328855F6E00B3C025 /* RecipeDetailViewController.swift */,
+				AA0DF59428855F6E00B3C025 /* RecipeDetailViewController.xib */,
 			);
 			path = RecipeDetails;
 			sourceTree = "<group>";
@@ -437,16 +560,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA9A4FC62887F5F80071C567 /* NavigationBarViewController.xib in Resources */,
 				AA9FD88D2879AC8400D970DA /* RecipesInfosListViewController.xib in Resources */,
+				AA9A4FD32887FE770071C567 /* HomePlatesViewController.xib in Resources */,
+				AA0DF59628855F6E00B3C025 /* RecipeDetailViewController.xib in Resources */,
+				AA9A4FDF288803150071C567 /* MyPlatesViewController.xib in Resources */,
 				AA7326F628643F2C003D6616 /* SearchRecipeCategoriesListViewController.xib in Resources */,
+				AA9A4FD72887FEE30071C567 /* plateTableViewCell.xib in Resources */,
 				AA732693284DE8B3003D6616 /* Localizable.strings in Resources */,
 				AA732689284DD733003D6616 /* SubscribeViewController.xib in Resources */,
 				AA9FD88928798D5500D970DA /* RecipeDetailsViewController.xib in Resources */,
 				AA9FD8912879ACA200D970DA /* RecipeInfoTableViewCell.xib in Resources */,
+				AA9A4FDB288800E20071C567 /* PlateDetailsViewController.xib in Resources */,
 				AA732679284D459C003D6616 /* LaunchScreen.storyboard in Resources */,
+				AA9A4FCF2887F92C0071C567 /* AccountViewController.xib in Resources */,
 				AA9FD899287D4E2000D970DA /* LogInViewController.xib in Resources */,
 				AA732676284D459C003D6616 /* Assets.xcassets in Resources */,
 				AA7326FC2864494C003D6616 /* SearchRecipeCategoriesTableViewCell.xib in Resources */,
+				AA9A4FE3288803900071C567 /* AddPlateViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,33 +588,59 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA9A4FCE2887F92C0071C567 /* AccountViewController.swift in Sources */,
 				AA9FD88C2879AC8400D970DA /* RecipesInfosListViewController.swift in Sources */,
 				AA7326EE286399A3003D6616 /* Food.swift in Sources */,
 				AA7326D0285A9029003D6616 /* MealInfos.swift in Sources */,
 				AA7326FB2864494C003D6616 /* SearchRecipeCategoriesTableViewCell.swift in Sources */,
 				AA9FD8B32881C0E300D970DA /* PlateRecipe.swift in Sources */,
-				AA9FD8B82881C11300D970DA /* FoodWebService.swift in Sources */,
-				AAF285FE2865A5C90060E039 /* MealCategories.swift in Sources */,
+				AA9FD8B82881C11300D970DA /* PlateWebService.swift in Sources */,
 				AAF286002868906C0060E039 /* MealRecipeService.swift in Sources */,
+				F8BEA38A288432C400A14C74 /* ReservationRequest.swift in Sources */,
 				AA9FD8B52881C0E300D970DA /* Plate.swift in Sources */,
 				AAF28642286F93060060E039 /* MealRecipeWebService.swift in Sources */,
+				F8BEA38C28844DFF00A14C74 /* PlateByIdResponse.swift in Sources */,
+				AA0DF58E2883651200B3C025 /* UserSubscribeResponse.swift in Sources */,
+				AA0DF58A28835E9B00B3C025 /* AuthenticationWebService.swift in Sources */,
+				AAF285FE2865A5C90060E039 /* MealCategories.swift in Sources */,
+				AAF286002868906C0060E039 /* MealRecipeService.swift in Sources */,
+				AA0DF590288369D600B3C025 /* UserLoginResponse.swift in Sources */,
+				AA9A4FD22887FE770071C567 /* HomePlatesViewController.swift in Sources */,
+				AA0DF5922884343400B3C025 /* MyVariables.swift in Sources */,
 				AA7326D4285E71F7003D6616 /* MealService.swift in Sources */,
+				F8BEA3802881F0F700A14C74 /* AuthService.swift in Sources */,
+				AA2D11B9288838B9007547F7 /* UserWebService.swift in Sources */,
 				AA7326F528643F2C003D6616 /* SearchRecipeCategoriesListViewController.swift in Sources */,
+				AA2D11BB28884300007547F7 /* UserSave.swift in Sources */,
+				F8BEA384288218B900A14C74 /* ReservationService.swift in Sources */,
 				AA9FD8B22881C0E300D970DA /* Evaluation.swift in Sources */,
-				AA9FD8AA2881C0B100D970DA /* FoodService.swift in Sources */,
+				AA9FD8AA2881C0B100D970DA /* PlateService.swift in Sources */,
+				AA9A4FDA288800E20071C567 /* PlateDetailsViewController.swift in Sources */,
 				AA7326CE285A900B003D6616 /* MealCategory.swift in Sources */,
 				AA73270428647A82003D6616 /* MealCategoryWebService.swift in Sources */,
+				AA0DF58828835E6600B3C025 /* AuthenticationService.swift in Sources */,
 				AA73270228647A64003D6616 /* MealCategoryService.swift in Sources */,
+				F8BEA3822881F12B00A14C74 /* AuthWebService.swift in Sources */,
+				AA9A4FE2288803900071C567 /* AddPlateViewController.swift in Sources */,
+				AA2D11B7288837F1007547F7 /* UserService.swift in Sources */,
+				AA0DF58C28835FDE00B3C025 /* UserLogin.swift in Sources */,
+				AA0DF59528855F6E00B3C025 /* RecipeDetailViewController.swift in Sources */,
 				AA9FD88828798D5500D970DA /* RecipeDetailsViewController.swift in Sources */,
 				AA7326CC285A8FAF003D6616 /* MealRecipe.swift in Sources */,
+				F8BEA3882884141700A14C74 /* PlateRequest.swift in Sources */,
 				AA73266D284D459B003D6616 /* AppDelegate.swift in Sources */,
+				F8BEA38628821D7700A14C74 /* ReservationWebService.swift in Sources */,
+				F8BEA38E28844E3800A14C74 /* PhotoResponse.swift in Sources */,
 				AA9FD8BA2881C27400D970DA /* User.swift in Sources */,
+				AA9A4FC52887F5F80071C567 /* NavigationBarViewController.swift in Sources */,
 				AA9FD898287D4E2000D970DA /* LogInViewController.swift in Sources */,
 				AA7326EA2863993D003D6616 /* RecipeService.swift in Sources */,
 				AA9FD8B42881C0E300D970DA /* Session.swift in Sources */,
 				AA9FD8B62881C0E300D970DA /* Reservation.swift in Sources */,
+				AA9A4FDE288803150071C567 /* MyPlatesViewController.swift in Sources */,
 				AA9FD8902879ACA200D970DA /* RecipeInfoTableViewCell.swift in Sources */,
 				AA732688284DD733003D6616 /* SubscribeViewController.swift in Sources */,
+				AA9A4FD62887FEE30071C567 /* plateTableViewCell.swift in Sources */,
 				AA9FD8B12881C0E300D970DA /* UserSubscribe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
