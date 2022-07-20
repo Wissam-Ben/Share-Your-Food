@@ -75,6 +75,7 @@
 		F8BEA38A288432C400A14C74 /* ReservationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BEA389288432C400A14C74 /* ReservationRequest.swift */; };
 		F8BEA38C28844DFF00A14C74 /* PlateByIdResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BEA38B28844DFF00A14C74 /* PlateByIdResponse.swift */; };
 		F8BEA38E28844E3800A14C74 /* PhotoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BEA38D28844E3800A14C74 /* PhotoResponse.swift */; };
+		F8BEA39028883BD900A14C74 /* Navigation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8BEA38F28883BD900A14C74 /* Navigation.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -180,6 +181,7 @@
 		F8BEA389288432C400A14C74 /* ReservationRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationRequest.swift; sourceTree = "<group>"; };
 		F8BEA38B28844DFF00A14C74 /* PlateByIdResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlateByIdResponse.swift; sourceTree = "<group>"; };
 		F8BEA38D28844E3800A14C74 /* PhotoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoResponse.swift; sourceTree = "<group>"; };
+		F8BEA38F28883BD900A14C74 /* Navigation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Navigation.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -221,6 +223,7 @@
 				AA7327072864E14E003D6616 /* Info.plist */,
 				AA732677284D459C003D6616 /* LaunchScreen.storyboard */,
 				AA732695284DE8B3003D6616 /* Localizable.strings */,
+				F8BEA38F28883BD900A14C74 /* Navigation.storyboard */,
 			);
 			path = ShareYourFood;
 			sourceTree = "<group>";
@@ -367,7 +370,6 @@
 				F8BEA37F2881F0F700A14C74 /* AuthService.swift */,
 				F8BEA383288218B900A14C74 /* ReservationService.swift */,
 				AA0DF58728835E6600B3C025 /* AuthenticationService.swift */,
-
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -570,6 +572,7 @@
 				AA732676284D459C003D6616 /* Assets.xcassets in Resources */,
 				AA7326FC2864494C003D6616 /* SearchRecipeCategoriesTableViewCell.xib in Resources */,
 				AA9A4FE3288803900071C567 /* AddPlateViewController.xib in Resources */,
+				F8BEA39028883BD900A14C74 /* Navigation.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

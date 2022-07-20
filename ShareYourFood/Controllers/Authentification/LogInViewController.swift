@@ -52,10 +52,10 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         
         }*/
         
-        self.plateService.fetchPlateById(plateId: 8) { _ in
+       /* self.plateService.fetchPlateById(plateId: 8) { _ in
           
         
-        }
+        }*/
         
         /*self.plateService.editPlate(plateId: 8, newplate: PlateRequest(name: "Couscous", photo: "", quantity: 400, number: 5, comment: "Couscous fait par halisia halifa", reserved: false, userId: 5)) { _ in
         }*/
@@ -104,7 +104,11 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         
         print(MyVariables.token)
 
-        self.navigationController?.pushViewController(SearchRecipeCategoriesListViewController(), animated: true)
+        /*self.navigationController?.pushViewController(SearchRecipeCategoriesListViewController(), animated: true)*/
+        var mainView: UIStoryboard!
+        mainView = UIStoryboard(name: "vcLogin", bundle: nil)
+        let viewcontroller : UIViewController = mainView.instantiateViewController(withIdentifier: "iPhone5") as UIViewController
+        self.navigationController?.pushViewController(viewcontroller, animated: true)
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
