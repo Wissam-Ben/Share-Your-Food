@@ -24,9 +24,9 @@ class plateTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setPlate(with plate: Plate) {
-        var imagePlate = setPlateImage(plateImageString: plate.photo)
-        self.plateImage.image = imagePlate
+    func setPlate(with plate: PlateResponse) {
+        //var imagePlate = setPlateImage(plateImageString: plate.photo)
+        //self.plateImage.image = imagePlate
         self.username.text = plate.user.username
         self.plateName.text = plate.name
     }

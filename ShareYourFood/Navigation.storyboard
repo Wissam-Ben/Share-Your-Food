@@ -156,6 +156,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="24A-bm-vvA"/>
+                    <connections>
+                        <outlet property="platesList" destination="l0x-CO-FYh" id="w70-sc-Xan"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Go-fH-OIA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -204,39 +207,45 @@
                                 <rect key="frame" x="10" y="89" width="394" height="269"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xD2-83-Klh">
-                                <rect key="frame" x="10" y="368" width="75" height="31"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Camera"/>
+                                <rect key="frame" x="10" y="368" width="54" height="30"/>
+                                <state key="normal" title="Camera"/>
+                                <connections>
+                                    <action selector="handleCamera:" destination="Swz-oC-1tp" eventType="touchUpInside" id="p4D-JN-lvH"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kG8-eo-e0N">
-                                <rect key="frame" x="95" y="368" width="70" height="31"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Gallery"/>
+                                <rect key="frame" x="74" y="368" width="48" height="30"/>
+                                <state key="normal" title="Gallery"/>
+                                <connections>
+                                    <action selector="handleGallery:" destination="Swz-oC-1tp" eventType="touchUpInside" id="HY6-uK-Zko"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Plate name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sUb-EA-Bj1">
-                                <rect key="frame" x="10" y="439" width="394" height="34"/>
+                                <rect key="frame" x="10" y="438" width="394" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Plate quantity" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="84m-qn-S04">
-                                <rect key="frame" x="10" y="503" width="394" height="34"/>
+                                <rect key="frame" x="10" y="502" width="394" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Plate portion (g/plate)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6PY-25-VWe">
-                                <rect key="frame" x="10" y="567" width="394" height="34"/>
+                                <rect key="frame" x="10" y="566" width="394" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Comment" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cU9-cf-T8c">
-                                <rect key="frame" x="10" y="631" width="394" height="34"/>
+                                <rect key="frame" x="10" y="630" width="394" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xdg-f6-0cg">
-                                <rect key="frame" x="171" y="762" width="72" height="31"/>
+                                <rect key="frame" x="184" y="763" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Publish"/>
+                                <connections>
+                                    <action selector="handlePublishPlate:" destination="Swz-oC-1tp" eventType="touchUpInside" id="blb-Bu-Cup"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4Ah-au-hYN"/>
@@ -272,6 +281,7 @@
                         <outlet property="nameTextField" destination="sUb-EA-Bj1" id="Q0a-pv-imi"/>
                         <outlet property="plateImage" destination="Wl8-XI-gEJ" id="FBk-qB-ONM"/>
                         <outlet property="portionTextField" destination="6PY-25-VWe" id="7cB-CP-LnW"/>
+                        <outlet property="publishButton" destination="xdg-f6-0cg" id="S3M-9o-Pv1"/>
                         <outlet property="quantityTextField" destination="84m-qn-S04" id="pb9-ds-v8V"/>
                     </connections>
                 </viewController>

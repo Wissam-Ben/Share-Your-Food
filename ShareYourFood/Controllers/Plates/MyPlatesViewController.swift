@@ -11,7 +11,9 @@ class MyPlatesViewController: UIViewController, UITableViewDelegate, UITableView
 
     @IBOutlet weak var platesList: UITableView!
     
-    var plates: [Plate] = [] {
+    var plateService: PlateService = PlateWebService()
+    
+    var plates: [PlateResponse] = [] {
         didSet {
             self.platesList.reloadData()
         }
@@ -24,6 +26,14 @@ class MyPlatesViewController: UIViewController, UITableViewDelegate, UITableView
         self.platesList.register(nib, forCellReuseIdentifier: "PLATE_CELL_ID")
         self.platesList.delegate = self
         self.platesList.dataSource = self
+        self.plateService.fetchPlates { plates in
+            for plate in plates {
+                if plate.user.id == MyVariables.id {
+                    self.plates.append(plate)
+                }
+            }
+            
+        }
         
     }
     

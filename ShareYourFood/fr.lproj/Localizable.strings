@@ -4,7 +4,11 @@
 
   Created by Benadjaoud Wissam on 06/06/2022.
   
-*/ 
+*/
+
+/*
+ Authentication
+ */
 "subscribe.title" = "Inscription";
 "login.title" = "Connexion";
 "firstname" = "prénom";
@@ -16,3 +20,21 @@
 "subscribe.button" = "S'inscrire";
 "login.message" = "Vous avez déjà un compte ?";
 "subscribe.message" = "Vous n'avez pas encore de compte ?";
+"login.length.message" = "Le login doit contenir au moins 4 caractères";
+"login.incorrect.fields" = "L'identifiant et le mot de passe sont incorrects";
+
+/*
+ Add plate
+ */
+"addplate.title" = "Ajouter un plat";
+"addplate.name" = "Nom du plat";
+"addplate.quantity" = "Quantité";
+"addplate.portion" = "Portion d'un plat (g/plat)";
+"addplate.comment" = "Commentaire";
+
+/*
+ All
+ */
+"invalid.form.message" = "Formulaire invalide";
+"missing.field.message" = "Les champs sont obligatoires";
+"close" = "Fermer";

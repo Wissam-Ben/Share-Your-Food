@@ -41,7 +41,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
     }
     
     //var plate: PlateByIdResponse = 
-    var plates: [Plate] = []
+    var plates: [PlateResponse] = []
     var users: [UserSubscribe] = []
     var reservations: [Reservation] = []
 
@@ -51,11 +51,26 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.reservationService.fetchReservationsOfPlate(plateId: 1) { plate in
+        self.plateService.fetchPlates { plate in
            
-            self.reservations = plate
+            self.plates = plate
         
         }
+        /*
+          Localizable.strings
+          ShareYourFood
+
+          Created by Benadjaoud Wissam on 06/06/2022.
+          
+        */
+        /*
+          Localizable.strings
+          ShareYourFood
+
+          Created by Benadjaoud Wissam on 06/06/2022.
+          
+        */
+
         
         /*self.plateService.editPlate(plateId: 8, newplate: PlateRequest(name: "Couscous", photo: "", quantity: 400, number: 5, comment: "Couscous fait par halisia halifa", reserved: false, userId: 5)) { _ in
         }*/
@@ -66,9 +81,9 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         /*self.reservationService.addReservation(reservation: ReservationRequest(plateId: 8)) { _ in
         }*/
         
-        userService.fetchUserById(userId: "5") { user in
+        /*userService.fetchUserById(userId: "5") { user in
             self.userAccount = user
-        }
+        }*/
         
         super.title = NSLocalizedString("login.title", comment: "")
         self.loginButton.setTitle(NSLocalizedString("login.button", comment: ""), for: UIControl.State.normal)
@@ -84,15 +99,15 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func handleLogin(_ sender: Any) {
         guard let log = self.usernameTextField.text, let pwd = self.passwordTextField.text else {
-            self.displayErrorMessage(title: "Formulaire invalide", message: "Les champs sont obligatoires")
+            self.displayErrorMessage(title: NSLocalizedString("linvalid.form.message", comment: ""), message: NSLocalizedString("missing.field.message", comment: ""))
             return
         }
         
-        guard log.count >= 4 else { self.displayErrorMessage(title: "Formulaire invalide", message: "Le login doit contenir au moins 4 caractères")
+        guard log.count >= 4 else { self.displayErrorMessage(title: NSLocalizedString("invalid.form.message", comment: ""), message: NSLocalizedString("login.length.message", comment: ""))
             return
         }
         
-        guard pwd.count >= 6 else { self.displayErrorMessage(title: "Formulaire invalide", message: "Le mot de passe doit contenir au moins 4 caractères")
+        guard pwd.count >= 6 else { self.displayErrorMessage(title: NSLocalizedString("invalid.form.message", comment: ""), message: NSLocalizedString("login.length.message", comment: ""))
             return
         }
         
@@ -110,7 +125,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         if(MyVariables.token != "") {
             self.navigationController?.pushViewController(vc!, animated: true)
         } else {
-            self.displayErrorMessage(title: "Formulaire invalide", message: "L'identifiant et le mot de passe sont incorrectes")
+            self.displayErrorMessage(title: NSLocalizedString("invalid.form.message", comment: ""), message: NSLocalizedString("login.incorrect.fields", comment: ""))
                 return
         }
     }
@@ -128,7 +143,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
     
     func displayErrorMessage(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Fermer", style: .cancel))
+        alert.addAction(UIAlertAction(title: NSLocalizedString("close", comment: ""), style: .cancel))
         self.present(alert, animated: true) {
             Timer.scheduledTimer(withTimeInterval: 2, repeats: false){ _ in
                 alert.dismiss(animated: true)

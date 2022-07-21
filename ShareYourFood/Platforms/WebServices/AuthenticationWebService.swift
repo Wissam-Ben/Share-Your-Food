@@ -59,7 +59,7 @@ class AuthenticationWebService: AuthenticationService {
                                 return
                         }
                         MyVariables.token = token
-                        MyVariables.id = id.description
+                        MyVariables.id = id
                       } catch {
                         print("Error: Trying to convert JSON data to string")
                         return

@@ -19,6 +19,12 @@ class AddPlateViewController: UIViewController, UITextFieldDelegate, UINavigatio
     
     @IBOutlet weak var commentTextField: UITextField!
     
+    @IBOutlet weak var publishButton: UIButton!
+    
+    var imageStr: String!
+    
+    var plateService: PlateService = PlateWebService()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -30,6 +36,10 @@ class AddPlateViewController: UIViewController, UITextFieldDelegate, UINavigatio
         self.portionTextField.delegate = self
         self.commentTextField.delegate = self
         
+        self.publishButton.addTarget(self, action: #selector(uploadToServer), for: .touchUpInside)
+        //self.handlePublishPlate(self.publishButton)
+        
+
     }
 
     @IBAction func handleCamera(_ sender: Any) {
@@ -54,11 +64,28 @@ class AddPlateViewController: UIViewController, UITextFieldDelegate, UINavigatio
     }
     
     @IBAction func handlePublishPlate(_ sender: Any) {
-        guard let name = self.nameTextField.text, let quantity = self.quantityTextField.text, let portion = self.portionTextField.text else {
-            self.displayErrorMessage(title: "Formulaire invalide", message: "Les champs sont obligatoires")
+        guard let name = self.nameTextField.text,
+                let number = self.quantityTextField.text,
+                let portion = self.portionTextField.text,
+              let comment = self.commentTextField.text else {
+            self.displayErrorMessage(title: NSLocalizedString("invalid.form.message", comment: ""), message: NSLocalizedString("missing.field.message", comment: ""))
             return
         }
-        // requete
+        
+        print("size")
+        print(self.plateImage.image?.size)
+        
+        let imageData: Data = self.plateImage.image!.pngData()!
+        let stringValue = String(decoding: imageData, as: UTF8.self)
+        let imageSt: String = self.plateImage.image!
+        self.imageStr = stringValue
+        
+        print(imageSt)
+        
+        self.plateService.addPlate(plate: PlateRequest(name: name, photo: self.imageStr, quantity: portion, number: number, comment: comment, reserved: false, userId: MyVariables.id.description)) { requestResponse in
+            print(requestResponse)
+        }
+        
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
@@ -72,12 +99,18 @@ class AddPlateViewController: UIViewController, UITextFieldDelegate, UINavigatio
     
     func displayErrorMessage(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Fermer", style: .cancel))
+        alert.addAction(UIAlertAction(title: NSLocalizedString("close", comment: ""), style: .cancel))
         self.present(alert, animated: true) {
             Timer.scheduledTimer(withTimeInterval: 2, repeats: false){ _ in
                 alert.dismiss(animated: true)
             }
         }
+    }
+    
+    @objc private func uploadToServer(sender: UITapGestureRecognizer) {
+        
+        
+        
     }
     
 }

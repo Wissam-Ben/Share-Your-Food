@@ -6,9 +6,11 @@
 //
 
 import Foundation
+import UIKit
 
 struct MyVariables {
     static var token = ""
-    static var id = ""
+    static var id = 0
     static var subscriptionStatusCode = 0
+    static var image : UIImage = UIImage()
 }
