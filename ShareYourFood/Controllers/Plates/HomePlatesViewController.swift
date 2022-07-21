@@ -11,7 +11,9 @@ class HomePlatesViewController: UIViewController, UITableViewDelegate, UITableVi
 
     @IBOutlet weak var platesList: UITableView!
     
-    var plates: [Plate] = [] {
+    var plateService: PlateService = PlateWebService()
+    
+    var plates: [PlateResponse] = [] {
         didSet {
             self.platesList.reloadData()
         }
@@ -20,10 +22,13 @@ class HomePlatesViewController: UIViewController, UITableViewDelegate, UITableVi
     override func viewDidLoad() {
         super.viewDidLoad()
 
-//        let nib = UINib(nibName: "plateTableViewCell", bundle: nil)
-//        self.platesList.register(nib, forCellReuseIdentifier: "PLATE_CELL_ID")
-//        self.platesList.delegate = self
-//        self.platesList.dataSource = self
+        let nib = UINib(nibName: "plateTableViewCell", bundle: nil)
+        self.platesList.register(nib, forCellReuseIdentifier: "HOME_PLATE_CELL_ID")
+        self.platesList.delegate = self
+        self.platesList.dataSource = self
+        self.plateService.fetchPlates { plates in
+            self.plates = plates
+        }
         
     }
     
@@ -39,7 +44,7 @@ class HomePlatesViewController: UIViewController, UITableViewDelegate, UITableVi
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let plate = self.plates[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "PLATE_CELL_ID", for: indexPath) as! plateTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "HOME_PLATE_CELL_ID", for: indexPath) as! plateTableViewCell
         cell.setPlate(with: plate)
         return cell
     }

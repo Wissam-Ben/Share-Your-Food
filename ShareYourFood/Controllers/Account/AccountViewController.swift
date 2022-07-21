@@ -24,7 +24,7 @@ class AccountViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.userId = MyVariables.id
+        self.userId = MyVariables.id.description
         
         self.userService.fetchUserById(userId: userId) { user in
             self.user = user

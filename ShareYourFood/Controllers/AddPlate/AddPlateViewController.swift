@@ -19,6 +19,12 @@ class AddPlateViewController: UIViewController, UITextFieldDelegate, UINavigatio
     
     @IBOutlet weak var commentTextField: UITextField!
     
+    @IBOutlet weak var publishButton: UIButton!
+    
+    var imageStr: String!
+    
+    var plateService: PlateService = PlateWebService()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,6 +35,9 @@ class AddPlateViewController: UIViewController, UITextFieldDelegate, UINavigatio
         self.quantityTextField.delegate = self
         self.portionTextField.delegate = self
         self.commentTextField.delegate = self
+        
+        self.publishButton.addTarget(self, action: #selector(uploadToServer), for: .touchUpInside)
+        //self.handlePublishPlate(self.publishButton)
         
 
     }
@@ -55,11 +64,28 @@ class AddPlateViewController: UIViewController, UITextFieldDelegate, UINavigatio
     }
     
     @IBAction func handlePublishPlate(_ sender: Any) {
-        guard let name = self.nameTextField.text, let quantity = self.quantityTextField.text, let portion = self.portionTextField.text else {
+        guard let name = self.nameTextField.text,
+                let number = self.quantityTextField.text,
+                let portion = self.portionTextField.text,
+              let comment = self.commentTextField.text else {
             self.displayErrorMessage(title: NSLocalizedString("invalid.form.message", comment: ""), message: NSLocalizedString("missing.field.message", comment: ""))
             return
         }
-        // requete
+        
+        print("size")
+        print(self.plateImage.image?.size)
+        
+        let imageData: Data = self.plateImage.image!.pngData()!
+        let stringValue = String(decoding: imageData, as: UTF8.self)
+        let imageSt: String = self.plateImage.image!
+        self.imageStr = stringValue
+        
+        print(imageSt)
+        
+        self.plateService.addPlate(plate: PlateRequest(name: name, photo: self.imageStr, quantity: portion, number: number, comment: comment, reserved: false, userId: MyVariables.id.description)) { requestResponse in
+            print(requestResponse)
+        }
+        
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
@@ -79,6 +105,12 @@ class AddPlateViewController: UIViewController, UITextFieldDelegate, UINavigatio
                 alert.dismiss(animated: true)
             }
         }
+    }
+    
+    @objc private func uploadToServer(sender: UITapGestureRecognizer) {
+        
+        
+        
     }
     
 }

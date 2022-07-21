@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+import UIKit
 
 class PlateWebService: PlateService {
     
@@ -33,11 +33,30 @@ class PlateWebService: PlateService {
                     return
             }
             
+            let imageee = json[2]["photo"] as? [String: Any]
+            print(imageee!["data"])
+            
+            //let data = try! NSKeyedArchiver.archivedData(withRootObject: imageee!["data"], requiringSecureCoding: true)
+            
+            let data = NSKeyedArchiver.archivedData(withRootObject: imageee!["data"])
+            
+            
+            
+            let scale = UIScreen.main.scale
+            
+            let image = UIImage(data: data,scale: 1.0)
+            
+            //MyVariables.image = image!
+            
+            print(image)
+
+//            print(json)
            let plates: [PlateResponse] = json.compactMap {obj in
             return PlateResponse(dict: obj)
             }
             for plate in plates {
                 print(plate.name)
+        
             }
             DispatchQueue.main.async {
                 completion(plates)
@@ -113,6 +132,7 @@ class PlateWebService: PlateService {
                 print("Error: Did not receive data")
                 return
             }
+            print(response?.description)
             guard let response = response as? HTTPURLResponse, (200 ..< 299) ~= response.statusCode else {
                 print("Error: HTTP request failed")
                 return

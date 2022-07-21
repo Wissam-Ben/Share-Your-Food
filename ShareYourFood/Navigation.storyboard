@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mY1-Ei-GNh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mY1-Ei-GNh">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -156,6 +156,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="24A-bm-vvA"/>
+                    <connections>
+                        <outlet property="platesList" destination="l0x-CO-FYh" id="w70-sc-Xan"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Go-fH-OIA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -204,12 +207,18 @@
                                 <rect key="frame" x="10" y="89" width="394" height="269"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xD2-83-Klh">
-                                <rect key="frame" x="10" y="368" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="10" y="368" width="54" height="30"/>
+                                <state key="normal" title="Camera"/>
+                                <connections>
+                                    <action selector="handleCamera:" destination="Swz-oC-1tp" eventType="touchUpInside" id="p4D-JN-lvH"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kG8-eo-e0N">
-                                <rect key="frame" x="66" y="368" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="74" y="368" width="48" height="30"/>
+                                <state key="normal" title="Gallery"/>
+                                <connections>
+                                    <action selector="handleGallery:" destination="Swz-oC-1tp" eventType="touchUpInside" id="HY6-uK-Zko"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Plate name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sUb-EA-Bj1">
                                 <rect key="frame" x="10" y="438" width="394" height="34"/>
@@ -234,6 +243,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xdg-f6-0cg">
                                 <rect key="frame" x="184" y="763" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="handlePublishPlate:" destination="Swz-oC-1tp" eventType="touchUpInside" id="blb-Bu-Cup"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4Ah-au-hYN"/>
@@ -269,6 +281,7 @@
                         <outlet property="nameTextField" destination="sUb-EA-Bj1" id="Q0a-pv-imi"/>
                         <outlet property="plateImage" destination="Wl8-XI-gEJ" id="FBk-qB-ONM"/>
                         <outlet property="portionTextField" destination="6PY-25-VWe" id="7cB-CP-LnW"/>
+                        <outlet property="publishButton" destination="xdg-f6-0cg" id="S3M-9o-Pv1"/>
                         <outlet property="quantityTextField" destination="84m-qn-S04" id="pb9-ds-v8V"/>
                     </connections>
                 </viewController>
