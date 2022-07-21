@@ -5,8 +5,9 @@
 //  Created by Halifa Halisia on 23/06/2022.
 //
 
-import Foundation
 
+import Foundation
+import UIKit
 
 class PlateWebService: PlateService {
     
@@ -34,17 +35,22 @@ class PlateWebService: PlateService {
             }
             
            let plates: [PlateResponse] = json.compactMap {obj in
+            
             return PlateResponse(dict: obj)
             }
-            for plate in plates {
-                print(plate.name)
-            }
+           
+
+            
+            //for plate in plates {
+            //print(plate.photo.data)
+            //}
             DispatchQueue.main.async {
                 completion(plates)
             }
         }
         dataTask.resume()
     }
+    
     
     func fetchPlateById(plateId: Int, completion: @escaping (PlateByIdResponse) -> Void) {
         let url = URL(string: "http://localhost:3000/plates/" + plateId.description)
