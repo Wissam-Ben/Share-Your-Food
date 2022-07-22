@@ -45,7 +45,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
     var users: [UserSubscribe] = []
     var reservations: [Reservation] = []
 
-    //var token: String!
+    var token: String!
 
     
     override func viewDidLoad() {
@@ -115,14 +115,18 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         self.authenticationService.login(completion: { response in
             //print(response)
             self.userResponse = response
-            MyVariables.token = response.token
+            //MyVariables.token = response.token
             print(MyVariables.token)
+            
+            
             
         }, user: self.user)
         
+        self.token = MyVariables.token
+        
         let vc = UIStoryboard(name: "Navigation", bundle: nil).instantiateInitialViewController() as? UIViewController
         
-        if(MyVariables.token != "") {
+        if(self.token != "") {
             self.navigationController?.pushViewController(vc!, animated: true)
         } else {
             self.displayErrorMessage(title: NSLocalizedString("invalid.form.message", comment: ""), message: NSLocalizedString("login.incorrect.fields", comment: ""))

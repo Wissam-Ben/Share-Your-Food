@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		40625C4B0CE92080C1047F64 /* Pods_ShareYourFood.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B8EE980855D060495AFADF1 /* Pods_ShareYourFood.framework */; };
 		AA0DF58828835E6600B3C025 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0DF58728835E6600B3C025 /* AuthenticationService.swift */; };
 		AA0DF58A28835E9B00B3C025 /* AuthenticationWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0DF58928835E9B00B3C025 /* AuthenticationWebService.swift */; };
 		AA0DF58C28835FDE00B3C025 /* UserLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0DF58B28835FDE00B3C025 /* UserLogin.swift */; };
@@ -19,6 +20,11 @@
 		AA2D11B9288838B9007547F7 /* UserWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2D11B8288838B9007547F7 /* UserWebService.swift */; };
 		AA2D11BB28884300007547F7 /* UserSave.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2D11BA28884300007547F7 /* UserSave.swift */; };
 		AA2D11C4288867D6007547F7 /* PlateDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA2D11C3288867D6007547F7 /* PlateDetailsViewController.xib */; };
+		AA2D11CB288A0A7B007547F7 /* AWSCore in Frameworks */ = {isa = PBXBuildFile; productRef = AA2D11CA288A0A7B007547F7 /* AWSCore */; };
+		AA2D11CD288A0A7B007547F7 /* AWSS3 in Frameworks */ = {isa = PBXBuildFile; productRef = AA2D11CC288A0A7B007547F7 /* AWSS3 */; };
+		AA2D11D0288AB48D007547F7 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2D11CF288AB48D007547F7 /* NetworkManager.swift */; };
+		AA2D11D3288AB615007547F7 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = AA2D11D2288AB615007547F7 /* Alamofire */; };
+		AA2D11D6288AB72C007547F7 /* PromiseKit in Frameworks */ = {isa = PBXBuildFile; productRef = AA2D11D5288AB72C007547F7 /* PromiseKit */; };
 		AA73266D284D459B003D6616 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA73266C284D459B003D6616 /* AppDelegate.swift */; };
 		AA732676284D459C003D6616 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA732675284D459C003D6616 /* Assets.xcassets */; };
 		AA732679284D459C003D6616 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA732677284D459C003D6616 /* LaunchScreen.storyboard */; };
@@ -79,6 +85,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4B8EE980855D060495AFADF1 /* Pods_ShareYourFood.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShareYourFood.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6785FAC13BD3BE4FF59A1236 /* Pods-ShareYourFood.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShareYourFood.debug.xcconfig"; path = "Target Support Files/Pods-ShareYourFood/Pods-ShareYourFood.debug.xcconfig"; sourceTree = "<group>"; };
 		AA0DF58728835E6600B3C025 /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
 		AA0DF58928835E9B00B3C025 /* AuthenticationWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationWebService.swift; sourceTree = "<group>"; };
 		AA0DF58B28835FDE00B3C025 /* UserLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLogin.swift; sourceTree = "<group>"; };
@@ -91,6 +99,8 @@
 		AA2D11B8288838B9007547F7 /* UserWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserWebService.swift; sourceTree = "<group>"; };
 		AA2D11BA28884300007547F7 /* UserSave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSave.swift; sourceTree = "<group>"; };
 		AA2D11C3288867D6007547F7 /* PlateDetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlateDetailsViewController.xib; sourceTree = "<group>"; };
+		AA2D11CE288A0C81007547F7 /* ShareYourFood.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ShareYourFood.entitlements; sourceTree = "<group>"; };
+		AA2D11CF288AB48D007547F7 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		AA732669284D459B003D6616 /* ShareYourFood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShareYourFood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA73266C284D459B003D6616 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA732675284D459C003D6616 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -171,6 +181,7 @@
 		AAF285FD2865A5C90060E039 /* MealCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealCategories.swift; sourceTree = "<group>"; };
 		AAF285FF2868906C0060E039 /* MealRecipeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealRecipeService.swift; sourceTree = "<group>"; };
 		AAF28641286F93060060E039 /* MealRecipeWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealRecipeWebService.swift; sourceTree = "<group>"; };
+		EA9A6404D5830693F2A02A2C /* Pods-ShareYourFood.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShareYourFood.release.xcconfig"; path = "Target Support Files/Pods-ShareYourFood/Pods-ShareYourFood.release.xcconfig"; sourceTree = "<group>"; };
 		F8BEA37F2881F0F700A14C74 /* UsersService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersService.swift; sourceTree = "<group>"; };
 		F8BEA3812881F12B00A14C74 /* AuthWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthWebService.swift; sourceTree = "<group>"; };
 		F8BEA383288218B900A14C74 /* ReservationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationService.swift; sourceTree = "<group>"; };
@@ -189,6 +200,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA2D11D6288AB72C007547F7 /* PromiseKit in Frameworks */,
+				AA2D11CD288A0A7B007547F7 /* AWSS3 in Frameworks */,
+				AA2D11D3288AB615007547F7 /* Alamofire in Frameworks */,
+				AA2D11CB288A0A7B007547F7 /* AWSCore in Frameworks */,
+				40625C4B0CE92080C1047F64 /* Pods_ShareYourFood.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,6 +216,8 @@
 			children = (
 				AA73266B284D459B003D6616 /* ShareYourFood */,
 				AA73266A284D459B003D6616 /* Products */,
+				BC49C94B79149D8BC4B5868E /* Pods */,
+				F989AC356D7429ECE80A24A9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -214,6 +232,7 @@
 		AA73266B284D459B003D6616 /* ShareYourFood */ = {
 			isa = PBXGroup;
 			children = (
+				AA2D11CE288A0C81007547F7 /* ShareYourFood.entitlements */,
 				AA7326C4285A7F0F003D6616 /* Definitions */,
 				AA7326C3285A7443003D6616 /* Controllers */,
 				AA7326C0285A73F7003D6616 /* Platforms */,
@@ -222,8 +241,8 @@
 				AA732675284D459C003D6616 /* Assets.xcassets */,
 				AA7327072864E14E003D6616 /* Info.plist */,
 				AA732677284D459C003D6616 /* LaunchScreen.storyboard */,
-				AA732695284DE8B3003D6616 /* Localizable.strings */,
 				F8BEA38F28883BD900A14C74 /* Navigation.storyboard */,
+				AA732695284DE8B3003D6616 /* Localizable.strings */,
 			);
 			path = ShareYourFood;
 			sourceTree = "<group>";
@@ -325,6 +344,7 @@
 				F8BEA38528821D7700A14C74 /* ReservationWebService.swift */,
 				AA0DF58928835E9B00B3C025 /* AuthenticationWebService.swift */,
 				AA2D11B8288838B9007547F7 /* UserWebService.swift */,
+				AA2D11CF288AB48D007547F7 /* NetworkManager.swift */,
 			);
 			path = WebServices;
 			sourceTree = "<group>";
@@ -495,6 +515,23 @@
 			path = RecipeDetails;
 			sourceTree = "<group>";
 		};
+		BC49C94B79149D8BC4B5868E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6785FAC13BD3BE4FF59A1236 /* Pods-ShareYourFood.debug.xcconfig */,
+				EA9A6404D5830693F2A02A2C /* Pods-ShareYourFood.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F989AC356D7429ECE80A24A9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4B8EE980855D060495AFADF1 /* Pods_ShareYourFood.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -502,15 +539,23 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AA73267D284D459C003D6616 /* Build configuration list for PBXNativeTarget "ShareYourFood" */;
 			buildPhases = (
+				870187EEC03F0576C63AD4C9 /* [CP] Check Pods Manifest.lock */,
 				AA732665284D459B003D6616 /* Sources */,
 				AA732666284D459B003D6616 /* Frameworks */,
 				AA732667284D459B003D6616 /* Resources */,
+				5FFC669678641B9FDCE69912 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = ShareYourFood;
+			packageProductDependencies = (
+				AA2D11CA288A0A7B007547F7 /* AWSCore */,
+				AA2D11CC288A0A7B007547F7 /* AWSS3 */,
+				AA2D11D2288AB615007547F7 /* Alamofire */,
+				AA2D11D5288AB72C007547F7 /* PromiseKit */,
+			);
 			productName = ShareYourFood;
 			productReference = AA732669284D459B003D6616 /* ShareYourFood.app */;
 			productType = "com.apple.product-type.application";
@@ -540,6 +585,11 @@
 				fr,
 			);
 			mainGroup = AA732660284D459B003D6616;
+			packageReferences = (
+				AA2D11C9288A0A7B007547F7 /* XCRemoteSwiftPackageReference "aws-sdk-ios-spm" */,
+				AA2D11D1288AB615007547F7 /* XCRemoteSwiftPackageReference "Alamofire.git" */,
+				AA2D11D4288AB72C007547F7 /* XCRemoteSwiftPackageReference "PromiseKit" */,
+			);
 			productRefGroup = AA73266A284D459B003D6616 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -573,6 +623,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5FFC669678641B9FDCE69912 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ShareYourFood/Pods-ShareYourFood-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ShareYourFood/Pods-ShareYourFood-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ShareYourFood/Pods-ShareYourFood-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		870187EEC03F0576C63AD4C9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ShareYourFood-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AA732665284D459B003D6616 /* Sources */ = {
@@ -631,6 +723,7 @@
 				AA9FD8B62881C0E300D970DA /* Reservation.swift in Sources */,
 				AA9A4FDE288803150071C567 /* MyPlatesViewController.swift in Sources */,
 				AA9FD8902879ACA200D970DA /* RecipeInfoTableViewCell.swift in Sources */,
+				AA2D11D0288AB48D007547F7 /* NetworkManager.swift in Sources */,
 				AA732688284DD733003D6616 /* SubscribeViewController.swift in Sources */,
 				AA9A4FD62887FEE30071C567 /* plateTableViewCell.swift in Sources */,
 				AA9FD8B12881C0E300D970DA /* UserSubscribe.swift in Sources */,
@@ -778,9 +871,11 @@
 		};
 		AA73267E284D459C003D6616 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6785FAC13BD3BE4FF59A1236 /* Pods-ShareYourFood.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ShareYourFood/ShareYourFood.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = J95BVGXMM8;
@@ -805,9 +900,11 @@
 		};
 		AA73267F284D459C003D6616 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA9A6404D5830693F2A02A2C /* Pods-ShareYourFood.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ShareYourFood/ShareYourFood.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = J95BVGXMM8;
@@ -852,6 +949,56 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AA2D11C9288A0A7B007547F7 /* XCRemoteSwiftPackageReference "aws-sdk-ios-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/aws-amplify/aws-sdk-ios-spm";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 2.27.0;
+			};
+		};
+		AA2D11D1288AB615007547F7 /* XCRemoteSwiftPackageReference "Alamofire.git" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 5.6.0;
+			};
+		};
+		AA2D11D4288AB72C007547F7 /* XCRemoteSwiftPackageReference "PromiseKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mxcl/PromiseKit";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 6.9.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AA2D11CA288A0A7B007547F7 /* AWSCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AA2D11C9288A0A7B007547F7 /* XCRemoteSwiftPackageReference "aws-sdk-ios-spm" */;
+			productName = AWSCore;
+		};
+		AA2D11CC288A0A7B007547F7 /* AWSS3 */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AA2D11C9288A0A7B007547F7 /* XCRemoteSwiftPackageReference "aws-sdk-ios-spm" */;
+			productName = AWSS3;
+		};
+		AA2D11D2288AB615007547F7 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AA2D11D1288AB615007547F7 /* XCRemoteSwiftPackageReference "Alamofire.git" */;
+			productName = Alamofire;
+		};
+		AA2D11D5288AB72C007547F7 /* PromiseKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AA2D11D4288AB72C007547F7 /* XCRemoteSwiftPackageReference "PromiseKit" */;
+			productName = PromiseKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AA732661284D459B003D6616 /* Project object */;
 }

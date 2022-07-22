@@ -72,20 +72,19 @@ class AddPlateViewController: UIViewController, UITextFieldDelegate, UINavigatio
             return
         }
         
-        print("size")
-        print(self.plateImage.image?.size)
-        
-        let imageData: Data = self.plateImage.image!.pngData()!
-        let stringValue = String(decoding: imageData, as: UTF8.self)
-        let imageSt: String = self.plateImage.image!
-        self.imageStr = stringValue
-        
-        print(imageSt)
+//        print("size")
+//        print(self.plateImage.image?.size)
+//
+//        let imageData: Data = self.plateImage.image!.pngData()!
+//        let stringValue = String(decoding: imageData, as: UTF8.self)
+//        let imageSt: String = self.plateImage.image!
+//        self.imageStr = stringValue
+//
+//        print(imageSt)
         
         self.plateService.addPlate(plate: PlateRequest(name: name, photo: self.imageStr, quantity: portion, number: number, comment: comment, reserved: false, userId: MyVariables.id.description)) { requestResponse in
             print(requestResponse)
         }
-        
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
@@ -93,8 +92,16 @@ class AddPlateViewController: UIViewController, UITextFieldDelegate, UINavigatio
             return
         }
         self.plateImage.image = image
-        
         picker.dismiss(animated: true)
+        
+        let request = NetworkManager.api.uploadImage(image: self.plateImage.image!)
+        request.done {
+            url in
+            print("succes : ", url)
+        }.catch {
+            error in
+            print("error description : ", error.localizedDescription)
+        }
     }
     
     func displayErrorMessage(title: String, message: String) {
@@ -105,12 +112,6 @@ class AddPlateViewController: UIViewController, UITextFieldDelegate, UINavigatio
                 alert.dismiss(animated: true)
             }
         }
-    }
-    
-    @objc private func uploadToServer(sender: UITapGestureRecognizer) {
-        
-        
-        
     }
     
 }
