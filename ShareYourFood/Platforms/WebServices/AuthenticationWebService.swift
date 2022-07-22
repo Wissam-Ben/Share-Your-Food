@@ -9,6 +9,12 @@ import Foundation
 
 class AuthenticationWebService: AuthenticationService {
   
+    static let authentication = AuthenticationWebService()
+    
+    var token : String = ""
+    
+    init() {}
+    
     func login(completion: @escaping (UserLoginResponse) -> Void, user: UserLogin) {
         let url = URL(string: "http://localhost:3000/auth/login")!
         var request = URLRequest(url: url)
@@ -60,6 +66,11 @@ class AuthenticationWebService: AuthenticationService {
                         }
                         MyVariables.token = token
                         MyVariables.id = id
+                        
+                        self.token = token
+                        
+                        print(self.token)
+                        
                       } catch {
                         print("Error: Trying to convert JSON data to string")
                         return

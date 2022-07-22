@@ -121,7 +121,7 @@ class AddPlateViewController: UIViewController, UITextFieldDelegate, UINavigatio
                 print("image uploaded percentage : ", progress.fractionCompleted)
             }
             let name = ProcessInfo.processInfo.globallyUniqueString+".jpg"
-            self.imageStr = name
+            //self.imageStr = name
             let transferUtility = AWSS3TransferUtility.default()
             let imageData = image.jpegData(compressionQuality: 0.4)
             let bucketName = "share-your-food"
@@ -134,8 +134,9 @@ class AddPlateViewController: UIViewController, UITextFieldDelegate, UINavigatio
                 if let error = error {
                     resolver.reject(error)
                 } else {
-                    let imageUrl = URL(string: "https://\(bucketName).s3.amazonaws.com/\(name)") // halisia
+                    let imageUrl = URL(string: "https://\(bucketName).s3.amazonaws.com/\(name)")
                     resolver.fulfill(imageUrl!)
+                    self.imageStr = String("https://\(bucketName).s3.amazonaws.com/\(name)")
                 }
                 
             }.continueWith {

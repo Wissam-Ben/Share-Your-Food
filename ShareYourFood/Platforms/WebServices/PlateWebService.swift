@@ -14,7 +14,9 @@ class PlateWebService: PlateService {
         let url = URL(string: "http://localhost:3000/plates")
         var request = URLRequest(url: url!)
 
-        let token = MyVariables.token
+        let token = "$2b$05$Q69XX.2a6HyKievVOzXRpOJePqc17yyodUS.G7VoqLlXm9DQg5gi."
+        
+        print(token)
         
         let authorization = "Bearer ".appending(token)
         request.httpMethod = "GET"
@@ -33,29 +35,13 @@ class PlateWebService: PlateService {
                     return
             }
             
-            let imageee = json[2]["photo"] as? [String: Any]
-            print(imageee!["data"])
-            
-            //let data = try! NSKeyedArchiver.archivedData(withRootObject: imageee!["data"], requiringSecureCoding: true)
-            
-            let data = NSKeyedArchiver.archivedData(withRootObject: imageee!["data"])
-            
-            
-            
-            let scale = UIScreen.main.scale
-            
-            let image = UIImage(data: data,scale: 1.0)
-            
-            //MyVariables.image = image!
-            
-            print(image)
+            print(json)
 
-//            print(json)
            let plates: [PlateResponse] = json.compactMap {obj in
             return PlateResponse(dict: obj)
             }
             for plate in plates {
-                print(plate.name)
+                print(plate)
         
             }
             DispatchQueue.main.async {
@@ -70,7 +56,7 @@ class PlateWebService: PlateService {
         
         var request = URLRequest(url: url!)
         
-        let token = MyVariables.token
+        let token = "$2b$05$1ifspGAo/hPd8u2IDzId8edxsM3co1BLLB4lfVLZlIZOhdeTP0lni"
         
         let authorization = "Bearer ".appending(token)
         request.httpMethod = "GET"
@@ -90,8 +76,8 @@ class PlateWebService: PlateService {
                     return
             }
            
-            print(plate)
-            //print(json)
+            //print(plate)
+            print(json)
             DispatchQueue.main.async {
                 completion(plate)
             }
@@ -104,7 +90,7 @@ class PlateWebService: PlateService {
     
     func addPlate(plate: PlateRequest, completion: @escaping ([PlateRequest]) -> Void) {
         let url = URL(string: "http://localhost:3000/plates")
-        let token = MyVariables.token
+        let token = "$2b$05$1ifspGAo/hPd8u2IDzId8edxsM3co1BLLB4lfVLZlIZOhdeTP0lni"
         let authorization = "Bearer ".appending(token)
         
         let uploadDataModel = PlateRequest(name: plate.name, photo: plate.photo, quantity: plate.quantity, number: plate.number, comment: plate.comment, reserved: plate.reserved, userId: plate.userId)

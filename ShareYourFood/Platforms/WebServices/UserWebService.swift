@@ -9,11 +9,11 @@ import Foundation
 
 class UserWebService: UserService {
     func fetchUserById(userId:String, completion: @escaping (User) -> Void) {
-        let url = URL(string: "http://localhost:3000/users/" + userId)
+        let url = URL(string: "http://localhost:3000/users/" + "6")
         
         var request = URLRequest(url: url!)
         
-        let token = MyVariables.token
+        let token = "$2b$05$Q69XX.2a6HyKievVOzXRpOJePqc17yyodUS.G7VoqLlXm9DQg5gi."
         
         let authorization = "Bearer ".appending(token)
         request.httpMethod = "GET"

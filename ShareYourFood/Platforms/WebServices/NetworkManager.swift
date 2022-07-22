@@ -55,4 +55,13 @@ class NetworkManager {
                 }
             }
     }
+    
+    func downloadImage() {
+        let S3BucketName: String = "share-your-food"
+        let S3DownloadKeyName: String = "ACF6F4DB-1208-43C2-94F0-CCB8AB952C5C-87452-0000034534239CA5.jpg"
+                
+                
+                
+         
+    }
 }

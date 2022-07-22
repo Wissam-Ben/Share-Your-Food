@@ -24,10 +24,7 @@ class SubscribeViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var loginButton: UIButton!
     
     @IBOutlet weak var loginTextView: UILabel!
-    var authenticationService: AuthenticationService {
-        return AuthenticationWebService()
-    }
-    
+    var authenticationService: AuthenticationService = AuthenticationWebService()
     var user: UserSubscribe!
     var userResponse: UserSubscribeResponse!
     

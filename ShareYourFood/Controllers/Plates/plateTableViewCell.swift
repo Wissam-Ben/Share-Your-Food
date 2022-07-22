@@ -25,8 +25,8 @@ class plateTableViewCell: UITableViewCell {
     }
     
     func setPlate(with plate: PlateResponse) {
-        //var imagePlate = setPlateImage(plateImageString: plate.photo)
-        //self.plateImage.image = imagePlate
+        var imagePlate = setPlateImage(plateImageString: plate.photo)
+        self.plateImage.image = imagePlate
         self.username.text = plate.user.username
         self.plateName.text = plate.name
     }

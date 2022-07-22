@@ -26,7 +26,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func initializeS3() {
-        //let credentialsProvider = AWSCognitoCredentialsProvider(regionType: .USEast1, identityPoolId: "us-east-1:4d930ef9-d523-47a7-9c83-38df908ad21e")
         let credentialsProvider = AWSStaticCredentialsProvider(accessKey: "AKIA3E6WIUD7XFMDQRMO", secretKey: "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")
         let configuration = AWSServiceConfiguration(region: .USEast1, credentialsProvider: credentialsProvider)
         AWSServiceManager.default().defaultServiceConfiguration = configuration
