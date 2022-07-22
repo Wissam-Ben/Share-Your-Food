@@ -6,6 +6,10 @@
 //
 
 import UIKit
+import Alamofire
+import PromiseKit
+import UIKit
+import AWSS3
 
 class AddPlateViewController: UIViewController, UITextFieldDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
@@ -36,7 +40,6 @@ class AddPlateViewController: UIViewController, UITextFieldDelegate, UINavigatio
         self.portionTextField.delegate = self
         self.commentTextField.delegate = self
         
-        self.publishButton.addTarget(self, action: #selector(uploadToServer), for: .touchUpInside)
         //self.handlePublishPlate(self.publishButton)
         
 
@@ -72,19 +75,14 @@ class AddPlateViewController: UIViewController, UITextFieldDelegate, UINavigatio
             return
         }
         
-//        print("size")
-//        print(self.plateImage.image?.size)
-//
-//        let imageData: Data = self.plateImage.image!.pngData()!
-//        let stringValue = String(decoding: imageData, as: UTF8.self)
-//        let imageSt: String = self.plateImage.image!
-//        self.imageStr = stringValue
-//
-//        print(imageSt)
+        //NetworkManager.api.uploadImage(image: self.plateImage.image!)
+
+        //uploadImage(with: "toto", type: "jpg")
         
         self.plateService.addPlate(plate: PlateRequest(name: name, photo: self.imageStr, quantity: portion, number: number, comment: comment, reserved: false, userId: MyVariables.id.description)) { requestResponse in
             print(requestResponse)
         }
+        
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
@@ -94,7 +92,7 @@ class AddPlateViewController: UIViewController, UITextFieldDelegate, UINavigatio
         self.plateImage.image = image
         picker.dismiss(animated: true)
         
-        let request = NetworkManager.api.uploadImage(image: self.plateImage.image!)
+        let request = uploadImage(image: self.plateImage.image!)
         request.done {
             url in
             print("succes : ", url)
@@ -102,6 +100,7 @@ class AddPlateViewController: UIViewController, UITextFieldDelegate, UINavigatio
             error in
             print("error description : ", error.localizedDescription)
         }
+        
     }
     
     func displayErrorMessage(title: String, message: String) {
@@ -113,5 +112,137 @@ class AddPlateViewController: UIViewController, UITextFieldDelegate, UINavigatio
             }
         }
     }
+    
+    
+    func uploadImage(image: UIImage) -> Promise<URL> {
+        return Promise { resolver in
+            let progressBlock: AWSS3TransferUtilityProgressBlock = {
+                task, progress in
+                print("image uploaded percentage : ", progress.fractionCompleted)
+            }
+            let name = ProcessInfo.processInfo.globallyUniqueString+".jpg"
+            self.imageStr = name
+            let transferUtility = AWSS3TransferUtility.default()
+            let imageData = image.jpegData(compressionQuality: 0.4)
+            let bucketName = "share-your-food"
+            let expression = AWSS3TransferUtilityUploadExpression()
+            expression.progressBlock = progressBlock
+            
+            transferUtility.uploadData(imageData!, bucket: String(bucketName), key: name, contentType: "image/jpeg", expression: expression) {
+                task, error in
+                
+                if let error = error {
+                    resolver.reject(error)
+                } else {
+                    let imageUrl = URL(string: "https://\(bucketName).s3.amazonaws.com/\(name)") // halisia
+                    resolver.fulfill(imageUrl!)
+                }
+                
+            }.continueWith {
+                (task:AWSTask) -> AnyObject? in
+                    if(task.error != nil){
+                        print("Error uploading file: \(String(describing: task.error?.localizedDescription))")
+                    }
+                    if(task.result != nil){
+                        print("Starting upload...")
+                    }
+                    return nil
+                }
+            }
+    }
+    
+    
+    
+    func uploadS3(image: UIImage,
+                  name: String,
+                  progressHandler: @escaping (Progress) -> Void,
+                  completionHandler: @escaping (Error?) -> Void) {
+        
+        // Configure AWS Cognito Credentials
+        
+//        let credentialsProvider = AWSCognitoCredentialsProvider(regionType: .USEast1, identityPoolId: "us-east-1:4d930ef9-d523-47a7-9c83-38df908ad21e")
+//        let configuration = AWSServiceConfiguration(region: .USEast1, credentialsProvider: credentialsProvider)
+//        AWSServiceManager.default().defaultServiceConfiguration = configuration
+//
+//        
+        guard let data = image.jpegData(compressionQuality: 0.4) else {
+            print("errrroooorrr")
+            return
+        }
+        
+        print(data.base64EncodedString())
+
+        let expression = AWSS3TransferUtilityUploadExpression()
+        expression.progressBlock = { task, progress in
+            DispatchQueue.main.async {
+                progressHandler(progress)
+            }
+        }
+
+        print("expression")
+        
+        AWSS3TransferUtility.default().uploadData(
+            data,
+            key: "share-your-food",
+            contentType: "image/jpg",
+            expression: expression) { task, error in
+                DispatchQueue.main.async {
+                    completionHandler(error)
+                }
+                print("Success")
+
+            }.continueWith { task -> AnyObject? in
+                if let error = task.error {
+                    DispatchQueue.main.async {
+                        completionHandler(error)
+                    }
+                }
+                return nil
+        }
+    }
+    
+    
+    let bucketName = "share-your-food"
+    var completionHandler: AWSS3TransferUtilityUploadCompletionHandlerBlock?
+
+    func uploadImagess(with resource: String,type: String){   //1
+            
+            let key = "\(resource).\(type)"
+            let resource = Bundle.main.path(forResource: resource, ofType: type)!
+            let Url = URL(fileURLWithPath: resource)
+            
+            let expression  = AWSS3TransferUtilityUploadExpression()
+            expression.progressBlock = { (task: AWSS3TransferUtilityTask,progress: Progress) -> Void in
+              print(progress.fractionCompleted)   //2
+              if progress.isFinished{           //3
+                print("Upload Finished...")
+                //do any task here.
+              }
+            }
+            
+            expression.setValue("public-read-write", forRequestHeader: "x-amz-acl")   //4
+            expression.setValue("public-read-write", forRequestParameter: "x-amz-acl")
+
+            completionHandler = { (task:AWSS3TransferUtilityUploadTask, error:NSError?) -> Void in
+                if(error != nil){
+                    print("Failure uploading file")
+                    
+                }else{
+                    print("Success uploading file")
+                }
+            } as? AWSS3TransferUtilityUploadCompletionHandlerBlock
+            
+            
+            //5
+            AWSS3TransferUtility.default().uploadFile(Url, bucket: bucketName, key: key, contentType: resource, expression: expression, completionHandler: self.completionHandler).continueWith(block: { (task:AWSTask) -> AnyObject? in
+                if(task.error != nil){
+                    print("Error uploading file: \(String(describing: task.error?.localizedDescription))")
+                }
+                if(task.result != nil){
+                    print("Starting upload...")
+                }
+                return nil
+            })
+        }
     
 }

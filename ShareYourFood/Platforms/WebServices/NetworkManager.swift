@@ -15,6 +15,8 @@ class NetworkManager {
     
     static let api = NetworkManager()
     
+    var imageName = ""
+    
     private init() {}
     
     func uploadImage(image: UIImage) -> Promise<URL> {
@@ -24,13 +26,14 @@ class NetworkManager {
                 print("image uploaded percentage : ", progress.fractionCompleted)
             }
             let name = ProcessInfo.processInfo.globallyUniqueString+".jpg"
+            self.imageName = name
             let transferUtility = AWSS3TransferUtility.default()
             let imageData = image.jpegData(compressionQuality: 0.4)
             let bucketName = "share-your-food"
             let expression = AWSS3TransferUtilityUploadExpression()
             expression.progressBlock = progressBlock
             
-            transferUtility.uploadData(imageData!, key: bucketName, contentType: "image/jpeg", expression: expression) {
+            transferUtility.uploadData(imageData!, bucket: String(bucketName), key: name, contentType: "image/jpeg", expression: expression) {
                 task, error in
                 
                 if let error = error {
@@ -40,8 +43,16 @@ class NetworkManager {
                     resolver.fulfill(imageUrl!)
                 }
                 
+            }.continueWith {
+                (task:AWSTask) -> AnyObject? in
+                    if(task.error != nil){
+                        print("Error uploading file: \(String(describing: task.error?.localizedDescription))")
+                    }
+                    if(task.result != nil){
+                        print("Starting upload...")
+                    }
+                    return nil
+                }
             }
-        }
     }
-    
 }

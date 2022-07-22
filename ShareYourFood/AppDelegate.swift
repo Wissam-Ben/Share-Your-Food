@@ -20,29 +20,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         w.makeKeyAndVisible()
         self.window = w
         
-        self.startInternetMonitoring()
         self.initializeS3()
         
         return true
     }
     
     func initializeS3() {
-        let poolId = Bundle.main.object(forInfoDictionaryKey: "AWSPoolId") as? String
-        let credentialsProvider = AWSCognitoCredentialsProvider(regionType: .APSouth1, identityPoolId: poolId)
-        let configuration = AWSServiceConfiguration(region: .APSouth1, credentialsProvider: credentialsProvider)
+        //let credentialsProvider = AWSCognitoCredentialsProvider(regionType: .USEast1, identityPoolId: "us-east-1:4d930ef9-d523-47a7-9c83-38df908ad21e")
+        let credentialsProvider = AWSStaticCredentialsProvider(accessKey: "AKIA3E6WIUD7XFMDQRMO", secretKey: "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")
+        let configuration = AWSServiceConfiguration(region: .USEast1, credentialsProvider: credentialsProvider)
         AWSServiceManager.default().defaultServiceConfiguration = configuration
     }
-    func startInternetMonitoring(){
-        if #available(iOS 12.0, *) {
-            if !InternetConnectionMonitor.shared.isMonitoring {
-                InternetConnectionMonitor.shared.startMonitoring()
-            } else {
-                InternetConnectionMonitor.shared.stopMonitoring()
-            }
-        } else {
-            // Fallback on earlier versions
-        }
-    }
+
 
 }
 
