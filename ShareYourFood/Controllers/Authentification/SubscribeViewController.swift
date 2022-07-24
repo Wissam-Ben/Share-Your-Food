@@ -19,11 +19,16 @@ class SubscribeViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var passwordTextField: UITextField!
     
+    @IBOutlet weak var phoneTextField: UITextField!
+    
+    @IBOutlet weak var addressTextField: UITextField!
+    
     @IBOutlet weak var subscribeButton: UIButton!
     
     @IBOutlet weak var loginButton: UIButton!
     
     @IBOutlet weak var loginTextView: UILabel!
+    
     var authenticationService: AuthenticationService = AuthenticationWebService()
     var user: UserSubscribe!
     var userResponse: UserSubscribeResponse!
@@ -55,6 +60,8 @@ class SubscribeViewController: UIViewController, UITextFieldDelegate {
               let lastname = self.lastnameTextField.text,
               let username = self.usernameTextField.text,
               let email = self.emailTextField.text,
+              let phone = self.phoneTextField.text,
+              let address = self.addressTextField.text,
               let password = self.passwordTextField.text else {
                 self.displayErrorMessage(title: "Formulaire invalide", message: "Les champs sont obligatoires")
                 return

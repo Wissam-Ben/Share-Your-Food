@@ -32,6 +32,7 @@ class AddPlateViewController: UIViewController, UITextFieldDelegate, UINavigatio
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.title = NSLocalizedString("addplate.title", comment: "")
         self.plateImage.layer.borderWidth = 1
         self.plateImage.layer.borderColor = UIColor.black.cgColor
         

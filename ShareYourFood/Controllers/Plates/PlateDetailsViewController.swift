@@ -25,8 +25,18 @@ class PlateDetailsViewController: UIViewController {
     
     var plate: PlateResponse!
     
+    var plateService: PlateService {
+            return PlateWebService()
+    }
+    
+    var reservationService: ReservationService {
+            return ReservationWebService()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.title = NSLocalizedString("plate.details.title", comment: "")
         
         self.portionLabel.text = NSLocalizedString("plate.portion.title", comment: "")
         self.quantityLabel.text = NSLocalizedString("plate.quantity.title", comment: "")
@@ -72,4 +82,13 @@ class PlateDetailsViewController: UIViewController {
         self.plate = plate
     }
     
+    @IBAction func handleReserveOrDeleteButton(_ sender: Any) {
+        if(self.plate.user.id == MyVariables.id) {
+            self.plateService.deletePlate(plateId: self.plate.id) { _ in
+            }
+        } else {
+            self.reservationService.addReservation(reservation: ReservationRequest(plateId: self.plate.id)) { _ in
+            }
+        }
+    }
 }

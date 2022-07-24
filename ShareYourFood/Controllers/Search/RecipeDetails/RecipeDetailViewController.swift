@@ -56,6 +56,8 @@ class RecipeDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.title = NSLocalizedString("recipe.details.title", comment: "")
+        
         self.mealRecipeService.fetchRecipeDetailsById(completion: { recipes in
             print(recipes)
             self.recipe = recipes.first

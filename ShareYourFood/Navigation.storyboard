@@ -4,16 +4,25 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="cQX-NP-p2K">
             <objects>
                 <navigationController id="fGY-5o-2GL" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="JEx-qE-YCe"/>
+                    <tabBarItem key="tabBarItem" title="" id="JEx-qE-YCe">
+                        <imageReference key="selectedImage" image="magnifyingglass" catalog="system" renderingMode="hierarchical">
+                            <hierarchicalColors>
+                                <color systemColor="systemMintColor"/>
+                                <color systemColor="secondaryLabelColor"/>
+                                <color systemColor="tertiaryLabelColor"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                    </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="NqT-1D-UeV">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -26,11 +35,19 @@
             </objects>
             <point key="canvasLocation" x="-1313" y="-100"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="baJ-WZ-ioL">
             <objects>
                 <navigationController id="nTy-gR-T5l" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="iwn-TY-egf"/>
+                    <tabBarItem key="tabBarItem" title="" id="iwn-TY-egf">
+                        <imageReference key="selectedImage" image="homekit" catalog="system" renderingMode="hierarchical">
+                            <hierarchicalColors>
+                                <color systemColor="systemMintColor"/>
+                                <color systemColor="systemMintColor"/>
+                                <color systemColor="systemMintColor"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                    </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="eCI-Mn-sFd">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -52,46 +69,34 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Capture d’écran 2022-07-20 à 18.21.26" translatesAutoresizingMaskIntoConstraints="NO" id="jE4-zO-Vur">
-                                <rect key="frame" x="30" y="118" width="354" height="271"/>
+                                <rect key="frame" x="30" y="118" width="354" height="448"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fzz-w7-bBG">
-                                <rect key="frame" x="167.5" y="419" width="79" height="21"/>
+                                <rect key="frame" x="167.5" y="596" width="79" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="firstname" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R2C-kk-yFh">
-                                <rect key="frame" x="30" y="470" width="72" height="21"/>
+                                <rect key="frame" x="30" y="667" width="72" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="lastname" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KSD-I0-Kq7">
-                                <rect key="frame" x="122" y="470" width="70" height="21"/>
+                                <rect key="frame" x="122" y="667" width="70" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="email : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cEc-33-E4p">
-                                <rect key="frame" x="30" y="511" width="54" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="number : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tJW-ut-FEc">
-                                <rect key="frame" x="30" y="552" width="72" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="address : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eLc-uh-0PI">
-                                <rect key="frame" x="30" y="593" width="75" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cEc-33-E4p">
+                                <rect key="frame" x="30" y="718" width="54" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4hc-IC-PTr">
-                                <rect key="frame" x="104" y="511" width="41" height="21"/>
+                                <rect key="frame" x="104" y="718" width="41" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -102,27 +107,24 @@
                         <constraints>
                             <constraint firstItem="KSD-I0-Kq7" firstAttribute="leading" secondItem="R2C-kk-yFh" secondAttribute="trailing" constant="20" id="2Xr-Yb-8Mg"/>
                             <constraint firstItem="R2C-kk-yFh" firstAttribute="leading" secondItem="Pwq-kC-arP" secondAttribute="leading" constant="30" id="4Ls-KA-ewB"/>
-                            <constraint firstItem="cEc-33-E4p" firstAttribute="top" secondItem="R2C-kk-yFh" secondAttribute="bottom" constant="20" id="8xv-oO-AFh"/>
-                            <constraint firstItem="eLc-uh-0PI" firstAttribute="leading" secondItem="Pwq-kC-arP" secondAttribute="leading" constant="30" id="A2y-E2-7ln"/>
-                            <constraint firstItem="KSD-I0-Kq7" firstAttribute="top" secondItem="Fzz-w7-bBG" secondAttribute="bottom" constant="30" id="Erh-on-1au"/>
+                            <constraint firstItem="cEc-33-E4p" firstAttribute="top" secondItem="R2C-kk-yFh" secondAttribute="bottom" constant="30" id="8xv-oO-AFh"/>
+                            <constraint firstItem="KSD-I0-Kq7" firstAttribute="top" secondItem="Fzz-w7-bBG" secondAttribute="bottom" constant="50" id="Erh-on-1au"/>
                             <constraint firstItem="4hc-IC-PTr" firstAttribute="leading" secondItem="cEc-33-E4p" secondAttribute="trailing" constant="20" id="Gtg-X7-WH0"/>
-                            <constraint firstItem="R2C-kk-yFh" firstAttribute="top" secondItem="Fzz-w7-bBG" secondAttribute="bottom" constant="30" id="O00-3o-Su0"/>
+                            <constraint firstItem="R2C-kk-yFh" firstAttribute="top" secondItem="Fzz-w7-bBG" secondAttribute="bottom" constant="50" id="O00-3o-Su0"/>
                             <constraint firstItem="Fzz-w7-bBG" firstAttribute="centerX" secondItem="58Q-49-4Dv" secondAttribute="centerX" id="WP8-Iz-znI"/>
                             <constraint firstItem="Fzz-w7-bBG" firstAttribute="top" secondItem="jE4-zO-Vur" secondAttribute="bottom" constant="30" id="a5H-fk-Mtk"/>
                             <constraint firstItem="jE4-zO-Vur" firstAttribute="leading" secondItem="Pwq-kC-arP" secondAttribute="leading" constant="30" id="c4x-tk-2cr"/>
                             <constraint firstItem="jE4-zO-Vur" firstAttribute="top" secondItem="Pwq-kC-arP" secondAttribute="top" constant="30" id="ggJ-7h-pjt"/>
-                            <constraint firstItem="tJW-ut-FEc" firstAttribute="leading" secondItem="Pwq-kC-arP" secondAttribute="leading" constant="30" id="gmK-rx-Sid"/>
                             <constraint firstItem="cEc-33-E4p" firstAttribute="leading" secondItem="Pwq-kC-arP" secondAttribute="leading" constant="30" id="lUt-o9-2KZ"/>
-                            <constraint firstItem="eLc-uh-0PI" firstAttribute="top" secondItem="tJW-ut-FEc" secondAttribute="bottom" constant="20" id="odJ-UI-JPj"/>
                             <constraint firstItem="Pwq-kC-arP" firstAttribute="trailing" secondItem="jE4-zO-Vur" secondAttribute="trailing" constant="30" id="pdl-no-AXc"/>
-                            <constraint firstItem="jE4-zO-Vur" firstAttribute="height" secondItem="58Q-49-4Dv" secondAttribute="height" multiplier="0.302455" id="vJn-zV-puH"/>
+                            <constraint firstItem="jE4-zO-Vur" firstAttribute="height" secondItem="58Q-49-4Dv" secondAttribute="height" multiplier="0.5" id="vJn-zV-puH"/>
                             <constraint firstItem="4hc-IC-PTr" firstAttribute="centerY" secondItem="cEc-33-E4p" secondAttribute="centerY" id="vy7-89-C5I"/>
-                            <constraint firstItem="tJW-ut-FEc" firstAttribute="top" secondItem="cEc-33-E4p" secondAttribute="bottom" constant="20" id="xnb-HF-87k"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Account" id="fK6-ZW-e3x"/>
                     <connections>
                         <outlet property="email" destination="4hc-IC-PTr" id="Lal-ZO-F8Y"/>
+                        <outlet property="emailLabel" destination="cEc-33-E4p" id="zPO-ur-HHc"/>
                         <outlet property="firstname" destination="R2C-kk-yFh" id="vmR-Lk-e3i"/>
                         <outlet property="lastname" destination="KSD-I0-Kq7" id="aRw-Tw-Wdy"/>
                         <outlet property="userImage" destination="jE4-zO-Vur" id="Cq3-6A-pot"/>
@@ -326,11 +328,19 @@
             </objects>
             <point key="canvasLocation" x="-1313" y="672"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="LuB-oE-RWl">
             <objects>
                 <navigationController id="sQH-Gi-QK7" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Vr1-2w-d8d"/>
+                    <tabBarItem key="tabBarItem" title="" id="Vr1-2w-d8d">
+                        <imageReference key="selectedImage" image="plus" catalog="system" renderingMode="hierarchical">
+                            <hierarchicalColors>
+                                <color systemColor="systemMintColor"/>
+                                <color systemColor="secondaryLabelColor"/>
+                                <color systemColor="tertiaryLabelColor"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                    </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="upL-Cy-1ke">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -343,11 +353,19 @@
             </objects>
             <point key="canvasLocation" x="-613" y="-111"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="puK-mr-pew">
             <objects>
                 <navigationController id="eJa-2k-5FO" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="UDB-Vg-jLT"/>
+                    <tabBarItem key="tabBarItem" title="" id="UDB-Vg-jLT">
+                        <imageReference key="selectedImage" image="person.fill" catalog="system" symbolScale="large" renderingMode="hierarchical">
+                            <hierarchicalColors>
+                                <color systemColor="systemMintColor"/>
+                                <color systemColor="secondaryLabelColor"/>
+                                <color systemColor="tertiaryLabelColor"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                    </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="EuD-lh-mgK">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -360,11 +378,19 @@
             </objects>
             <point key="canvasLocation" x="817" y="-100"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="U5t-tw-Jrh">
             <objects>
                 <navigationController id="TH4-GK-9VW" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="kx9-VY-VHK"/>
+                    <tabBarItem key="tabBarItem" title="" id="kx9-VY-VHK">
+                        <imageReference key="selectedImage" image="list.dash" catalog="system" renderingMode="hierarchical">
+                            <hierarchicalColors>
+                                <color systemColor="systemMintColor"/>
+                                <color systemColor="systemMintColor"/>
+                                <color systemColor="systemMintColor"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                    </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="aiB-1j-UVm">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -402,8 +428,22 @@
     <resources>
         <image name="Capture d’écran 2022-07-17 à 15.25.06" width="674" height="434"/>
         <image name="Capture d’écran 2022-07-20 à 18.21.26" width="770" height="760"/>
+        <image name="homekit" catalog="system" width="128" height="106"/>
+        <image name="list.dash" catalog="system" width="128" height="85"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -30,6 +30,8 @@ class RecipesInfosListViewController: UIViewController, UITableViewDelegate, UIT
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.title = NSLocalizedString("search.recipes.title", comment: "")
 
         let nib = UINib(nibName: "RecipeInfoTableViewCell", bundle: nil)
         self.recipesListView.register(nib, forCellReuseIdentifier: "RECIPE_INFO_CELL_ID")

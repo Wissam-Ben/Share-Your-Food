@@ -42,6 +42,7 @@
 /*
  Plate details
  */
+"plate.details.title" = "Plate details";
 "plate.username.title" = "Cooked by : ";
 "plate.portion.title" = "Portion (g/plate) : ";
 "plate.quantity.title" = "Quantity : ";
@@ -49,3 +50,25 @@
 "plate.comment.title" = "Comment : ";
 "plate.reserve.button" = "Reserve";
 "plate.delete.button" = "Delete";
+
+/*
+ Account
+ */
+"account.title" = "My account";
+
+/*
+ Home Plates
+ */
+"home.plates.title" = "Available plates";
+
+/*
+ My plates
+ */
+"my.plates.title" = "My shared plates";
+
+/*
+ Search recipes Meal DB
+ */
+"search.categories.title" = "Recipe categories";
+"search.recipes.title" = "Recipe ideas";
+"recipe.details.title" = "Recipe details";

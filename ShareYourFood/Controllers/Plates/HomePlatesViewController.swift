@@ -21,6 +21,8 @@ class HomePlatesViewController: UIViewController, UITableViewDelegate, UITableVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.title = NSLocalizedString("home.plates.title", comment: "")
 
         let nib = UINib(nibName: "plateTableViewCell", bundle: nil)
         self.platesList.register(nib, forCellReuseIdentifier: "HOME_PLATE_CELL_ID")

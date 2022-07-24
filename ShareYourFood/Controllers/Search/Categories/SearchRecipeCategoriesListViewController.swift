@@ -22,6 +22,8 @@ class SearchRecipeCategoriesListViewController: UIViewController, UITableViewDel
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.title = NSLocalizedString("search.categories.title", comment: "")
+        
         let nib = UINib(nibName: "SearchRecipeCategoriesTableViewCell", bundle: nil)
         self.categoryTableView.register(nib, forCellReuseIdentifier: "CATEGORY_CELL_ID")
         self.categoryTableView.delegate = self

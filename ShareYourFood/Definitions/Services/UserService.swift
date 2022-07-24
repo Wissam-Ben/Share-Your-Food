@@ -9,5 +9,6 @@ import Foundation
 
 
 protocol UserService {
-    func fetchUserById(userId: String, completion: @escaping (User) -> Void) -> Void
+    func fetchUserById(userId: Int) -> User
+    func fetchUsers(completion: @escaping ([User]) -> Void) -> Void
 }

@@ -10,14 +10,14 @@ import Foundation
 
 class User: Codable {
     
-    var id: String
+    var id: Int
     var firstname: String
     var lastname: String
     var username: String
     var password: String
     var email: String
         
-    init(id: String, firstname: String, lastname: String, username: String, password: String, email: String) {
+    init(id: Int, firstname: String, lastname: String, username: String, password: String, email: String) {
         self.id = id
         self.firstname = firstname
         self.lastname = lastname
@@ -27,7 +27,7 @@ class User: Codable {
     }
         
     convenience init?(dict: [String: Any]) {
-        guard let id = dict["id"] as? String,
+        guard let id = dict["id"] as? Int,
               let firstname = dict["firstname"] as? String,
               let lastname = dict["lastname"] as? String,
               let username = dict["username"] as? String,

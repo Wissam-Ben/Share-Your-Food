@@ -32,8 +32,8 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
             return PlateWebService()
     }
     
-    var authService: AuthService {
-            return AuthWebService()
+    var userService: UserService {
+            return UserWebService()
     }
     
     var reservationService: ReservationService {
@@ -56,20 +56,6 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
             self.plates = plate
         
         }
-        /*
-          Localizable.strings
-          ShareYourFood
-
-          Created by Benadjaoud Wissam on 06/06/2022.
-          
-        */
-        /*
-          Localizable.strings
-          ShareYourFood
-
-          Created by Benadjaoud Wissam on 06/06/2022.
-          
-        */
 
         
         /*self.plateService.editPlate(plateId: 8, newplate: PlateRequest(name: "Couscous", photo: "", quantity: 400, number: 5, comment: "Couscous fait par halisia halifa", reserved: false, userId: 5)) { _ in
@@ -81,9 +67,6 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         /*self.reservationService.addReservation(reservation: ReservationRequest(plateId: 8)) { _ in
         }*/
         
-        /*userService.fetchUserById(userId: "5") { user in
-            self.userAccount = user
-        }*/
         
         super.title = NSLocalizedString("login.title", comment: "")
         self.loginButton.setTitle(NSLocalizedString("login.button", comment: ""), for: UIControl.State.normal)
