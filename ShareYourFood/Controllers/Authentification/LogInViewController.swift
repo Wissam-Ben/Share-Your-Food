@@ -101,20 +101,18 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
             //MyVariables.token = response.token
             print(MyVariables.token)
             
+            self.token = MyVariables.token
             
             
+            
+            if(self.token == "") {
+                self.displayErrorMessage(title: NSLocalizedString("invalid.form.message", comment: ""), message: NSLocalizedString("login.incorrect.fields", comment: ""))
+                    return
+            }
         }, user: self.user)
         
-        self.token = MyVariables.token
-        
         let vc = UIStoryboard(name: "Navigation", bundle: nil).instantiateInitialViewController() as? UIViewController
-        
-        if(self.token != "") {
-            self.navigationController?.pushViewController(vc!, animated: true)
-        } else {
-            self.displayErrorMessage(title: NSLocalizedString("invalid.form.message", comment: ""), message: NSLocalizedString("login.incorrect.fields", comment: ""))
-                return
-        }
+        self.navigationController?.pushViewController(vc!, animated: true)
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

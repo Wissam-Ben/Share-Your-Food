@@ -210,6 +210,7 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xD2-83-Klh">
                                 <rect key="frame" x="10" y="368" width="54" height="30"/>
+                                <color key="tintColor" systemColor="systemMintColor"/>
                                 <state key="normal" title="Camera"/>
                                 <connections>
                                     <action selector="handleCamera:" destination="Swz-oC-1tp" eventType="touchUpInside" id="p4D-JN-lvH"/>
@@ -217,6 +218,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kG8-eo-e0N">
                                 <rect key="frame" x="74" y="368" width="48" height="30"/>
+                                <color key="tintColor" systemColor="systemMintColor"/>
                                 <state key="normal" title="Gallery"/>
                                 <connections>
                                     <action selector="handleGallery:" destination="Swz-oC-1tp" eventType="touchUpInside" id="HY6-uK-Zko"/>
@@ -243,8 +245,9 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xdg-f6-0cg">
-                                <rect key="frame" x="184" y="763" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="170.5" y="763" width="73" height="30"/>
+                                <color key="tintColor" systemColor="systemMintColor"/>
+                                <state key="normal" title="Add plates"/>
                                 <connections>
                                     <action selector="handlePublishPlate:" destination="Swz-oC-1tp" eventType="touchUpInside" id="blb-Bu-Cup"/>
                                 </connections>

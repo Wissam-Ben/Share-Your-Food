@@ -11,7 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LogInViewController" customModule="ShareYourFood" customModuleProvider="target">
             <connections>
-                <outlet property="loginButton" destination="2Tf-aO-IZP" id="t1v-JP-pM3"/>
+                <outlet property="loginButton" destination="DL3-mt-plG" id="HgQ-5P-upl"/>
                 <outlet property="passwordTextField" destination="Adg-Tr-Qfe" id="aXu-CC-l0M"/>
                 <outlet property="subscribeButton" destination="bEL-Cl-CbA" id="3lo-Mz-zwY"/>
                 <outlet property="subscribeTextView" destination="cgU-kY-Nr8" id="4r2-NC-uKv"/>
@@ -34,14 +34,6 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Tf-aO-IZP">
-                    <rect key="frame" x="184" y="472" width="46" height="30"/>
-                    <color key="tintColor" systemColor="systemMintColor"/>
-                    <state key="normal" title="Button"/>
-                    <connections>
-                        <action selector="handleLogin:" destination="-1" eventType="touchUpInside" id="dba-Ts-IpU"/>
-                    </connections>
-                </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cgU-kY-Nr8">
                     <rect key="frame" x="102" y="811" width="183" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -60,11 +52,19 @@
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Capture d’écran 2022-07-17 à 12.25.04" translatesAutoresizingMaskIntoConstraints="NO" id="rhO-qv-uwZ">
                     <rect key="frame" x="10" y="54" width="394" height="280"/>
                 </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DL3-mt-plG">
+                    <rect key="frame" x="177" y="482" width="60" height="31"/>
+                    <color key="tintColor" systemColor="systemMintColor"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="Login"/>
+                    <connections>
+                        <action selector="handleLogin:" destination="-1" eventType="touchUpInside" id="oWF-yL-joj"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="2Tf-aO-IZP" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="32I-s9-DYw"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="bEL-Cl-CbA" secondAttribute="trailing" constant="30" id="7kM-3s-AJ0"/>
                 <constraint firstItem="cpI-WZ-AmX" firstAttribute="top" secondItem="rhO-qv-uwZ" secondAttribute="bottom" constant="10" id="GUD-um-bmt"/>
                 <constraint firstItem="Adg-Tr-Qfe" firstAttribute="top" secondItem="cpI-WZ-AmX" secondAttribute="bottom" constant="30" id="Gtd-It-x3x"/>
@@ -75,7 +75,8 @@
                 <constraint firstItem="rhO-qv-uwZ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="OTT-Dl-eWR"/>
                 <constraint firstItem="cpI-WZ-AmX" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="PsB-sB-VR4"/>
                 <constraint firstItem="bEL-Cl-CbA" firstAttribute="centerY" secondItem="cgU-kY-Nr8" secondAttribute="centerY" id="SEK-yO-mSo"/>
-                <constraint firstItem="2Tf-aO-IZP" firstAttribute="top" secondItem="Adg-Tr-Qfe" secondAttribute="bottom" constant="30" id="U26-DY-hWk"/>
+                <constraint firstItem="DL3-mt-plG" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Ycv-hm-lCM"/>
+                <constraint firstItem="DL3-mt-plG" firstAttribute="top" secondItem="Adg-Tr-Qfe" secondAttribute="bottom" constant="40" id="ZQY-hH-QJ9"/>
                 <constraint firstItem="bEL-Cl-CbA" firstAttribute="leading" secondItem="cgU-kY-Nr8" secondAttribute="trailing" constant="10" id="aOe-xo-Go4"/>
                 <constraint firstItem="cpI-WZ-AmX" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="300" id="bui-ff-C7l"/>
                 <constraint firstItem="Adg-Tr-Qfe" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="dcl-rf-3nY"/>
