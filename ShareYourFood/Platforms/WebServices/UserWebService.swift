@@ -9,7 +9,7 @@ import Foundation
 
 class UserWebService: UserService {
     func fetchUserById(userId:String, completion: @escaping (User) -> Void) {
-        let url = URL(string: "http://localhost:3000/users/" + "6")
+        let url = URL(string: "http://localhost:3000/users/6")
         
         var request = URLRequest(url: url!)
         

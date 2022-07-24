@@ -64,7 +64,7 @@ class HomePlatesViewController: UIViewController, UITableViewDelegate, UITableVi
         
         let plate = self.plates[indexPath.row]
     
-        // add configure to plate details
+        platedetails.configure(with: plate)
         
         self.navigationController?.pushViewController(platedetails, animated: true)
     

@@ -17,18 +17,18 @@
                 <rect key="frame" x="0.0" y="0.0" width="723" height="224"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gun-BW-T0S">
-                        <rect key="frame" x="10" y="10" width="493" height="204"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gun-BW-T0S">
+                        <rect key="frame" x="10" y="10" width="463" height="204"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recipe name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JqF-Te-9Mu">
-                        <rect key="frame" x="533" y="26" width="190" height="172"/>
+                        <rect key="frame" x="503" y="26" width="220" height="172"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="gun-BW-T0S" secondAttribute="trailing" constant="220" id="56H-HI-UbG"/>
+                    <constraint firstAttribute="trailing" secondItem="gun-BW-T0S" secondAttribute="trailing" constant="250" id="56H-HI-UbG"/>
                     <constraint firstAttribute="bottomMargin" secondItem="JqF-Te-9Mu" secondAttribute="bottom" constant="15" id="6bc-CT-c56"/>
                     <constraint firstItem="gun-BW-T0S" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="DZ1-gh-fVy"/>
                     <constraint firstItem="JqF-Te-9Mu" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="15" id="JoS-D7-b4u"/>

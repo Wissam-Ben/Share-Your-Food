@@ -42,8 +42,6 @@
 		AA7326FC2864494C003D6616 /* SearchRecipeCategoriesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA7326FA2864494C003D6616 /* SearchRecipeCategoriesTableViewCell.xib */; };
 		AA73270228647A64003D6616 /* MealCategoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA73270128647A64003D6616 /* MealCategoryService.swift */; };
 		AA73270428647A82003D6616 /* MealCategoryWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA73270328647A82003D6616 /* MealCategoryWebService.swift */; };
-		AA9A4FC52887F5F80071C567 /* NavigationBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9A4FC32887F5F80071C567 /* NavigationBarViewController.swift */; };
-		AA9A4FC62887F5F80071C567 /* NavigationBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA9A4FC42887F5F80071C567 /* NavigationBarViewController.xib */; };
 		AA9A4FCE2887F92C0071C567 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9A4FCC2887F92C0071C567 /* AccountViewController.swift */; };
 		AA9A4FD22887FE770071C567 /* HomePlatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9A4FD02887FE770071C567 /* HomePlatesViewController.swift */; };
 		AA9A4FD62887FEE30071C567 /* plateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9A4FD42887FEE30071C567 /* plateTableViewCell.swift */; };
@@ -150,8 +148,6 @@
 		AA73270128647A64003D6616 /* MealCategoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealCategoryService.swift; sourceTree = "<group>"; };
 		AA73270328647A82003D6616 /* MealCategoryWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealCategoryWebService.swift; sourceTree = "<group>"; };
 		AA7327072864E14E003D6616 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AA9A4FC32887F5F80071C567 /* NavigationBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarViewController.swift; sourceTree = "<group>"; };
-		AA9A4FC42887F5F80071C567 /* NavigationBarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NavigationBarViewController.xib; sourceTree = "<group>"; };
 		AA9A4FCC2887F92C0071C567 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		AA9A4FD02887FE770071C567 /* HomePlatesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePlatesViewController.swift; sourceTree = "<group>"; };
 		AA9A4FD42887FEE30071C567 /* plateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = plateTableViewCell.swift; sourceTree = "<group>"; };
@@ -351,8 +347,6 @@
 				AA9A4FC72887F8770071C567 /* Account */,
 				AA7326E028639491003D6616 /* Search */,
 				AA7326DF28639475003D6616 /* Authentification */,
-				AA9A4FC32887F5F80071C567 /* NavigationBarViewController.swift */,
-				AA9A4FC42887F5F80071C567 /* NavigationBarViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -586,7 +580,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA9A4FC62887F5F80071C567 /* NavigationBarViewController.xib in Resources */,
 				AA9FD88D2879AC8400D970DA /* RecipesInfosListViewController.xib in Resources */,
 				AA0DF59628855F6E00B3C025 /* RecipeDetailViewController.xib in Resources */,
 				AA7326F628643F2C003D6616 /* SearchRecipeCategoriesListViewController.xib in Resources */,
@@ -656,7 +649,6 @@
 				F8BEA38628821D7700A14C74 /* ReservationWebService.swift in Sources */,
 				F8BEA38E28844E3800A14C74 /* PhotoResponse.swift in Sources */,
 				AA9FD8BA2881C27400D970DA /* User.swift in Sources */,
-				AA9A4FC52887F5F80071C567 /* NavigationBarViewController.swift in Sources */,
 				AA9FD898287D4E2000D970DA /* LogInViewController.swift in Sources */,
 				AA7326EA2863993D003D6616 /* RecipeService.swift in Sources */,
 				AA9FD8B42881C0E300D970DA /* Session.swift in Sources */,
