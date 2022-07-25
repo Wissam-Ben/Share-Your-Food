@@ -10,11 +10,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
+        <!--Recipes-->
         <scene sceneID="cQX-NP-p2K">
             <objects>
                 <navigationController id="fGY-5o-2GL" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" id="JEx-qE-YCe">
+                    <tabBarItem key="tabBarItem" title="Recipes" id="JEx-qE-YCe">
                         <imageReference key="selectedImage" image="magnifyingglass" catalog="system"/>
                     </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="NqT-1D-UeV">
@@ -29,13 +29,11 @@
             </objects>
             <point key="canvasLocation" x="-1313" y="-100"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Home-->
         <scene sceneID="baJ-WZ-ioL">
             <objects>
                 <navigationController id="nTy-gR-T5l" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" id="iwn-TY-egf">
-                        <imageReference key="selectedImage" image="homekit" catalog="system"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="Home" selectedImage="homekit" catalog="system" id="iwn-TY-egf"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="eCI-Mn-sFd">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -146,6 +144,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="24A-bm-vvA"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="platesList" destination="l0x-CO-FYh" id="w70-sc-Xan"/>
                     </connections>
@@ -321,12 +320,12 @@
             </objects>
             <point key="canvasLocation" x="-1313" y="672"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Add-->
         <scene sceneID="LuB-oE-RWl">
             <objects>
                 <navigationController id="sQH-Gi-QK7" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" id="Vr1-2w-d8d">
-                        <imageReference key="selectedImage" image="plus" catalog="system"/>
+                    <tabBarItem key="tabBarItem" title="Add" id="Vr1-2w-d8d">
+                        <imageReference key="selectedImage" image="plus" catalog="system" symbolScale="large"/>
                     </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="upL-Cy-1ke">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -340,11 +339,11 @@
             </objects>
             <point key="canvasLocation" x="-613" y="-111"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Account-->
         <scene sceneID="puK-mr-pew">
             <objects>
                 <navigationController id="eJa-2k-5FO" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" id="UDB-Vg-jLT">
+                    <tabBarItem key="tabBarItem" title="Account" id="UDB-Vg-jLT">
                         <imageReference key="selectedImage" image="person.fill" catalog="system" symbolScale="large"/>
                     </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="EuD-lh-mgK">
@@ -359,11 +358,11 @@
             </objects>
             <point key="canvasLocation" x="817" y="-100"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--My plates-->
         <scene sceneID="U5t-tw-Jrh">
             <objects>
                 <navigationController id="TH4-GK-9VW" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" id="kx9-VY-VHK">
+                    <tabBarItem key="tabBarItem" title="My plates" id="kx9-VY-VHK">
                         <imageReference key="selectedImage" image="list.dash" catalog="system"/>
                     </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="aiB-1j-UVm">
