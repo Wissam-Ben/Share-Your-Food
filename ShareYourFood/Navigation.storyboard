@@ -107,7 +107,11 @@
                             <constraint firstItem="4hc-IC-PTr" firstAttribute="centerY" secondItem="cEc-33-E4p" secondAttribute="centerY" id="vy7-89-C5I"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Account" id="hU6-bg-7ib">
+                        <imageReference key="selectedImage" image="person.fill" catalog="system" symbolScale="large"/>
+                    </tabBarItem>
                     <navigationItem key="navigationItem" title="Account" id="fK6-ZW-e3x"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="email" destination="4hc-IC-PTr" id="Lal-ZO-F8Y"/>
                         <outlet property="emailLabel" destination="cEc-33-E4p" id="zPO-ur-HHc"/>
@@ -143,6 +147,7 @@
                             <constraint firstItem="l0x-CO-FYh" firstAttribute="leading" secondItem="0qQ-Bv-iqk" secondAttribute="leading" id="cBb-bQ-45h"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Home" selectedImage="homekit" catalog="system" id="LGy-8W-oEp"/>
                     <navigationItem key="navigationItem" title="Home" id="24A-bm-vvA"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -175,7 +180,11 @@
                             <constraint firstItem="bRX-bO-Jlp" firstAttribute="trailing" secondItem="vzB-dO-crb" secondAttribute="trailing" id="cAA-tj-eEc"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="My plates" id="pHb-xT-Qzc">
+                        <imageReference key="selectedImage" image="list.dash" catalog="system"/>
+                    </tabBarItem>
                     <navigationItem key="navigationItem" title="My shared plates" id="kW6-kj-Zll"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="platesList" destination="vzB-dO-crb" id="yGr-Md-sOl"/>
                     </connections>
@@ -267,7 +276,11 @@
                             <constraint firstItem="xD2-83-Klh" firstAttribute="top" secondItem="Wl8-XI-gEJ" secondAttribute="bottom" constant="10" id="xxT-eX-wCV"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Add" id="nOB-QA-IYv">
+                        <imageReference key="selectedImage" image="plus" catalog="system" symbolScale="large"/>
+                    </tabBarItem>
                     <navigationItem key="navigationItem" title="Add a plate" id="P4z-fC-Njp"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="cameraButton" destination="xD2-83-Klh" id="JXC-f6-kh0"/>
                         <outlet property="commentTextField" destination="cU9-cf-T8c" id="J0z-dw-YAs"/>
@@ -310,7 +323,11 @@
                             <constraint firstItem="NL8-bq-1fi" firstAttribute="centerY" secondItem="CuO-fo-N9z" secondAttribute="centerY" id="vwv-tX-GSb"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Recipes" id="ZyO-JU-bof">
+                        <imageReference key="selectedImage" image="magnifyingglass" catalog="system"/>
+                    </tabBarItem>
                     <navigationItem key="navigationItem" title="Recipes Ideas" id="RGt-QN-hQN"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="categoriesIndicatorView" destination="NL8-bq-1fi" id="orx-Jm-EgI"/>
                         <outlet property="categoryTableView" destination="qx1-Vk-Z01" id="qno-xv-Nge"/>
