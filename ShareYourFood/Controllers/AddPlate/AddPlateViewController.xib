@@ -11,7 +11,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddPlateViewController" customModule="ShareYourFood" customModuleProvider="target">
             <connections>
+                <outlet property="cameraButton" destination="yuE-I1-dUf" id="5ed-Fm-Afa"/>
                 <outlet property="commentTextField" destination="MNY-9j-fdb" id="61y-a2-xQE"/>
+                <outlet property="galleryButton" destination="j2V-H5-sUN" id="HlJ-MD-Flg"/>
                 <outlet property="nameTextField" destination="4qt-Tt-C6p" id="vep-nW-zhJ"/>
                 <outlet property="plateImage" destination="iPg-bi-BEW" id="wee-Jf-mdT"/>
                 <outlet property="portionTextField" destination="F2C-gl-Hhh" id="vnf-im-msd"/>

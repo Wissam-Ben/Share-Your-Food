@@ -23,6 +23,12 @@ class AddPlateViewController: UIViewController, UITextFieldDelegate, UINavigatio
     
     @IBOutlet weak var commentTextField: UITextField!
     
+    @IBOutlet weak var cameraButton: UIButton!
+    
+    
+    @IBOutlet weak var galleryButton: UIButton!
+    
+    
     @IBOutlet weak var publishButton: UIButton!
     
     var imageStr: String!
@@ -33,6 +39,17 @@ class AddPlateViewController: UIViewController, UITextFieldDelegate, UINavigatio
         super.viewDidLoad()
         
         self.title = NSLocalizedString("addplate.title", comment: "")
+        
+        self.nameTextField.text = NSLocalizedString("addplate.name", comment: "")
+        self.quantityTextField.text = NSLocalizedString("addplate.quantity", comment: "")
+        self.portionTextField.text = NSLocalizedString("addplate.portion", comment: "")
+        self.commentTextField.text = NSLocalizedString("addplate.comment", comment: "")
+        
+        self.cameraButton.setTitle(NSLocalizedString("camera.button", comment: ""), for: UIControl.State.normal)
+        self.galleryButton.setTitle(NSLocalizedString("gallery.button", comment: ""), for: UIControl.State.normal)
+        self.publishButton.setTitle(NSLocalizedString("publish.button", comment: ""), for: UIControl.State.normal)
+        
+        
         self.plateImage.layer.borderWidth = 1
         self.plateImage.layer.borderColor = UIColor.black.cgColor
         
@@ -41,7 +58,7 @@ class AddPlateViewController: UIViewController, UITextFieldDelegate, UINavigatio
         self.portionTextField.delegate = self
         self.commentTextField.delegate = self
         
-        //self.handlePublishPlate(self.publishButton)
+        
         
 
     }

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mY1-Ei-GNh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mY1-Ei-GNh">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -15,13 +15,7 @@
             <objects>
                 <navigationController id="fGY-5o-2GL" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" id="JEx-qE-YCe">
-                        <imageReference key="selectedImage" image="magnifyingglass" catalog="system" renderingMode="hierarchical">
-                            <hierarchicalColors>
-                                <color systemColor="systemMintColor"/>
-                                <color systemColor="secondaryLabelColor"/>
-                                <color systemColor="tertiaryLabelColor"/>
-                            </hierarchicalColors>
-                        </imageReference>
+                        <imageReference key="selectedImage" image="magnifyingglass" catalog="system"/>
                     </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="NqT-1D-UeV">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -40,13 +34,7 @@
             <objects>
                 <navigationController id="nTy-gR-T5l" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" id="iwn-TY-egf">
-                        <imageReference key="selectedImage" image="homekit" catalog="system" renderingMode="hierarchical">
-                            <hierarchicalColors>
-                                <color systemColor="systemMintColor"/>
-                                <color systemColor="systemMintColor"/>
-                                <color systemColor="systemMintColor"/>
-                            </hierarchicalColors>
-                        </imageReference>
+                        <imageReference key="selectedImage" image="homekit" catalog="system"/>
                     </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="eCI-Mn-sFd">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -282,7 +270,9 @@
                     </view>
                     <navigationItem key="navigationItem" title="Add a plate" id="P4z-fC-Njp"/>
                     <connections>
+                        <outlet property="cameraButton" destination="xD2-83-Klh" id="JXC-f6-kh0"/>
                         <outlet property="commentTextField" destination="cU9-cf-T8c" id="J0z-dw-YAs"/>
+                        <outlet property="galleryButton" destination="kG8-eo-e0N" id="Pxe-hY-o9M"/>
                         <outlet property="nameTextField" destination="sUb-EA-Bj1" id="Q0a-pv-imi"/>
                         <outlet property="plateImage" destination="Wl8-XI-gEJ" id="FBk-qB-ONM"/>
                         <outlet property="portionTextField" destination="6PY-25-VWe" id="7cB-CP-LnW"/>
@@ -336,13 +326,7 @@
             <objects>
                 <navigationController id="sQH-Gi-QK7" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" id="Vr1-2w-d8d">
-                        <imageReference key="selectedImage" image="plus" catalog="system" renderingMode="hierarchical">
-                            <hierarchicalColors>
-                                <color systemColor="systemMintColor"/>
-                                <color systemColor="secondaryLabelColor"/>
-                                <color systemColor="tertiaryLabelColor"/>
-                            </hierarchicalColors>
-                        </imageReference>
+                        <imageReference key="selectedImage" image="plus" catalog="system"/>
                     </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="upL-Cy-1ke">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -361,13 +345,7 @@
             <objects>
                 <navigationController id="eJa-2k-5FO" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" id="UDB-Vg-jLT">
-                        <imageReference key="selectedImage" image="person.fill" catalog="system" symbolScale="large" renderingMode="hierarchical">
-                            <hierarchicalColors>
-                                <color systemColor="systemMintColor"/>
-                                <color systemColor="secondaryLabelColor"/>
-                                <color systemColor="tertiaryLabelColor"/>
-                            </hierarchicalColors>
-                        </imageReference>
+                        <imageReference key="selectedImage" image="person.fill" catalog="system" symbolScale="large"/>
                     </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="EuD-lh-mgK">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -386,13 +364,7 @@
             <objects>
                 <navigationController id="TH4-GK-9VW" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" id="kx9-VY-VHK">
-                        <imageReference key="selectedImage" image="list.dash" catalog="system" renderingMode="hierarchical">
-                            <hierarchicalColors>
-                                <color systemColor="systemMintColor"/>
-                                <color systemColor="systemMintColor"/>
-                                <color systemColor="systemMintColor"/>
-                            </hierarchicalColors>
-                        </imageReference>
+                        <imageReference key="selectedImage" image="list.dash" catalog="system"/>
                     </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="aiB-1j-UVm">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -436,17 +408,11 @@
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="plus" catalog="system" width="128" height="113"/>
-        <systemColor name="secondaryLabelColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemMintColor">
             <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="tertiaryLabelColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

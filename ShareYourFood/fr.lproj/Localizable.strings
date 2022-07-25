@@ -31,6 +31,9 @@
 "addplate.quantity" = "Quantité";
 "addplate.portion" = "Portion d'un plat (g/plat)";
 "addplate.comment" = "Commentaire";
+"camera.button" = "Appareil photo";
+"gallery.button" = "Galerie";
+"publish.button" = "Ajouter ce plat";
 
 /*
  All
