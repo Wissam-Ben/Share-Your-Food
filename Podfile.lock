@@ -1,0 +1,41 @@
+PODS:
+  - Alamofire (5.6.2)
+  - AWSCognito (2.6.35):
+    - AWSCore (= 2.6.35)
+  - AWSCore (2.6.35)
+  - AWSS3 (2.6.35):
+    - AWSCore (= 2.6.35)
+  - PromiseKit (6.17.1):
+    - PromiseKit/CorePromise (= 6.17.1)
+    - PromiseKit/Foundation (= 6.17.1)
+    - PromiseKit/UIKit (= 6.17.1)
+  - PromiseKit/CorePromise (6.17.1)
+  - PromiseKit/Foundation (6.17.1):
+    - PromiseKit/CorePromise
+  - PromiseKit/UIKit (6.17.1):
+    - PromiseKit/CorePromise
+
+DEPENDENCIES:
+  - Alamofire
+  - AWSCognito (~> 2.6.13)
+  - AWSS3 (~> 2.6.13)
+  - PromiseKit
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - AWSCognito
+    - AWSCore
+    - AWSS3
+    - PromiseKit
+
+SPEC CHECKSUMS:
+  Alamofire: d368e1ff8a298e6dde360e35a3e68e6c610e7204
+  AWSCognito: 6b96ae976b5f59881c1bb406e0c7d08494651dee
+  AWSCore: 2dab62ef2e5ca5d8c72c6cbdb3a6ea1532c27c2b
+  AWSS3: 282a590bb47e9cd88de24979fb28954399c41c52
+  PromiseKit: ee485df3d4dc570594d7e7aecae6352697dc6a4c
+
+PODFILE CHECKSUM: 2e53beea629ee9860855f175474f0583f2ea0cab
+
+COCOAPODS: 1.11.3
