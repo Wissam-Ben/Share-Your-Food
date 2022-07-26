@@ -16,6 +16,9 @@ class AuthenticationWebService: AuthenticationService {
     init() {}
     
     func login(completion: @escaping (UserLoginResponse) -> Void, user: UserLogin) {
+        
+        UserDefaults.init()
+        
         let url = URL(string: "http://localhost:3000/auth/login")!
         var request = URLRequest(url: url)
         
@@ -64,12 +67,10 @@ class AuthenticationWebService: AuthenticationService {
                                 print("errooooor")
                                 return
                         }
-                        MyVariables.token = token
-                        MyVariables.id = id
+                        UserDefaults.standard.set(token, forKey: MyVariables.token)
+                        UserDefaults.standard.set(id, forKey: MyVariables.id)
                         
-                        self.token = token
-                        
-                        print(self.token)
+                        print(UserDefaults.standard.string(forKey: MyVariables.token))
                         
                       } catch {
                         print("Error: Trying to convert JSON data to string")
@@ -121,8 +122,8 @@ class AuthenticationWebService: AuthenticationService {
                             return
                         }
                         
-                        MyVariables.subscriptionStatusCode = response.statusCode
-                
+                        UserDefaults.standard.set(response.statusCode, forKey: MyVariables.subscribeStatusCode)
+                                        
                     } catch {
                         print("Error: Trying to convert JSON data to string")
                         return

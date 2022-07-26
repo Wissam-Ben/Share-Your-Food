@@ -10,6 +10,7 @@ import UIKit
 class MyPlatesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
 
     @IBOutlet weak var platesList: UITableView!
+    @IBOutlet weak var handleItemTapped: UITabBarItem!
     
     var plateService: PlateService = PlateWebService()
     
@@ -30,7 +31,7 @@ class MyPlatesViewController: UIViewController, UITableViewDelegate, UITableView
         self.platesList.dataSource = self
         self.plateService.fetchPlates { plates in
             for plate in plates {
-                if plate.user.id == MyVariables.id {
+                if plate.user.id == UserDefaults.standard.integer(forKey: MyVariables.id) {
                     self.plates.append(plate)
                 }
             }
@@ -76,6 +77,6 @@ class MyPlatesViewController: UIViewController, UITableViewDelegate, UITableView
         self.navigationController?.pushViewController(platedetails, animated: true)
     
     }
-    
 
+    
 }

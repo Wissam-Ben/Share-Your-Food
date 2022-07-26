@@ -101,6 +101,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b6F-6B-dsi">
+                                <rect key="frame" x="172" y="108" width="70" height="31"/>
+                                <color key="tintColor" systemColor="systemMintColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Logout"/>
+                                <connections>
+                                    <action selector="handleLogout:" destination="BeG-QQ-nLZ" eventType="touchUpInside" id="SP6-WX-LZk"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Pwq-kC-arP"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -110,6 +119,7 @@
                             <constraint firstItem="cEc-33-E4p" firstAttribute="top" secondItem="R2C-kk-yFh" secondAttribute="bottom" constant="30" id="8xv-oO-AFh"/>
                             <constraint firstItem="KSD-I0-Kq7" firstAttribute="top" secondItem="Fzz-w7-bBG" secondAttribute="bottom" constant="50" id="Erh-on-1au"/>
                             <constraint firstItem="4hc-IC-PTr" firstAttribute="leading" secondItem="cEc-33-E4p" secondAttribute="trailing" constant="20" id="Gtg-X7-WH0"/>
+                            <constraint firstItem="b6F-6B-dsi" firstAttribute="centerX" secondItem="58Q-49-4Dv" secondAttribute="centerX" id="KHv-JE-jJ2"/>
                             <constraint firstItem="R2C-kk-yFh" firstAttribute="top" secondItem="Fzz-w7-bBG" secondAttribute="bottom" constant="50" id="O00-3o-Su0"/>
                             <constraint firstItem="Fzz-w7-bBG" firstAttribute="centerX" secondItem="58Q-49-4Dv" secondAttribute="centerX" id="WP8-Iz-znI"/>
                             <constraint firstItem="Fzz-w7-bBG" firstAttribute="top" secondItem="jE4-zO-Vur" secondAttribute="bottom" constant="30" id="a5H-fk-Mtk"/>
@@ -118,22 +128,35 @@
                             <constraint firstItem="cEc-33-E4p" firstAttribute="leading" secondItem="Pwq-kC-arP" secondAttribute="leading" constant="30" id="lUt-o9-2KZ"/>
                             <constraint firstItem="Pwq-kC-arP" firstAttribute="trailing" secondItem="jE4-zO-Vur" secondAttribute="trailing" constant="30" id="pdl-no-AXc"/>
                             <constraint firstItem="jE4-zO-Vur" firstAttribute="height" secondItem="58Q-49-4Dv" secondAttribute="height" multiplier="0.5" id="vJn-zV-puH"/>
+                            <constraint firstItem="b6F-6B-dsi" firstAttribute="top" secondItem="Pwq-kC-arP" secondAttribute="top" constant="20" id="vsC-Az-E7r"/>
                             <constraint firstItem="4hc-IC-PTr" firstAttribute="centerY" secondItem="cEc-33-E4p" secondAttribute="centerY" id="vy7-89-C5I"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="" id="e6r-9F-KnY">
+                        <imageReference key="selectedImage" image="person.fill" catalog="system" symbolScale="large" renderingMode="hierarchical">
+                            <hierarchicalColors>
+                                <color systemColor="systemMintColor"/>
+                                <color systemColor="secondaryLabelColor"/>
+                                <color systemColor="tertiaryLabelColor"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                    </tabBarItem>
                     <navigationItem key="navigationItem" title="Account" id="fK6-ZW-e3x"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="email" destination="4hc-IC-PTr" id="Lal-ZO-F8Y"/>
                         <outlet property="emailLabel" destination="cEc-33-E4p" id="zPO-ur-HHc"/>
                         <outlet property="firstname" destination="R2C-kk-yFh" id="vmR-Lk-e3i"/>
+                        <outlet property="item" destination="e6r-9F-KnY" id="V0u-lg-Ncf"/>
                         <outlet property="lastname" destination="KSD-I0-Kq7" id="aRw-Tw-Wdy"/>
+                        <outlet property="logoutButton" destination="b6F-6B-dsi" id="YB6-e6-Qhc"/>
                         <outlet property="userImage" destination="jE4-zO-Vur" id="Cq3-6A-pot"/>
                         <outlet property="username" destination="Fzz-w7-bBG" id="QK8-qV-qO9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wxP-ZY-8CE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="816" y="672"/>
+            <point key="canvasLocation" x="815.94202898550736" y="671.65178571428567"/>
         </scene>
         <!--Home-->
         <scene sceneID="IZP-8l-C6R">
@@ -157,8 +180,19 @@
                             <constraint firstItem="l0x-CO-FYh" firstAttribute="leading" secondItem="0qQ-Bv-iqk" secondAttribute="leading" id="cBb-bQ-45h"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="" id="Qu9-hi-89P">
+                        <imageReference key="selectedImage" image="homekit" catalog="system" renderingMode="hierarchical">
+                            <hierarchicalColors>
+                                <color systemColor="systemMintColor"/>
+                                <color systemColor="systemMintColor"/>
+                                <color systemColor="systemMintColor"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                    </tabBarItem>
                     <navigationItem key="navigationItem" title="Home" id="24A-bm-vvA"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="item" destination="Qu9-hi-89P" id="qUh-Ul-gGS"/>
                         <outlet property="platesList" destination="l0x-CO-FYh" id="w70-sc-Xan"/>
                     </connections>
                 </viewController>
@@ -188,8 +222,19 @@
                             <constraint firstItem="bRX-bO-Jlp" firstAttribute="trailing" secondItem="vzB-dO-crb" secondAttribute="trailing" id="cAA-tj-eEc"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="" id="nE8-NS-eaF">
+                        <imageReference key="selectedImage" image="list.dash" catalog="system" renderingMode="hierarchical">
+                            <hierarchicalColors>
+                                <color systemColor="systemMintColor"/>
+                                <color systemColor="systemMintColor"/>
+                                <color systemColor="systemMintColor"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                    </tabBarItem>
                     <navigationItem key="navigationItem" title="My shared plates" id="kW6-kj-Zll"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="handleItemTapped" destination="nE8-NS-eaF" id="mEI-FG-3Wv"/>
                         <outlet property="platesList" destination="vzB-dO-crb" id="yGr-Md-sOl"/>
                     </connections>
                 </viewController>
@@ -280,9 +325,20 @@
                             <constraint firstItem="xD2-83-Klh" firstAttribute="top" secondItem="Wl8-XI-gEJ" secondAttribute="bottom" constant="10" id="xxT-eX-wCV"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="" id="bkV-3M-M1b">
+                        <imageReference key="selectedImage" image="plus" catalog="system" renderingMode="hierarchical">
+                            <hierarchicalColors>
+                                <color systemColor="systemMintColor"/>
+                                <color systemColor="secondaryLabelColor"/>
+                                <color systemColor="tertiaryLabelColor"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                    </tabBarItem>
                     <navigationItem key="navigationItem" title="Add a plate" id="P4z-fC-Njp"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="commentTextField" destination="cU9-cf-T8c" id="J0z-dw-YAs"/>
+                        <outlet property="item" destination="bkV-3M-M1b" id="fUK-ss-vUo"/>
                         <outlet property="nameTextField" destination="sUb-EA-Bj1" id="Q0a-pv-imi"/>
                         <outlet property="plateImage" destination="Wl8-XI-gEJ" id="FBk-qB-ONM"/>
                         <outlet property="portionTextField" destination="6PY-25-VWe" id="7cB-CP-LnW"/>
@@ -321,10 +377,21 @@
                             <constraint firstItem="NL8-bq-1fi" firstAttribute="centerY" secondItem="CuO-fo-N9z" secondAttribute="centerY" id="vwv-tX-GSb"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="" id="PP8-3o-3nq">
+                        <imageReference key="selectedImage" image="magnifyingglass" catalog="system" renderingMode="hierarchical">
+                            <hierarchicalColors>
+                                <color systemColor="systemMintColor"/>
+                                <color systemColor="secondaryLabelColor"/>
+                                <color systemColor="tertiaryLabelColor"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                    </tabBarItem>
                     <navigationItem key="navigationItem" title="Recipes Ideas" id="RGt-QN-hQN"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="categoriesIndicatorView" destination="NL8-bq-1fi" id="orx-Jm-EgI"/>
                         <outlet property="categoryTableView" destination="qx1-Vk-Z01" id="qno-xv-Nge"/>
+                        <outlet property="item" destination="PP8-3o-3nq" id="bFC-6U-lqL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cnp-LD-0QG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -410,10 +477,11 @@
         <scene sceneID="sa8-5X-cKX">
             <objects>
                 <tabBarController storyboardIdentifier="navMenu" id="mY1-Ei-GNh" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fAc-mm-71m">
+                    <tabBar key="tabBar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fAc-mm-71m">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" systemColor="systemMintColor"/>
                     </tabBar>
                     <connections>
                         <segue destination="nTy-gR-T5l" kind="relationship" relationship="viewControllers" id="CNw-lr-UnG"/>

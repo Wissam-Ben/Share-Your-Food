@@ -35,6 +35,8 @@ class SubscribeViewController: UIViewController, UITextFieldDelegate {
     
     var token: String!
     
+    var defaults = UserDefaults.standard
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -93,7 +95,7 @@ class SubscribeViewController: UIViewController, UITextFieldDelegate {
             print(self.userResponse.password)
         }, user: self.user)
         
-        if(MyVariables.subscriptionStatusCode == 200) {
+        if(defaults.integer(forKey: "subscriptionStatusCode") == 200) {
             self.navigationController?.pushViewController(LogInViewController(), animated: true)
         } else {
             self.displayErrorMessage(title: "Formulaire invalide", message: "Les champs saisis ne sont pas conformes")

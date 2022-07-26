@@ -13,6 +13,11 @@ import AWSS3
 
 class AddPlateViewController: UIViewController, UITextFieldDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
+    
+    
+    @IBOutlet weak var item: UITabBarItem!
+    
+    
     @IBOutlet weak var plateImage: UIImageView!
     
     @IBOutlet weak var nameTextField: UITextField!

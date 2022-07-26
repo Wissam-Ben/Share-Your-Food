@@ -40,10 +40,12 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
             return ReservationWebService()
     }
     
+    let defaults = UserDefaults.standard
+    
     //var plate: PlateByIdResponse = 
-    var plates: [PlateResponse] = []
-    var users: [UserSubscribe] = []
-    var reservations: [Reservation] = []
+//    var plates: [PlateResponse] = []
+//    var users: [UserSubscribe] = []
+//    var reservations: [Reservation] = []
 
     var token: String!
 
@@ -51,22 +53,8 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.plateService.fetchPlates { plate in
-           
-            self.plates = plate
-        
-        }
-
-        
-        /*self.plateService.editPlate(plateId: 8, newplate: PlateRequest(name: "Couscous", photo: "", quantity: 400, number: 5, comment: "Couscous fait par halisia halifa", reserved: false, userId: 5)) { _ in
-        }*/
-        
-        /*self.plateService.deletePlate(plateId: 1) { _ in
-        }*/
-        
-        /*self.reservationService.addReservation(reservation: ReservationRequest(plateId: 8)) { _ in
-        }*/
-        
+//
+//
         
         super.title = NSLocalizedString("login.title", comment: "")
         self.loginButton.setTitle(NSLocalizedString("login.button", comment: ""), for: UIControl.State.normal)
@@ -81,6 +69,9 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
     
     
     @IBAction func handleLogin(_ sender: Any) {
+        
+        //UserDefaults.init()
+        
         guard let log = self.usernameTextField.text, let pwd = self.passwordTextField.text else {
             self.displayErrorMessage(title: NSLocalizedString("linvalid.form.message", comment: ""), message: NSLocalizedString("missing.field.message", comment: ""))
             return
@@ -101,16 +92,14 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
             //MyVariables.token = response.token
             print(MyVariables.token)
             
-            self.token = MyVariables.token
-            
-            
+            self.token = self.defaults.string(forKey: MyVariables.token)
             
             if(self.token == "") {
                 self.displayErrorMessage(title: NSLocalizedString("invalid.form.message", comment: ""), message: NSLocalizedString("login.incorrect.fields", comment: ""))
                     return
             }
         }, user: self.user)
-        
+    
         let vc = UIStoryboard(name: "Navigation", bundle: nil).instantiateInitialViewController() as? UIViewController
         self.navigationController?.pushViewController(vc!, animated: true)
     }

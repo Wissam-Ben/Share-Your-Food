@@ -9,8 +9,7 @@ import Foundation
 import UIKit
 
 struct MyVariables {
-    static var token = ""
-    static var id = 0
-    static var subscriptionStatusCode = 0
-    static var image : UIImage = UIImage()
+    static let token = "token"
+    static let id = "id"
+    static let subscribeStatusCode = "subscribeStatusCode"
 }

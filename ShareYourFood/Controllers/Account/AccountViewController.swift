@@ -8,6 +8,11 @@
 import UIKit
 
 class AccountViewController: UIViewController {
+    
+    
+    @IBOutlet weak var item: UITabBarItem!
+    
+    @IBOutlet weak var logoutButton: UIButton!
     @IBOutlet weak var userImage: UIImageView!
     @IBOutlet weak var username: UILabel!
     @IBOutlet weak var firstname: UILabel!
@@ -25,9 +30,11 @@ class AccountViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.item.title = "toto"
+        
         self.title = NSLocalizedString("account.title", comment: "")
         
-        self.userId = 6
+        self.userId = UserDefaults.standard.integer(forKey: MyVariables.id)
         
         self.userService.fetchUsers { users in
             self.users = users
@@ -43,5 +50,11 @@ class AccountViewController: UIViewController {
         }
 
     }
-
+    
+    
+    @IBAction func handleLogout(_ sender: Any) {
+        let vc = UIStoryboard(name: "LaunchScreen", bundle: nil).instantiateInitialViewController()
+        self.navigationController?.pushViewController(vc!, animated: true)
+    }
+    
 }

@@ -8,7 +8,10 @@
 import UIKit
 
 class HomePlatesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
+    
+    
+    @IBOutlet weak var item: UITabBarItem!
+    
     @IBOutlet weak var platesList: UITableView!
     
     var plateService: PlateService = PlateWebService()

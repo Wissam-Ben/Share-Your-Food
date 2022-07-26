@@ -11,14 +11,15 @@ import UIKit
 class PlateWebService: PlateService {
     
     func fetchPlates(completion: @escaping ([PlateResponse]) -> Void) {
+        
+        //UserDefaults.init()
+        
         let url = URL(string: "http://localhost:3000/plates")
         var request = URLRequest(url: url!)
 
-        let token = "$2b$05$Q69XX.2a6HyKievVOzXRpOJePqc17yyodUS.G7VoqLlXm9DQg5gi."
+        let token = UserDefaults.standard.string(forKey: "token")
         
-        print(token)
-        
-        let authorization = "Bearer ".appending(token)
+        let authorization = "Bearer ".appending(token!)
         request.httpMethod = "GET"
         request.addValue(authorization, forHTTPHeaderField: "Authorization")
         
@@ -56,9 +57,9 @@ class PlateWebService: PlateService {
         
         var request = URLRequest(url: url!)
         
-        let token = "$2b$05$1ifspGAo/hPd8u2IDzId8edxsM3co1BLLB4lfVLZlIZOhdeTP0lni"
+        let token = UserDefaults.standard.string(forKey: "token")
         
-        let authorization = "Bearer ".appending(token)
+        let authorization = "Bearer ".appending(token!)
         request.httpMethod = "GET"
         request.addValue(authorization, forHTTPHeaderField: "Authorization")
         
@@ -84,14 +85,11 @@ class PlateWebService: PlateService {
         }
         dataTask.resume()
     }
-
-    
-    
     
     func addPlate(plate: PlateRequest, completion: @escaping ([PlateRequest]) -> Void) {
         let url = URL(string: "http://localhost:3000/plates")
-        let token = "$2b$05$1ifspGAo/hPd8u2IDzId8edxsM3co1BLLB4lfVLZlIZOhdeTP0lni"
-        let authorization = "Bearer ".appending(token)
+        let token = UserDefaults.standard.string(forKey: "token")
+        let authorization = "Bearer ".appending(token!)
         
         let uploadDataModel = PlateRequest(name: plate.name, photo: plate.photo, quantity: plate.quantity, number: plate.number, comment: plate.comment, reserved: plate.reserved, userId: plate.userId)
               
@@ -147,8 +145,8 @@ class PlateWebService: PlateService {
     
     func editPlate(plateId: Int, newplate: PlateRequest, completion: @escaping ([PlateRequest]) -> Void) {
         let url = URL(string: "http://localhost:3000/plates/"+plateId.description)
-        let token = "$2b$05$WrR/dKo3Pa6i8cm4h9EEe.Xits/GiHxiNvVGq8s72Ect7D2gACM2e"
-        let authorization = "Bearer ".appending(token)
+        let token = UserDefaults.standard.string(forKey: MyVariables.token)
+        let authorization = "Bearer ".appending(token!)
         
         let newPlate = PlateRequest(name: newplate.name, photo: newplate.photo, quantity: newplate.quantity, number: newplate.number, comment: newplate.comment, reserved: newplate.reserved, userId: newplate.userId)
               
@@ -203,8 +201,8 @@ class PlateWebService: PlateService {
     
     func deletePlate(plateId: Int, completion: @escaping ([PlateRequest]) -> Void) {
         let url = URL(string: "http://localhost:3000/plates/"+plateId.description)
-        let token = MyVariables.token
-        let authorization = "Bearer ".appending(token)
+        let token = UserDefaults.standard.string(forKey: MyVariables.token)
+        let authorization = "Bearer ".appending(token!)
         
                 
         var request = URLRequest(url: url!)

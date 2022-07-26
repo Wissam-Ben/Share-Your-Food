@@ -8,7 +8,10 @@
 import UIKit
 
 class SearchRecipeCategoriesListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
+    
+    
+    @IBOutlet weak var item: UITabBarItem!
+    
     @IBOutlet weak var categoryTableView: UITableView!
     @IBOutlet weak var categoriesIndicatorView: UIActivityIndicatorView!
     var mealCategoryService : MealCategoryService = MealCategoryWebService()

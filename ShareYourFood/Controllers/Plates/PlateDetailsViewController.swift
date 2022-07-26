@@ -44,7 +44,7 @@ class PlateDetailsViewController: UIViewController {
         self.commentLabel.text = NSLocalizedString("plate.comment.title", comment: "")
         self.createdBy.text = NSLocalizedString("plate.username.title", comment: "")
         // verifier les id utilisateur
-        if(self.plate.user.id == MyVariables.id) {
+        if(self.plate.user.id == UserDefaults.standard.integer(forKey: MyVariables.id)) {
             self.reserveOrDeleteButton.setTitle(NSLocalizedString("plate.delete.button", comment: ""), for: UIControl.State.normal)
         } else {
             self.reserveOrDeleteButton.setTitle(NSLocalizedString("plate.reserve.button", comment: ""), for: UIControl.State.normal)
@@ -83,7 +83,7 @@ class PlateDetailsViewController: UIViewController {
     }
     
     @IBAction func handleReserveOrDeleteButton(_ sender: Any) {
-        if(self.plate.user.id == MyVariables.id) {
+        if(self.plate.user.id == UserDefaults.standard.integer(forKey: MyVariables.id) ) {
             self.plateService.deletePlate(plateId: self.plate.id) { _ in
             }
         } else {
