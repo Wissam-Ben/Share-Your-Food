@@ -38,7 +38,6 @@
         <!--Navigation Controller-->
         <scene sceneID="baJ-WZ-ioL">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kFs-9M-Cfr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController id="nTy-gR-T5l" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" id="iwn-TY-egf">
                         <imageReference key="image" image="homekit" catalog="system"/>
@@ -58,6 +57,7 @@
                         <segue destination="fCh-Yn-Srq" kind="relationship" relationship="rootViewController" id="aJX-SG-8wh"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kFs-9M-Cfr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2009" y="-100"/>
         </scene>
@@ -293,7 +293,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Capture d’écran 2022-07-17 à 15.25.06" translatesAutoresizingMaskIntoConstraints="NO" id="Wl8-XI-gEJ">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default_image" translatesAutoresizingMaskIntoConstraints="NO" id="Wl8-XI-gEJ">
                                 <rect key="frame" x="10" y="115" width="394" height="269"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xD2-83-Klh">
@@ -561,7 +561,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Capture d’écran 2022-07-17 à 15.25.06" width="674" height="434"/>
+        <image name="default_image" width="334" height="262"/>
         <image name="homekit" catalog="system" width="128" height="106"/>
         <image name="list.dash" catalog="system" width="128" height="85"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>

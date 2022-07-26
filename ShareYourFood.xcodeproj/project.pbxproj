@@ -470,7 +470,6 @@
 		AA9A4FCA2887F8CE0071C567 /* AddPlate */ = {
 			isa = PBXGroup;
 			children = (
-				AA9A4FE0288803900071C567 /* AddPlateViewController.swift */,
 				AA9A4FE1288803900071C567 /* AddPlateViewController.xib */,
 			);
 			path = AddPlate;
@@ -479,6 +478,7 @@
 		AA9FD8A2287F57EA00D970DA /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				AA9A4FE0288803900071C567 /* AddPlateViewController.swift */,
 				AA7326F328643F2C003D6616 /* SearchRecipeCategoriesListViewController.swift */,
 				AA7326F428643F2C003D6616 /* SearchRecipeCategoriesListViewController.xib */,
 				AA7326F92864494C003D6616 /* SearchRecipeCategoriesTableViewCell.swift */,
