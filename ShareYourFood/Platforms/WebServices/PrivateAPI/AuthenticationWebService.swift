@@ -17,7 +17,9 @@ class AuthenticationWebService: AuthenticationService {
     
     func login(completion: @escaping (UserLoginResponse) -> Void, user: UserLogin) {
         
-        UserDefaults.init()
+        UserDefaults.standard.set("", forKey: MyVariables.token)
+        UserDefaults.standard.set(0, forKey: MyVariables.id)
+        UserDefaults.standard.set(200, forKey: MyVariables.subscribeStatusCode)
         
         let url = URL(string: "http://localhost:3000/auth/login")!
         var request = URLRequest(url: url)
