@@ -21,7 +21,6 @@
 		AA2D11C4288867D6007547F7 /* PlateDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA2D11C3288867D6007547F7 /* PlateDetailsViewController.xib */; };
 		AA2D11CB288A0A7B007547F7 /* AWSCore in Frameworks */ = {isa = PBXBuildFile; productRef = AA2D11CA288A0A7B007547F7 /* AWSCore */; };
 		AA2D11CD288A0A7B007547F7 /* AWSS3 in Frameworks */ = {isa = PBXBuildFile; productRef = AA2D11CC288A0A7B007547F7 /* AWSS3 */; };
-		AA2D11D0288AB48D007547F7 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2D11CF288AB48D007547F7 /* NetworkManager.swift */; };
 		AA2D11D3288AB615007547F7 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = AA2D11D2288AB615007547F7 /* Alamofire */; };
 		AA2D11D6288AB72C007547F7 /* PromiseKit in Frameworks */ = {isa = PBXBuildFile; productRef = AA2D11D5288AB72C007547F7 /* PromiseKit */; };
 		AA73266D284D459B003D6616 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA73266C284D459B003D6616 /* AppDelegate.swift */; };
@@ -93,7 +92,6 @@
 		AA2D11BA28884300007547F7 /* UserAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccount.swift; sourceTree = "<group>"; };
 		AA2D11C3288867D6007547F7 /* PlateDetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlateDetailsViewController.xib; sourceTree = "<group>"; };
 		AA2D11CE288A0C81007547F7 /* ShareYourFood.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ShareYourFood.entitlements; sourceTree = "<group>"; };
-		AA2D11CF288AB48D007547F7 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		AA732669284D459B003D6616 /* ShareYourFood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShareYourFood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA73266C284D459B003D6616 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA732675284D459C003D6616 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -329,7 +327,6 @@
 				F8BEA38528821D7700A14C74 /* ReservationWebService.swift */,
 				AA0DF58928835E9B00B3C025 /* AuthenticationWebService.swift */,
 				AA2D11B8288838B9007547F7 /* UserWebService.swift */,
-				AA2D11CF288AB48D007547F7 /* NetworkManager.swift */,
 			);
 			path = WebServices;
 			sourceTree = "<group>";
@@ -647,7 +644,6 @@
 				AA9FD8B62881C0E300D970DA /* Reservation.swift in Sources */,
 				AA9A4FDE288803150071C567 /* MyPlatesViewController.swift in Sources */,
 				AA9FD8902879ACA200D970DA /* RecipeInfoTableViewCell.swift in Sources */,
-				AA2D11D0288AB48D007547F7 /* NetworkManager.swift in Sources */,
 				AA732688284DD733003D6616 /* SubscribeViewController.swift in Sources */,
 				AA9A4FD62887FEE30071C567 /* plateTableViewCell.swift in Sources */,
 				AA9FD8B12881C0E300D970DA /* UserSubscribe.swift in Sources */,

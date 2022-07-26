@@ -61,12 +61,10 @@ class RecipeDetailViewController: UIViewController {
         self.mealRecipeService.fetchRecipeDetailsById(completion: { recipes in
             print(recipes)
             self.recipe = recipes.first
-            if self.recipe.thumb != "" {
-                let image = self.setImageRecipe(recipeImageString: self.recipe.thumb)
-                self.recipeImageView.image = image
-            } else {
-                return
-            }
+            
+            let image = self.setImageRecipe(recipeImageString: self.recipe.thumb)
+            
+            self.recipeImageView.image = image
             
             self.recipeNameTextView.text = self.recipe.name
             self.areaTextView.text = self.recipe.area
@@ -105,24 +103,27 @@ class RecipeDetailViewController: UIViewController {
             
         }, id: self.recipeId)
     }
-
     
     private func setImageRecipe(recipeImageString: String) -> UIImage{
         let url = URL(string: recipeImageString)
         let data = try? Data(contentsOf: url!)
         let recipeImage: UIImage
+        
         if let imageData = data {
             recipeImage = UIImage(data: imageData)!
         } else {
             let imageName = "not_found"
-            let image = UIImage(named: imageName)
-            recipeImage = image!
+            guard let image = UIImage(named: imageName) else {
+                return UIImage(named: "default_image")!
+            }
+            recipeImage = image
         }
         return recipeImage
     }
     
     func configure(with recipe: MealInfos) {
         self.recipeId = recipe.idMeal
+        
     }
     
 }

@@ -53,8 +53,15 @@ class AccountViewController: UIViewController {
     
     
     @IBAction func handleLogout(_ sender: Any) {
-        let vc = UIStoryboard(name: "LaunchScreen", bundle: nil).instantiateInitialViewController()
-        self.navigationController?.pushViewController(vc!, animated: true)
+        
+        UserDefaults.standard.removeObject(forKey: MyVariables.token)
+        UserDefaults.standard.removeObject(forKey: MyVariables.id)
+        UserDefaults.standard.removeObject(forKey: MyVariables.subscribeStatusCode)
+        
+        self.navigationController?.pushViewController(LogInViewController(), animated: true)
+        self.tabBarController?.tabBar.isHidden = true
+        self.navigationController?.navigationBar.isHidden = true
+        
     }
     
 }

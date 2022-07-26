@@ -13,9 +13,9 @@ class ReservationWebService: ReservationService {
         let url = URL(string: "http://localhost:3000/reservations/" + plateId.description)
         var request = URLRequest(url: url!)
         
-        let token = "$2b$05$Sfc0OsNv7SzRjHnGqZf7auexbmPfBO6SY2zV.W1KpV13QKInvGpL."
+        let token = UserDefaults.standard.string(forKey: MyVariables.token)
         
-        let authorization = "Bearer ".appending(token)
+        let authorization = "Bearer ".appending(token!)
         request.httpMethod = "GET"
         request.addValue(authorization, forHTTPHeaderField: "Authorization")
         
@@ -48,8 +48,8 @@ class ReservationWebService: ReservationService {
     
     func addReservation(reservation: ReservationRequest, completion: @escaping ([PlateRequest]) -> Void) {
         let url = URL(string: "http://localhost:3000/reservations")
-        let token = "$2b$05$JlrgxiPVf6rOjq1OL3nQU.IXH00IHQZmHYUneLTsHeUCMDPE4Dhs."
-        let authorization = "Bearer ".appending(token)
+        let token = UserDefaults.standard.string(forKey: MyVariables.token)
+        let authorization = "Bearer ".appending(token!)
         
         let uploadDataModel = ReservationRequest(plateId: reservation.plateId)
               

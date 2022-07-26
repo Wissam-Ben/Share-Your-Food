@@ -37,7 +37,10 @@ class AddPlateViewController: UIViewController, UITextFieldDelegate, UINavigatio
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = NSLocalizedString("addplate.title", comment: "")
+        
+        
+        //self.title = NSLocalizedString("addplate.title", comment: "")
+        
         self.plateImage.layer.borderWidth = 1
         self.plateImage.layer.borderColor = UIColor.black.cgColor
         
@@ -45,9 +48,6 @@ class AddPlateViewController: UIViewController, UITextFieldDelegate, UINavigatio
         self.quantityTextField.delegate = self
         self.portionTextField.delegate = self
         self.commentTextField.delegate = self
-        
-        //self.handlePublishPlate(self.publishButton)
-        
 
     }
 
@@ -81,13 +81,15 @@ class AddPlateViewController: UIViewController, UITextFieldDelegate, UINavigatio
             return
         }
         
-        //NetworkManager.api.uploadImage(image: self.plateImage.image!)
-
-        //uploadImage(with: "toto", type: "jpg")
-        
-        self.plateService.addPlate(plate: PlateRequest(name: name, photo: self.imageStr, quantity: portion, number: number, comment: comment, reserved: false, userId: MyVariables.id.description)) { requestResponse in
+        self.plateService.addPlate(plate: PlateRequest(name: name, photo: self.imageStr, quantity: portion, number: number, comment: comment, reserved: false, userId: UserDefaults.standard.integer(forKey: MyVariables.id).description)) { requestResponse in
             print(requestResponse)
         }
+        
+        self.plateImage.image = UIImage(named: "default_image")
+        self.nameTextField.text = ""
+        self.quantityTextField.text = ""
+        self.portionTextField.text = ""
+        self.commentTextField.text = ""
         
     }
     
@@ -106,7 +108,6 @@ class AddPlateViewController: UIViewController, UITextFieldDelegate, UINavigatio
             error in
             print("error description : ", error.localizedDescription)
         }
-        
     }
     
     func displayErrorMessage(title: String, message: String) {
@@ -127,15 +128,12 @@ class AddPlateViewController: UIViewController, UITextFieldDelegate, UINavigatio
                 print("image uploaded percentage : ", progress.fractionCompleted)
             }
             let name = ProcessInfo.processInfo.globallyUniqueString+".jpg"
-            //self.imageStr = name
             let transferUtility = AWSS3TransferUtility.default()
             let imageData = image.jpegData(compressionQuality: 0.4)
             let bucketName = "share-your-food"
             let expression = AWSS3TransferUtilityUploadExpression()
             expression.progressBlock = progressBlock
-            
-            transferUtility.uploadData(imageData!, bucket: String(bucketName), key: name, contentType: "image/jpeg", expression: expression) {
-                task, error in
+            transferUtility.uploadData(imageData!, bucket: String(bucketName), key: name, contentType: "image/jpeg", expression: expression) { task, error in
                 
                 if let error = error {
                     resolver.reject(error)
@@ -165,13 +163,7 @@ class AddPlateViewController: UIViewController, UITextFieldDelegate, UINavigatio
                   progressHandler: @escaping (Progress) -> Void,
                   completionHandler: @escaping (Error?) -> Void) {
         
-        // Configure AWS Cognito Credentials
-        
-//        let credentialsProvider = AWSCognitoCredentialsProvider(regionType: .USEast1, identityPoolId: "us-east-1:4d930ef9-d523-47a7-9c83-38df908ad21e")
-//        let configuration = AWSServiceConfiguration(region: .USEast1, credentialsProvider: credentialsProvider)
-//        AWSServiceManager.default().defaultServiceConfiguration = configuration
-//
-//        
+       
         guard let data = image.jpegData(compressionQuality: 0.4) else {
             print("errrroooorrr")
             return

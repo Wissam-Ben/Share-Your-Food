@@ -20,6 +20,12 @@ class MyPlatesViewController: UIViewController, UITableViewDelegate, UITableView
         }
     }
     
+    let myRefreshControl: UIRefreshControl = {
+            let refreshControl = UIRefreshControl()
+            refreshControl.addTarget(self, action: #selector(refresh(sender:)), for: .valueChanged)
+            return refreshControl
+        }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -37,7 +43,22 @@ class MyPlatesViewController: UIViewController, UITableViewDelegate, UITableView
             }
             
         }
+        self.platesList.refreshControl = myRefreshControl
         
+    }
+    
+    @objc private func refresh(sender: UIRefreshControl){
+        plates.removeAll()
+
+        self.plateService.fetchPlates { plates in
+            for plate in plates {
+                if plate.user.id == UserDefaults.standard.integer(forKey: MyVariables.id) {
+                    self.plates.append(plate)
+                }
+            }
+            
+        }
+        sender.endRefreshing()
     }
     
     @objc func handleEditTableView() {

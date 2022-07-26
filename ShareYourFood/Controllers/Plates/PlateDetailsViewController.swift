@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class PlateDetailsViewController: UIViewController {
 
@@ -33,6 +34,12 @@ class PlateDetailsViewController: UIViewController {
             return ReservationWebService()
     }
     
+    let myRefreshControl: UIRefreshControl = {
+            let refreshControl = UIRefreshControl()
+            refreshControl.addTarget(self, action: #selector(refresh(sender:)), for: .valueChanged)
+            return refreshControl
+        }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -40,7 +47,7 @@ class PlateDetailsViewController: UIViewController {
         
         self.portionLabel.text = NSLocalizedString("plate.portion.title", comment: "")
         self.quantityLabel.text = NSLocalizedString("plate.quantity.title", comment: "")
-        self.createdAt.text = NSLocalizedString("plate.portion.title", comment: "")
+        self.createdAt.text = NSLocalizedString("plate.createdAt.title", comment: "")
         self.commentLabel.text = NSLocalizedString("plate.comment.title", comment: "")
         self.createdBy.text = NSLocalizedString("plate.username.title", comment: "")
         // verifier les id utilisateur
@@ -48,6 +55,36 @@ class PlateDetailsViewController: UIViewController {
             self.reserveOrDeleteButton.setTitle(NSLocalizedString("plate.delete.button", comment: ""), for: UIControl.State.normal)
         } else {
             self.reserveOrDeleteButton.setTitle(NSLocalizedString("plate.reserve.button", comment: ""), for: UIControl.State.normal)
+        }
+        self.plateImage.image = setPlateImage(plateImageString: self.plate.photo)
+        self.username.text = self.plate.user.username
+        self.plateName.text = self.plate.name
+        self.portion.text = self.plate.quantity.description
+        self.quantity.text = self.plate.number.description
+        self.date.text = self.plate.createdAt
+        self.comment.text = self.plate.comment
+
+    }
+    
+    @objc private func refresh(sender: UIRefreshControl){
+      
+        self.title = NSLocalizedString("plate.details.title", comment: "")
+        
+        self.portionLabel.text = NSLocalizedString("plate.portion.title", comment: "")
+        self.quantityLabel.text = NSLocalizedString("plate.quantity.title", comment: "")
+        self.createdAt.text = NSLocalizedString("plate.portion.title", comment: "")
+        self.commentLabel.text = NSLocalizedString("plate.comment.title", comment: "")
+        self.createdBy.text = NSLocalizedString("plate.username.title", comment: "")
+        
+        self.quantity.text = self.plate.number.description
+        if self.plate.number.description == "0" {
+            self.reserveOrDeleteButton.isEnabled = false
+        } else {
+            if(self.plate.user.id == UserDefaults.standard.integer(forKey: MyVariables.id)) {
+                self.reserveOrDeleteButton.setTitle(NSLocalizedString("plate.delete.button", comment: ""), for: UIControl.State.normal)
+            } else {
+                self.reserveOrDeleteButton.setTitle(NSLocalizedString("plate.reserve.button", comment: ""), for: UIControl.State.normal)
+            }
         }
         
         self.plateImage.image = setPlateImage(plateImageString: self.plate.photo)
@@ -57,8 +94,7 @@ class PlateDetailsViewController: UIViewController {
         self.quantity.text = self.plate.number.description
         self.date.text = self.plate.createdAt
         self.comment.text = self.plate.comment
-        
-        
+        sender.endRefreshing()
     }
 
     private func setPlateImage(plateImageString: String) -> UIImage{
@@ -91,4 +127,6 @@ class PlateDetailsViewController: UIViewController {
             }
         }
     }
+    
+    
 }

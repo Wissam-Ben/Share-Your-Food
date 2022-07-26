@@ -64,7 +64,7 @@ class AuthenticationWebService: AuthenticationService {
                         guard let token: String = jsonObject["token"] as? String,
                               let user: [String: Any] = jsonObject["user"] as? [String: Any],
                               let id: Int = user["id"] as? Int else {
-                                print("errooooor")
+                                print("error")
                                 return
                         }
                         UserDefaults.standard.set(token, forKey: MyVariables.token)

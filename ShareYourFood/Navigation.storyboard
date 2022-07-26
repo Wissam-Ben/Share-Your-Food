@@ -14,7 +14,7 @@
         <scene sceneID="cQX-NP-p2K">
             <objects>
                 <navigationController id="fGY-5o-2GL" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" id="JEx-qE-YCe">
+                    <tabBarItem key="tabBarItem" title="" image="magnifyingglass" catalog="system" id="JEx-qE-YCe">
                         <imageReference key="selectedImage" image="magnifyingglass" catalog="system" renderingMode="hierarchical">
                             <hierarchicalColors>
                                 <color systemColor="systemMintColor"/>
@@ -38,8 +38,10 @@
         <!--Navigation Controller-->
         <scene sceneID="baJ-WZ-ioL">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kFs-9M-Cfr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController id="nTy-gR-T5l" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" id="iwn-TY-egf">
+                        <imageReference key="image" image="homekit" catalog="system"/>
                         <imageReference key="selectedImage" image="homekit" catalog="system" renderingMode="hierarchical">
                             <hierarchicalColors>
                                 <color systemColor="systemMintColor"/>
@@ -56,7 +58,6 @@
                         <segue destination="fCh-Yn-Srq" kind="relationship" relationship="rootViewController" id="aJX-SG-8wh"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kFs-9M-Cfr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2009" y="-100"/>
         </scene>
@@ -402,7 +403,7 @@
         <scene sceneID="LuB-oE-RWl">
             <objects>
                 <navigationController id="sQH-Gi-QK7" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" id="Vr1-2w-d8d">
+                    <tabBarItem key="tabBarItem" title="" image="plus" catalog="system" id="Vr1-2w-d8d">
                         <imageReference key="selectedImage" image="plus" catalog="system" renderingMode="hierarchical">
                             <hierarchicalColors>
                                 <color systemColor="systemMintColor"/>
@@ -427,7 +428,7 @@
         <scene sceneID="puK-mr-pew">
             <objects>
                 <navigationController id="eJa-2k-5FO" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" id="UDB-Vg-jLT">
+                    <tabBarItem key="tabBarItem" title="" image="person" catalog="system" id="UDB-Vg-jLT">
                         <imageReference key="selectedImage" image="person.fill" catalog="system" symbolScale="large" renderingMode="hierarchical">
                             <hierarchicalColors>
                                 <color systemColor="systemMintColor"/>
@@ -452,7 +453,7 @@
         <scene sceneID="U5t-tw-Jrh">
             <objects>
                 <navigationController id="TH4-GK-9VW" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" id="kx9-VY-VHK">
+                    <tabBarItem key="tabBarItem" title="" image="list.dash" catalog="system" id="kx9-VY-VHK">
                         <imageReference key="selectedImage" image="list.dash" catalog="system" renderingMode="hierarchical">
                             <hierarchicalColors>
                                 <color systemColor="systemMintColor"/>
@@ -477,11 +478,12 @@
         <scene sceneID="sa8-5X-cKX">
             <objects>
                 <tabBarController storyboardIdentifier="navMenu" id="mY1-Ei-GNh" sceneMemberID="viewController">
-                    <tabBar key="tabBar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fAc-mm-71m">
+                    <tabBar key="tabBar" opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fAc-mm-71m">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="tintColor" systemColor="systemMintColor"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" systemColor="systemMintColor"/>
                     </tabBar>
                     <connections>
                         <segue destination="nTy-gR-T5l" kind="relationship" relationship="viewControllers" id="CNw-lr-UnG"/>
@@ -502,6 +504,7 @@
         <image name="homekit" catalog="system" width="128" height="106"/>
         <image name="list.dash" catalog="system" width="128" height="85"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="person" catalog="system" width="128" height="117"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="secondaryLabelColor">

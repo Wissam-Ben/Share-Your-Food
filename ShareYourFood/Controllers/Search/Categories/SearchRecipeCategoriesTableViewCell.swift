@@ -40,9 +40,11 @@ class SearchRecipeCategoriesTableViewCell: UITableViewCell {
         if let imageData = data {
             categoryImage = UIImage(data: imageData)!
         } else {
-            let imageName = "not_found"
-            let image = UIImage(named: imageName)
-            categoryImage = image!
+            let imageName = "default_image"
+            guard let image = UIImage(named: imageName) else {
+                return UIImage(named: "default_image")!
+            }
+            categoryImage = image
         }
         
         return categoryImage
