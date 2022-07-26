@@ -17,6 +17,7 @@ class AddPlateViewController: UIViewController, UITextFieldDelegate, UINavigatio
     
     @IBOutlet weak var item: UITabBarItem!
     
+    @IBOutlet weak var addPlateTitle: UILabel!
     
     @IBOutlet weak var plateImage: UIImageView!
     
@@ -37,10 +38,10 @@ class AddPlateViewController: UIViewController, UITextFieldDelegate, UINavigatio
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.title = ""
         
-        
-        //self.title = NSLocalizedString("addplate.title", comment: "")
-        
+        self.addPlateTitle.text = NSLocalizedString("addplate.title", comment: "")
+                
         self.plateImage.layer.borderWidth = 1
         self.plateImage.layer.borderColor = UIColor.black.cgColor
         
@@ -73,15 +74,16 @@ class AddPlateViewController: UIViewController, UITextFieldDelegate, UINavigatio
     }
     
     @IBAction func handlePublishPlate(_ sender: Any) {
-        guard let name = self.nameTextField.text,
-                let number = self.quantityTextField.text,
-                let portion = self.portionTextField.text,
+        guard let image = self.imageStr,
+              let name = self.nameTextField.text,
+              let number = self.quantityTextField.text,
+              let portion = self.portionTextField.text,
               let comment = self.commentTextField.text else {
             self.displayErrorMessage(title: NSLocalizedString("invalid.form.message", comment: ""), message: NSLocalizedString("missing.field.message", comment: ""))
             return
         }
         
-        self.plateService.addPlate(plate: PlateRequest(name: name, photo: self.imageStr, quantity: portion, number: number, comment: comment, reserved: false, userId: UserDefaults.standard.integer(forKey: MyVariables.id).description)) { requestResponse in
+        self.plateService.addPlate(plate: PlateRequest(name: name, photo: image, quantity: portion, number: number, comment: comment, reserved: false, userId: UserDefaults.standard.integer(forKey: MyVariables.id).description)) { requestResponse in
             print(requestResponse)
         }
         

@@ -27,8 +27,6 @@ class AuthenticationWebService: AuthenticationService {
             return
         }
         
-        print(user.username + user.password)
-        
         request.httpMethod = "POST"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type") // the request is JSON
         request.setValue("application/json", forHTTPHeaderField: "Accept") // the response expected to be in JSON format
@@ -67,11 +65,10 @@ class AuthenticationWebService: AuthenticationService {
                                 print("error")
                                 return
                         }
+                        
                         UserDefaults.standard.set(token, forKey: MyVariables.token)
                         UserDefaults.standard.set(id, forKey: MyVariables.id)
-                        
-                        print(UserDefaults.standard.string(forKey: MyVariables.token))
-                        
+                                                
                       } catch {
                         print("Error: Trying to convert JSON data to string")
                         return

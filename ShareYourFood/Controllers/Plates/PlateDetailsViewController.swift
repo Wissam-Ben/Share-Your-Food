@@ -10,6 +10,8 @@ import SwiftUI
 
 class PlateDetailsViewController: UIViewController {
 
+    
+    
     @IBOutlet weak var plateImage: UIImageView!
     @IBOutlet weak var plateName: UILabel!
     @IBOutlet weak var portionLabel: UILabel!
@@ -44,7 +46,6 @@ class PlateDetailsViewController: UIViewController {
         super.viewDidLoad()
         
         self.title = NSLocalizedString("plate.details.title", comment: "")
-        
         self.portionLabel.text = NSLocalizedString("plate.portion.title", comment: "")
         self.quantityLabel.text = NSLocalizedString("plate.quantity.title", comment: "")
         self.createdAt.text = NSLocalizedString("plate.createdAt.title", comment: "")

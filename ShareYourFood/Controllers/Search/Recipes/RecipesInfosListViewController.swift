@@ -11,6 +11,7 @@ class RecipesInfosListViewController: UIViewController, UITableViewDelegate, UIT
 
     @IBOutlet weak var recipesListView: UITableView!
     
+    @IBOutlet weak var indicatorView: UIActivityIndicatorView!
     var searchCategory: SearchRecipeCategoriesTableViewCell = SearchRecipeCategoriesTableViewCell()
     
     var category: String = ""
@@ -39,6 +40,7 @@ class RecipesInfosListViewController: UIViewController, UITableViewDelegate, UIT
         self.recipesListView.dataSource = self
         print(category)
         self.mealRecipeService.fetchRecipesByCategory( completion: { categories in
+            self.indicatorView.stopAnimating()
             self.recipes = categories
         }, category: self.category)
 
@@ -77,9 +79,7 @@ class RecipesInfosListViewController: UIViewController, UITableViewDelegate, UIT
         let recipe = self.recipes[indexPath.row]
         
         recipeDetails.configure(with: recipe)
-        
-        print(recipe.idMeal)
-        
+                
         self.navigationController?.pushViewController(recipeDetails, animated: true)
         print(recipe.strMeal)
     }

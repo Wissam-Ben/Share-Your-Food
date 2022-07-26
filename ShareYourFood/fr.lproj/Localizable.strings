@@ -59,16 +59,16 @@
 /*
  Home Plates
  */
-"home.plates.title" = "Plats disponibles";
+"home.plates.title" = "Plats partagés";
 
 /*
  My plates
  */
-"my.plates.title" = "My plats partagés";
+"my.plates.title" = "Mes plats partagés";
 
 /*
  Search recipes Meal DB
  */
-"search.categories.title" = "Categoriesnde recettes";
+"search.categories.title" = "Categories de recettes";
 "search.recipes.title" = "Idées de recettes";
 "recipe.details.title" = "Details de la recette";

@@ -14,6 +14,10 @@ class HomePlatesViewController: UIViewController, UITableViewDelegate, UITableVi
     
     @IBOutlet weak var platesList: UITableView!
     
+    @IBOutlet weak var homeTitle: UILabel!
+    
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
     var plateService: PlateService = PlateWebService()
     
     var plates: [PlateResponse] = [] {
@@ -31,13 +35,15 @@ class HomePlatesViewController: UIViewController, UITableViewDelegate, UITableVi
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = NSLocalizedString("home.plates.title", comment: "")
+        self.title = ""
+        self.homeTitle.text = NSLocalizedString("home.plates.title", comment: "")
 
         let nib = UINib(nibName: "plateTableViewCell", bundle: nil)
         self.platesList.register(nib, forCellReuseIdentifier: "HOME_PLATE_CELL_ID")
         self.platesList.delegate = self
         self.platesList.dataSource = self
         self.plateService.fetchPlates { plates in
+            self.activityIndicator.stopAnimating()
             self.plates = plates
         }
         

@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchRecipeCategoriesListViewController" customModule="ShareYourFood" customModuleProvider="target">
             <connections>
+                <outlet property="searchRecipeTitle" destination="zaG-vO-zbe" id="eft-mL-PHQ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,12 +21,19 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="dmt-SE-ewg">
-                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <rect key="frame" x="0.0" y="71" width="414" height="791"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
-                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="rgd-VZ-uVX">
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="rgd-VZ-uVX">
                     <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                    <color key="color" systemColor="systemMintColor"/>
                 </activityIndicatorView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recipe categories ideas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zaG-vO-zbe">
+                    <rect key="frame" x="85" y="44" width="244" height="27"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -33,16 +41,21 @@
                 <constraint firstItem="rgd-VZ-uVX" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="9ue-K0-RsE"/>
                 <constraint firstItem="rgd-VZ-uVX" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Cv8-OT-nOs"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="dmt-SE-ewg" secondAttribute="bottom" id="DYA-mp-T7c"/>
+                <constraint firstItem="dmt-SE-ewg" firstAttribute="top" secondItem="zaG-vO-zbe" secondAttribute="bottom" id="HdK-Bx-x0c"/>
+                <constraint firstItem="zaG-vO-zbe" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="TVv-KQ-Mov"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="dmt-SE-ewg" secondAttribute="trailing" id="bXu-GQ-3DN"/>
+                <constraint firstItem="zaG-vO-zbe" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="dp0-hL-mgS"/>
                 <constraint firstItem="dmt-SE-ewg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="nXo-c8-Eei"/>
-                <constraint firstItem="dmt-SE-ewg" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="nzA-1B-4tu"/>
             </constraints>
-            <point key="canvasLocation" x="139" y="114"/>
+            <point key="canvasLocation" x="137.68115942028987" y="113.83928571428571"/>
         </view>
     </objects>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

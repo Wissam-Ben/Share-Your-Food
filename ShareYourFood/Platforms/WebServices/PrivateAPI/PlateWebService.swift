@@ -17,7 +17,7 @@ class PlateWebService: PlateService {
         let url = URL(string: "http://localhost:3000/plates")
         var request = URLRequest(url: url!)
 
-        let token = UserDefaults.standard.string(forKey: "token")
+        let token = UserDefaults.standard.string(forKey: MyVariables.token)
         
         let authorization = "Bearer ".appending(token!)
         request.httpMethod = "GET"
@@ -35,15 +35,8 @@ class PlateWebService: PlateService {
                 }
                     return
             }
-            
-            print(json)
-
            let plates: [PlateResponse] = json.compactMap {obj in
             return PlateResponse(dict: obj)
-            }
-            for plate in plates {
-                print(plate)
-        
             }
             DispatchQueue.main.async {
                 completion(plates)
@@ -57,7 +50,7 @@ class PlateWebService: PlateService {
         
         var request = URLRequest(url: url!)
         
-        let token = UserDefaults.standard.string(forKey: "token")
+        let token = UserDefaults.standard.string(forKey: MyVariables.token)
         
         let authorization = "Bearer ".appending(token!)
         request.httpMethod = "GET"
@@ -76,9 +69,6 @@ class PlateWebService: PlateService {
                 }
                     return
             }
-           
-            //print(plate)
-            print(json)
             DispatchQueue.main.async {
                 completion(plate)
             }
@@ -88,7 +78,7 @@ class PlateWebService: PlateService {
     
     func addPlate(plate: PlateRequest, completion: @escaping ([PlateRequest]) -> Void) {
         let url = URL(string: "http://localhost:3000/plates")
-        let token = UserDefaults.standard.string(forKey: "token")
+        let token = UserDefaults.standard.string(forKey: MyVariables.token)
         let authorization = "Bearer ".appending(token!)
         
         let uploadDataModel = PlateRequest(name: plate.name, photo: plate.photo, quantity: plate.quantity, number: plate.number, comment: plate.comment, reserved: plate.reserved, userId: plate.userId)
@@ -101,8 +91,8 @@ class PlateWebService: PlateService {
 
         var request = URLRequest(url: url!)
         request.httpMethod = "POST"
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type") // the request is JSON
-        request.setValue("application/json", forHTTPHeaderField: "Accept") // the response expected to be in JSON format
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.setValue("application/json", forHTTPHeaderField: "Accept")
         request.addValue(authorization, forHTTPHeaderField: "Authorization")
        
         request.httpBody = jsonData
@@ -134,8 +124,6 @@ class PlateWebService: PlateService {
                     print("Error: Couldn't print JSON in String")
                     return
                 }
-                
-                print(prettyPrintedJson)
             } catch {
                 print("Error: Trying to convert JSON data to string")
                 return
@@ -158,8 +146,8 @@ class PlateWebService: PlateService {
 
         var request = URLRequest(url: url!)
         request.httpMethod = "PUT"
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type") // the request is JSON
-        request.setValue("application/json", forHTTPHeaderField: "Accept") // the response expected to be in JSON format
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.setValue("application/json", forHTTPHeaderField: "Accept")
         request.addValue(authorization, forHTTPHeaderField: "Authorization")
        
         request.httpBody = jsonData
@@ -190,8 +178,6 @@ class PlateWebService: PlateService {
                     print("Error: Couldn't print JSON in String")
                     return
                 }
-                
-                print(prettyPrintedJson)
             } catch {
                 print("Error: Trying to convert JSON data to string")
                 return
@@ -236,17 +222,12 @@ class PlateWebService: PlateService {
                     print("Error: Could print JSON in String")
                     return
                 }
-                
-                print(prettyPrintedJson)
             } catch {
                 print("Error: Trying to convert JSON data to string")
                 return
             }
         }.resume()
     }
-    
-
-    
 }
 
 

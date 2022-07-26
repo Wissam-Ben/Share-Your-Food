@@ -9,6 +9,8 @@ import UIKit
 
 class SearchRecipeCategoriesListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+
+    @IBOutlet weak var categoriesTitle: UILabel!
     
     @IBOutlet weak var item: UITabBarItem!
     
@@ -25,8 +27,10 @@ class SearchRecipeCategoriesListViewController: UIViewController, UITableViewDel
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.title = NSLocalizedString("search.categories.title", comment: "")
+        self.title = ""
         
+        self.categoriesTitle.text = NSLocalizedString("search.categories.title", comment: "")
+                
         let nib = UINib(nibName: "SearchRecipeCategoriesTableViewCell", bundle: nil)
         self.categoryTableView.register(nib, forCellReuseIdentifier: "CATEGORY_CELL_ID")
         self.categoryTableView.delegate = self
@@ -72,8 +76,6 @@ class SearchRecipeCategoriesListViewController: UIViewController, UITableViewDel
         recipes.configure(with: category)
         
         self.navigationController?.pushViewController(recipes, animated: true)
-        
-        print(category.name)
     }
     
     

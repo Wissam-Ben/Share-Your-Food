@@ -15,20 +15,17 @@ class SearchRecipeCategoriesTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
     
     func setCategory(with category: MealCategory) {
         var imageCategory = setImageCategory(categoryImageString: category.thumb)
         self.categoryImage.image = imageCategory
         self.categoryName.text = category.name
-        //self.categoryDescription.text = category.description
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         
-        // Configure the view for the selected state
     }
     
     private func setImageCategory(categoryImageString: String) -> UIImage{

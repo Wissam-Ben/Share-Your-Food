@@ -46,7 +46,6 @@ class UserWebService: UserService {
                 }
                 
                let users: [User] = json.compactMap {obj in
-                   print(obj)
                     return User(dict: obj)
                 }
                 

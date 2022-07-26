@@ -20,6 +20,8 @@ class AccountViewController: UIViewController {
     @IBOutlet weak var email: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
     
+    @IBOutlet weak var myAccountTitle: UILabel!
+    
     var userId: Int!
     
     var user: User!
@@ -30,9 +32,9 @@ class AccountViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.item.title = "toto"
+        self.title = ""
         
-        self.title = NSLocalizedString("account.title", comment: "")
+        self.myAccountTitle.text = NSLocalizedString("account.title", comment: "")
         
         self.userId = UserDefaults.standard.integer(forKey: MyVariables.id)
         
@@ -53,11 +55,6 @@ class AccountViewController: UIViewController {
     
     
     @IBAction func handleLogout(_ sender: Any) {
-        
-        UserDefaults.standard.removeObject(forKey: MyVariables.token)
-        UserDefaults.standard.removeObject(forKey: MyVariables.id)
-        UserDefaults.standard.removeObject(forKey: MyVariables.subscribeStatusCode)
-        
         self.navigationController?.pushViewController(LogInViewController(), animated: true)
         self.tabBarController?.tabBar.isHidden = true
         self.navigationController?.navigationBar.isHidden = true

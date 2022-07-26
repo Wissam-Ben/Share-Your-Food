@@ -11,10 +11,9 @@ class MealRecipeWebService : MealRecipeService {
     
     func fetchRecipesByCategory(completion: @escaping ([MealInfos]) -> Void, category: String) {
         
-        print("créer URL")
         guard let url = URL(string: "https://www.themealdb.com/api/json/v1/1/filter.php?c=" + category) else {
             completion([])
-            print("Helllllooooo impossible de créer URL")// impossible de créer l'url
+            print("Impossible de créer URL")
             return
         }
                 
@@ -24,15 +23,13 @@ class MealRecipeWebService : MealRecipeService {
                   let recipes = json["meals"] as? [ [String: Any] ] else {
                 DispatchQueue.main.async {
                     print("completion");
-                    completion([]) // écoute le résultat
+                    completion([])
                 }
                 return
             }
-            //print(json)
             let recipeInfosObjects: [MealInfos] = recipes.compactMap{ obj in
                 return MealInfos(dict: obj)
             }
-            //print(recipeInfosObjects)
             DispatchQueue.main.async {
                 completion(recipeInfosObjects) // écoute le résultat
             }
@@ -41,10 +38,9 @@ class MealRecipeWebService : MealRecipeService {
     }
     
     func fetchRecipeDetailsById(completion: @escaping ([MealRecipe]) -> Void, id: String) {
-        print("Helllllooooo créer URL")
         guard let url = URL(string: "https://www.themealdb.com/api/json/v1/1/lookup.php?i=" + id) else {
             completion([])
-            print("Helllllooooo impossible de créer URL")// impossible de créer l'url
+            print("Impossible de créer URL")
             return
         }
         
@@ -56,19 +52,16 @@ class MealRecipeWebService : MealRecipeService {
                   let json = try? JSONSerialization.jsonObject(with: fetchData) as? [String: Any],
                   let details = json["meals"] as? [ [String: Any] ] else {
                 DispatchQueue.main.async {
-                    print("completion!!!!!");
-                    completion([]) // écoute le résultat
+                    completion([])
                 }
                 return
             }
             print(json)
             let recipe: [MealRecipe] = details.compactMap{ obj in
-                print(obj)
                 return MealRecipe(dict: obj)
             }
-            //print(categoryObjects)
             DispatchQueue.main.async {
-                completion(recipe) // écoute le résultat
+                completion(recipe)
             }
         }
         dataTask.resume()

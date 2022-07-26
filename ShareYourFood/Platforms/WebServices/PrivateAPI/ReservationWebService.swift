@@ -32,12 +32,9 @@ class ReservationWebService: ReservationService {
                     return
             }
             
-
             let reservations: [Reservation] = json.compactMap {obj in
-                //print(obj)
                 return Reservation(dict: obj)
             }
-            print(reservations)
             
             DispatchQueue.main.async {
                 completion(reservations)
@@ -53,7 +50,6 @@ class ReservationWebService: ReservationService {
         
         let uploadDataModel = ReservationRequest(plateId: reservation.plateId)
               
-          // Convert model to JSON data
           guard let jsonData = try? JSONEncoder().encode(uploadDataModel) else {
               print("Error: Trying to convert model to JSON data")
               return

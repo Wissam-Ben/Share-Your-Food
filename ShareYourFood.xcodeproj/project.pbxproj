@@ -23,8 +23,8 @@
 		AA2D11CD288A0A7B007547F7 /* AWSS3 in Frameworks */ = {isa = PBXBuildFile; productRef = AA2D11CC288A0A7B007547F7 /* AWSS3 */; };
 		AA2D11D3288AB615007547F7 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = AA2D11D2288AB615007547F7 /* Alamofire */; };
 		AA2D11D6288AB72C007547F7 /* PromiseKit in Frameworks */ = {isa = PBXBuildFile; productRef = AA2D11D5288AB72C007547F7 /* PromiseKit */; };
+		AA6A8543289094FD00AE2885 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA732675284D459C003D6616 /* Assets.xcassets */; };
 		AA73266D284D459B003D6616 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA73266C284D459B003D6616 /* AppDelegate.swift */; };
-		AA732676284D459C003D6616 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA732675284D459C003D6616 /* Assets.xcassets */; };
 		AA732679284D459C003D6616 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA732677284D459C003D6616 /* LaunchScreen.storyboard */; };
 		AA732688284DD733003D6616 /* SubscribeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA732686284DD733003D6616 /* SubscribeViewController.swift */; };
 		AA732689284DD733003D6616 /* SubscribeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA732687284DD733003D6616 /* SubscribeViewController.xib */; };
@@ -32,7 +32,6 @@
 		AA7326CC285A8FAF003D6616 /* MealRecipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7326CB285A8FAF003D6616 /* MealRecipe.swift */; };
 		AA7326CE285A900B003D6616 /* MealCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7326CD285A900B003D6616 /* MealCategory.swift */; };
 		AA7326D0285A9029003D6616 /* MealInfos.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7326CF285A9029003D6616 /* MealInfos.swift */; };
-		AA7326D4285E71F7003D6616 /* MealService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7326D3285E71F7003D6616 /* MealService.swift */; };
 		AA7326EA2863993D003D6616 /* RecipeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7326E92863993D003D6616 /* RecipeService.swift */; };
 		AA7326EE286399A3003D6616 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7326ED286399A3003D6616 /* Food.swift */; };
 		AA7326F528643F2C003D6616 /* SearchRecipeCategoriesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7326F328643F2C003D6616 /* SearchRecipeCategoriesListViewController.swift */; };
@@ -94,7 +93,7 @@
 		AA2D11CE288A0C81007547F7 /* ShareYourFood.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ShareYourFood.entitlements; sourceTree = "<group>"; };
 		AA732669284D459B003D6616 /* ShareYourFood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShareYourFood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA73266C284D459B003D6616 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AA732675284D459C003D6616 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AA732675284D459C003D6616 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ShareYourFood/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		AA732678284D459C003D6616 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AA732686284DD733003D6616 /* SubscribeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribeViewController.swift; sourceTree = "<group>"; };
 		AA732687284DD733003D6616 /* SubscribeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubscribeViewController.xib; sourceTree = "<group>"; };
@@ -134,7 +133,6 @@
 		AA7326CB285A8FAF003D6616 /* MealRecipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealRecipe.swift; sourceTree = "<group>"; };
 		AA7326CD285A900B003D6616 /* MealCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealCategory.swift; sourceTree = "<group>"; };
 		AA7326CF285A9029003D6616 /* MealInfos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealInfos.swift; sourceTree = "<group>"; };
-		AA7326D3285E71F7003D6616 /* MealService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealService.swift; sourceTree = "<group>"; };
 		AA7326E92863993D003D6616 /* RecipeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeService.swift; sourceTree = "<group>"; };
 		AA7326ED286399A3003D6616 /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 		AA7326F328643F2C003D6616 /* SearchRecipeCategoriesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRecipeCategoriesListViewController.swift; sourceTree = "<group>"; };
@@ -144,7 +142,7 @@
 		AA73270128647A64003D6616 /* MealCategoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealCategoryService.swift; sourceTree = "<group>"; };
 		AA73270328647A82003D6616 /* MealCategoryWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealCategoryWebService.swift; sourceTree = "<group>"; };
 		AA7327072864E14E003D6616 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AA9A4FCC2887F92C0071C567 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		AA9A4FCC2887F92C0071C567 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AccountViewController.swift; path = ShareYourFood/Controllers/Account/AccountViewController.swift; sourceTree = SOURCE_ROOT; };
 		AA9A4FD02887FE770071C567 /* HomePlatesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePlatesViewController.swift; sourceTree = "<group>"; };
 		AA9A4FD42887FEE30071C567 /* plateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = plateTableViewCell.swift; sourceTree = "<group>"; };
 		AA9A4FD52887FEE30071C567 /* plateTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = plateTableViewCell.xib; sourceTree = "<group>"; };
@@ -196,6 +194,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AA6A8540289085EB00AE2885 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AA7326EC28639985003D6616 /* FoodModels */,
+				AA7326EB2863995A003D6616 /* MealDBModels */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AA6A85412890863000AE2885 /* MealDB */ = {
+			isa = PBXGroup;
+			children = (
+				AA73270328647A82003D6616 /* MealCategoryWebService.swift */,
+				AAF28641286F93060060E039 /* MealRecipeWebService.swift */,
+			);
+			path = MealDB;
+			sourceTree = "<group>";
+		};
+		AA6A85422890864200AE2885 /* PrivateAPI */ = {
+			isa = PBXGroup;
+			children = (
+				AA0DF58928835E9B00B3C025 /* AuthenticationWebService.swift */,
+				AA2D11B8288838B9007547F7 /* UserWebService.swift */,
+				AA9FD8B72881C11300D970DA /* PlateWebService.swift */,
+				F8BEA38528821D7700A14C74 /* ReservationWebService.swift */,
+			);
+			path = PrivateAPI;
+			sourceTree = "<group>";
+		};
 		AA732660284D459B003D6616 = {
 			isa = PBXGroup;
 			children = (
@@ -217,10 +244,10 @@
 			isa = PBXGroup;
 			children = (
 				AA2D11CE288A0C81007547F7 /* ShareYourFood.entitlements */,
-				AA7326C4285A7F0F003D6616 /* Definitions */,
-				AA7326C3285A7443003D6616 /* Controllers */,
-				AA7326C0285A73F7003D6616 /* Platforms */,
 				AA73269B285A716D003D6616 /* api */,
+				AA7326C4285A7F0F003D6616 /* Definitions */,
+				AA7326C0285A73F7003D6616 /* Platforms */,
+				AA7326C3285A7443003D6616 /* Controllers */,
 				AA73266C284D459B003D6616 /* AppDelegate.swift */,
 				AA732675284D459C003D6616 /* Assets.xcassets */,
 				AA7327072864E14E003D6616 /* Info.plist */,
@@ -312,6 +339,7 @@
 		AA7326C0285A73F7003D6616 /* Platforms */ = {
 			isa = PBXGroup;
 			children = (
+				AA7326C6285A7F8D003D6616 /* Services */,
 				AA7326C1285A7414003D6616 /* WebServices */,
 			);
 			path = Platforms;
@@ -320,13 +348,8 @@
 		AA7326C1285A7414003D6616 /* WebServices */ = {
 			isa = PBXGroup;
 			children = (
-				AA9FD8B72881C11300D970DA /* PlateWebService.swift */,
-				AA7326D3285E71F7003D6616 /* MealService.swift */,
-				AA73270328647A82003D6616 /* MealCategoryWebService.swift */,
-				AAF28641286F93060060E039 /* MealRecipeWebService.swift */,
-				F8BEA38528821D7700A14C74 /* ReservationWebService.swift */,
-				AA0DF58928835E9B00B3C025 /* AuthenticationWebService.swift */,
-				AA2D11B8288838B9007547F7 /* UserWebService.swift */,
+				AA6A85422890864200AE2885 /* PrivateAPI */,
+				AA6A85412890863000AE2885 /* MealDB */,
 			);
 			path = WebServices;
 			sourceTree = "<group>";
@@ -346,19 +369,9 @@
 		AA7326C4285A7F0F003D6616 /* Definitions */ = {
 			isa = PBXGroup;
 			children = (
-				AA7326C6285A7F8D003D6616 /* Services */,
-				AA7326C5285A7F18003D6616 /* Models */,
+				AA6A8540289085EB00AE2885 /* Models */,
 			);
 			path = Definitions;
-			sourceTree = "<group>";
-		};
-		AA7326C5285A7F18003D6616 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				AA7326EC28639985003D6616 /* FoodModels */,
-				AA7326EB2863995A003D6616 /* MealModels */,
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		AA7326C6285A7F8D003D6616 /* Services */ = {
@@ -396,7 +409,7 @@
 			path = Search;
 			sourceTree = "<group>";
 		};
-		AA7326EB2863995A003D6616 /* MealModels */ = {
+		AA7326EB2863995A003D6616 /* MealDBModels */ = {
 			isa = PBXGroup;
 			children = (
 				AA7326CB285A8FAF003D6616 /* MealRecipe.swift */,
@@ -404,7 +417,7 @@
 				AA7326CF285A9029003D6616 /* MealInfos.swift */,
 				AAF285FD2865A5C90060E039 /* MealCategories.swift */,
 			);
-			path = MealModels;
+			path = MealDBModels;
 			sourceTree = "<group>";
 		};
 		AA7326EC28639985003D6616 /* FoodModels */ = {
@@ -571,6 +584,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA6A8543289094FD00AE2885 /* Assets.xcassets in Resources */,
 				AA9FD88D2879AC8400D970DA /* RecipesInfosListViewController.xib in Resources */,
 				AA0DF59628855F6E00B3C025 /* RecipeDetailViewController.xib in Resources */,
 				AA7326F628643F2C003D6616 /* SearchRecipeCategoriesListViewController.xib in Resources */,
@@ -580,7 +594,6 @@
 				AA9FD8912879ACA200D970DA /* RecipeInfoTableViewCell.xib in Resources */,
 				AA732679284D459C003D6616 /* LaunchScreen.storyboard in Resources */,
 				AA9FD899287D4E2000D970DA /* LogInViewController.xib in Resources */,
-				AA732676284D459C003D6616 /* Assets.xcassets in Resources */,
 				AA7326FC2864494C003D6616 /* SearchRecipeCategoriesTableViewCell.xib in Resources */,
 				AA2D11C4288867D6007547F7 /* PlateDetailsViewController.xib in Resources */,
 				AA9A4FE3288803900071C567 /* AddPlateViewController.xib in Resources */,
@@ -614,7 +627,6 @@
 				AA0DF590288369D600B3C025 /* UserLoginResponse.swift in Sources */,
 				AA9A4FD22887FE770071C567 /* HomePlatesViewController.swift in Sources */,
 				AA0DF5922884343400B3C025 /* MyVariables.swift in Sources */,
-				AA7326D4285E71F7003D6616 /* MealService.swift in Sources */,
 				AA2D11B9288838B9007547F7 /* UserWebService.swift in Sources */,
 				AA7326F528643F2C003D6616 /* SearchRecipeCategoriesListViewController.swift in Sources */,
 				AA2D11BB28884300007547F7 /* UserAccount.swift in Sources */,

@@ -62,8 +62,6 @@ class SubscribeViewController: UIViewController, UITextFieldDelegate {
               let lastname = self.lastnameTextField.text,
               let username = self.usernameTextField.text,
               let email = self.emailTextField.text,
-              let phone = self.phoneTextField.text,
-              let address = self.addressTextField.text,
               let password = self.passwordTextField.text else {
                 self.displayErrorMessage(title: "Formulaire invalide", message: "Les champs sont obligatoires")
                 return

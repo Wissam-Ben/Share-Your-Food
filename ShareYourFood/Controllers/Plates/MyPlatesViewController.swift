@@ -12,6 +12,10 @@ class MyPlatesViewController: UIViewController, UITableViewDelegate, UITableView
     @IBOutlet weak var platesList: UITableView!
     @IBOutlet weak var handleItemTapped: UITabBarItem!
     
+    @IBOutlet weak var myPlatesTitle: UILabel!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
+    
     var plateService: PlateService = PlateWebService()
     
     var plates: [PlateResponse] = [] {
@@ -29,15 +33,19 @@ class MyPlatesViewController: UIViewController, UITableViewDelegate, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = NSLocalizedString("my.plates.title", comment: "")
+        self.title = ""
+        
+        self.myPlatesTitle.text = NSLocalizedString("my.plates.title", comment: "")
 
         let nib = UINib(nibName: "plateTableViewCell", bundle: nil)
         self.platesList.register(nib, forCellReuseIdentifier: "PLATE_CELL_ID")
         self.platesList.delegate = self
         self.platesList.dataSource = self
         self.plateService.fetchPlates { plates in
+            self.activityIndicator.stopAnimating()
             for plate in plates {
                 if plate.user.id == UserDefaults.standard.integer(forKey: MyVariables.id) {
+                    self.activityIndicator.stopAnimating()
                     self.plates.append(plate)
                 }
             }

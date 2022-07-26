@@ -9,10 +9,10 @@ import Foundation
 
 class MealCategoryWebService : MealCategoryService {
     func fetchCategories(completion: @escaping ([MealCategory]) -> Void) -> Void {
-        print("Helllllooooo créer URL")
+        
         guard let url = URL(string: "https://www.themealdb.com/api/json/v1/1/categories.php") else {
             completion([])
-            print("Helllllooooo impossible de créer URL")// impossible de créer l'url
+            print("impossible de créer l'URL")
             return
         }
                 
@@ -22,18 +22,15 @@ class MealCategoryWebService : MealCategoryService {
                   let categories = json["categories"] as? [ [String: Any] ] else {
                 DispatchQueue.main.async {
                     print("completion");
-                    completion([]) // écoute le résultat
+                    completion([])
                 }
                 return
             }
-            //print(json)
             let categoryObjects: [MealCategory] = categories.compactMap{ obj in
-                //print(obj)
                 return MealCategory(dict: obj)
             }
-            //print(categoryObjects)
             DispatchQueue.main.async {
-                completion(categoryObjects) // écoute le résultat
+                completion(categoryObjects)
             }
         }
         dataTask.resume()
