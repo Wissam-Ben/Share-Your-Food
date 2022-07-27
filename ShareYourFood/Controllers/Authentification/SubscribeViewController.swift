@@ -90,15 +90,9 @@ class SubscribeViewController: UIViewController, UITextFieldDelegate {
         self.user = UserSubscribe(firstname: firstname, lastname: lastname, username: username, password: password, email: email)
         self.authenticationService.subscribe(completion: { UserSubscribeResponse in
             self.userResponse = UserSubscribeResponse
-            print(self.userResponse.password)
         }, user: self.user)
         
-        if(defaults.integer(forKey: "subscriptionStatusCode") == 200) {
-            self.navigationController?.pushViewController(LogInViewController(), animated: true)
-        } else {
-            self.displayErrorMessage(title: "Formulaire invalide", message: "Les champs saisis ne sont pas conformes")
-                return
-        }
+        self.navigationController?.pushViewController(LogInViewController(), animated: true)
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
